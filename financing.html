@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HP Financing & Consumer Pay</title>
+    <link rel="icon" type="img " href="logo-hp.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+
+         /* Mengatur gaya dasar untuk seluruh halaman */
+    body {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+      margin: 0;
+      letter-spacing: 0px;
+    }
+
+    
+    .nav-background{
+      background-color: #b22222;
+      height:90px ;
+      text-align: center ;
+      justify-content: center;
+      padding: 0 20px ;
+      padding-top: 15px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid black;
+
+      
+    }
+
+    .nav-text{
+      color: white;
+      font-weight: normal;
+      font-size: 30px;
+     
+      
+    }
+
+    .nav-span{
+      color: white;
+      font-size: 20px;
+      letter-spacing: 0px;
+    }
+
+
+
+
+   /* 1 */
+
+    /* Kontainer utama layout */
+    .container1 {
+      display: flex; /* Membagi elemen anak dalam baris */
+      flex-direction: row; /* Arah horizontal */
+      flex-wrap: wrap; /* Agar elemen bisa turun ke bawah jika sempit */
+      margin-bottom: 80px;
+      margin-top: 20px;
+      
+      
+    }
+
+    /* Bagian kiri untuk gambar */
+    .left1 {
+      flex: 1; /* Mengambil ruang yang tersedia secara seimbang */
+      min-width: 300px; /* Lebar minimum agar tetap terlihat baik di layar kecil */
+    }
+
+    /* Gambar agar memenuhi kotaknya tanpa distorsi */
+    .image1 {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Gambar menyesuaikan ukuran kotak dengan rapi */
+    }
+
+    /* Bagian kanan layout */
+    .right1 {
+      flex: 1;
+      display: flex; /* Menjadikan bagian atas & bawah vertikal */
+      flex-direction: column;
+    }
+
+    /* Bagian atas kanan dengan background biru tua */
+    .topRight1 {
+      background-color: #2f2f5f; /* Biru tua */
+      color: white; /* Teks putih */
+     padding-left: 30px ;
+     padding-right: 90px;
+      flex: 1; /* Bagi ruang dengan bagian bawah */
+    }
+
+    /* Bagian bawah kanan dengan latar berbeda */
+    .bottomRight1 {
+      background-color: #e8eaf6; /* Ungu muda */
+      color: #222; /* Teks abu gelap */
+      padding: 30px 40px; /* Atur ruang dalam */
+    }
+
+    /* Judul utama */
+    .title1 {
+      font-size: 50px; /* Ukuran huruf besar */
+      margin-bottom: 30px; /* Jarak bawah antar elemen */
+      font-family: arial, sans-serif;
+      padding-top: none;
+    }
+
+    /* Subjudul */
+    .subheader1 {
+     font-family: arial, sans-serif;
+     font-weight: normal;
+      font-size: 30px;
+      margin-bottom: 20px;
+       padding-bottom: 20px;
+        border-bottom: black 2px solid;
+      
+    }
+
+
+    /* Paragraf penjelasan */
+    .text1 {
+      font-size: 20px;
+      line-height: 1,5; /* Spasi baris */
+      color: #222; /* Teks abu terang */
+      margin-bottom: 30px;
+    }
+
+    /* Tombol biru */
+    .button1 {
+      display: inline-block;
+      background-color: #4d5dfb; /* Biru cerah */
+      color: white;
+      padding: 12px 24px;
+      font-size: 20px;
+      text-decoration: none; /* Hilangkan garis bawah */
+      font-weight: bold;
+      width: fit-content; /* Menyesuaikan ukuran isi */
+    }
+
+    /* Responsif untuk perangkat kecil */
+    @media (max-width: 768px) {
+      .container1 {
+        flex-direction: column; /* Susun elemen secara vertikal */
+      }
+
+      .right1 {
+        flex-direction: column; /* Pastikan susunan vertikal tetap */
+      }
+
+      .title1 {
+        font-size: 28px; /* Ukuran lebih kecil di layar kecil */
+      }
+    }
+
+
+
+
+
+        /* 2 */
+
+        .nav2{
+          height: 50px;
+          width: 60px;
+        }
+ 
+        .btn-link {
+            font-size: 1.25rem;
+        }
+        .form-control {
+            font-size: 1.25rem;
+            height: 50px;
+            width: 500px;
+        
+        }
+        .btn-outline-secondary {
+            font-size: 1.25rem;
+            padding: 10px 15px;
+        }
+
+        .troli {
+        
+            font-size: 30px;
+            color: black; 
+            margin-top: 2,5px;
+
+            
+        }
+
+
+
+        
+        /* 3*/
+
+
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        .faq-question {
+            background-color: rgba(0, 0, 0, 0);
+           
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+            letter-spacing: 0px;
+            word-spacing: -1px;
+            
+        }
+        .faq-answer {
+            display: none;
+            margin-left: 18px;
+            margin-bottom: 15px; /* Tambahkan jarak bawah */
+            font-size: 14px;
+            font-weight: 100;
+            font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+            letter-spacing: 0px;
+          }
+
+
+        .underline{
+         
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            
+        }    
+
+       .jarak-faq{
+        margin-left: 18px;
+       }
+
+       .spacing{
+            
+              
+                margin-top: 48px;  
+                margin-bottom: 100px; 
+       }
+
+
+
+
+       .jarak{
+        margin-left: 30px;
+        margin-top: 50px;
+       }
+
+
+       /* 4 */
+
+       .container{
+        display: inline-block;
+        gap: 10px;
+       }
+
+
+
+    .hp-financing-wrapper {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .hp-financing-card {
+      padding: 20px;
+      width: 290px;
+      height: 300px;
+      background-color: white;
+      border: 2px solid #33333333;
+      text-align: left;
+    }
+
+    /* mengatur teks supaya di sebelah gambar */
+    .hp-financing-header {
+      display: flex;  /*menyusun kotak supaya berbaris atau sejajar */
+      align-items: center;   /*mengatur judul supaya sejajar di tengah */
+      gap: 10px; /*jarak antara judul dengan icon */
+      margin-bottom: 10px;
+    }
+
+    /* mengatur icon kalender */
+    .hp-financing-icon {
+      width: 80px;
+      height: 80px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      
+    }
+
+    /* mengatur tulisan di sebelah gambar */
+    .hp-financing-title {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .hp-financing-description {
+      font-size: 17px;
+      font-weight: normal;
+      color: #333333;
+      border-top: 1px solid #333333;
+      padding-top: 10px;
+    }
+
+        /* Container utama untuk semua box fitur */
+    .financing-steps {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Box umum untuk tiap fitur */
+    .financing-box2 {
+      background-color: #eef0ff;
+      padding: 30px;
+      flex: 1;
+      text-align: left;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    /* Gaya ikon di dalam box */
+    .financing-icon2 {
+      height: 70px;
+      width: 68px;
+    }
+
+    /* Judul tiap box */
+    .financing-title2 {
+      
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    /* Deskripsi masing-masing box */
+    .financing-description2 {
+      font-size: 20px;
+      color: #333;
+      line-height: 1.5; /*tinggi baris teks */
+      letter-spacing: 0px;
+    }
+
+    .arrow{
+     font-size: 30px;
+     margin-right: 5px;
+    }
+       
+
+
+ 
+
+
+    /* 5 */
+
+
+        .title3 {
+      font-size: 40px;
+      font-weight: normal;
+      letter-spacing: 0px;
+      margin-bottom: 5px;
+      margin-top: 40px;
+      margin-left: 25px;
+    }
+
+    .subtitle3 {
+      font-size: 20px;
+      color: #333;
+      font-weight: 300;
+      margin-bottom: 30px;
+      margin-left: 25px;
+    }
+
+    .cards3 {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      
+    }
+
+    .card3 {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 425px;
+      border: solid 2px #ddd;
+      height: auto;
+      overflow: hidden; /*menyembunyikan konnten yang melewati batas*/
+      display: flex; 
+      flex-direction: column;
+    }
+
+    .card-header3 {
+      background-color: #2d2b51;
+      color: #fff;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .card-body3 { /*mengatur tataletak didalam box*/
+      padding: 20px;
+      text-align: left;
+    }
+
+
+    .card-body3 img {
+      max-height: 40px;
+      margin-bottom: 20px;
+    }
+   
+
+    .card-footer3 {  /*mengatur tata letak tombol login */
+      padding: 15px;
+      text-align: left;
+    }
+
+     .btn-login3 {   /*mengatur tombol login */
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px; /*atas bawah kiri kanan*/
+      text-decoration: none;
+      
+    }
+
+    .btn-login3:hover {
+      background-color: #444;
+    }
+
+
+
+
+
+      
+    /* 6 */
+
+    .layout {
+      display: flex; /* Mengatur elemen anak sejajar secara horizontal */
+      flex-direction: row; /* Arah tata letak horizontal (kanan-kiri) */
+      width: 100%; /* Lebar penuh */
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .left-side {
+      background-color: #1a1a1a; /* Warna latar belakang gelap */
+      color: #fff; /* Warna teks putih */
+      padding: 50px; /* Ruang di sekitar konten */
+      flex: 1; /* Membagi ruang sama rata dengan .right-side */
+      font-weight: normal;
+
+    }
+
+    .left-side h1 {
+      font-size: 48px; /* Ukuran huruf besar untuk judul */
+      margin-bottom: 20px; /* Jarak bawah dari judul */
+      font-weight: normal;
+      font-family: sans-serif, arial;
+      
+    }
+
+    .border{
+      border-top: 2px solid white;
+    
+    }
+
+    .left-side p {
+      font-size: 18px; /* Ukuran font isi paragraf */
+      margin-top: 20px;
+      line-height: 1.6; /* Jarak baris untuk keterbacaan */
+      font-family: arial, sans-serif;
+      
+    }
+
+    .left-side button {
+      margin-top: 20px; /* Jarak atas dari tombol */
+      padding: 10px 25px; /* Padding dalam tombol */
+      font-size: 16px; /* Ukuran teks tombol */
+      background-color: #fff; /* Warna latar belakang tombol */
+      color: #000; /* Warna teks tombol */
+      border: none; /* Tanpa garis tepi */
+      cursor: pointer; /* Ubah kursor saat hover */
+    }
+
+    .right-side {
+      flex: 1; /* Membagi ruang sama rata dengan .left-side */
+    }
+
+    .right-side img {
+      width: 100%; /* Lebar gambar mengisi elemen induk */
+      height: auto; /* Menjaga rasio aspek gambar */
+      display: block; /* Menghindari spasi bawah gambar */
+    }
+       
+
+
+
+    /* 7 */
+
+    .br-text {
+
+    margin-left: 15px;
+    margin-right: 20px;
+
+    color: #333;
+    font-size: 16px;
+  }
+
+
+
+
+   /* Mengatur style untuk seluruh footer */
+    .top-footer {
+      background-color: #f5f5f5; /* Warna abu-abu muda */
+      padding: 20px ; /* Padding atas dan bawah */
+      display: flex; /* Mengatur agar isi footer bisa disusun horizontal */
+      justify-content: center; /* Menengahkan isi secara horizontal */
+      gap: 40px; /* Jarak antar item */
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+       margin-top: 30px;
+       margin-top: 130px;
+    }
+
+    .top-footer-item a{
+        color: black;
+        text-decoration: underline;
+    }
+
+
+  /* 8 */
+
+   /* Container utama footer */
+    footer {
+      background-color: #000; /* Latar footer tetap hitam */
+      padding: 40px; /* Ruang di dalam footer */
+      border-top: 1px solid #444; /* Garis pemisah di atas footer */
+      
+    }
+
+    /* Atur tata letak kolom footer */
+    .footer-container {
+      display: flex; /* Gunakan flexbox untuk baris kolom */
+      flex-wrap: wrap; /* Kolom bisa turun ke bawah jika layar kecil */
+      justify-content: space-between; /* Jarak antar kolom */
+      max-width: 1200px;
+      margin: auto; /* Pusatkan footer di halaman */
+    }
+
+    /* Gaya untuk masing-masing kolom */
+    .footer-column {
+      flex: 1 1 180px; /* Responsif: 1 bagian, minimal 180px */
+      margin: 10px;
+    }
+
+    /* Judul kolom (About Us, Support, dll) */
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Link di dalam footer */
+    .footer-column a {
+      display: block;
+      color: #ccc; /* Abu-abu muda */
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 14px;
+      
+    }
+
+
+    /* Bagian bawah footer (copyright + links hukum) */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+
+    /* Baris link legal (privacy, terms, dll) */
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    /* Link individual pada bagian bawah */
+    .footer-links a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 12px;
+      text-decoration: none;
+    }
+       
+    
+        /* Top Banner */
+    .top-banner {
+      background-color: #a70b4e; /* Warna merah seperti di gambar */
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+
+    .top-banner .left {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .top-banner .center {
+      flex: 1;
+      margin: 5px 20px;
+      font-size: 14px;
+    }
+
+    .top-banner .center b {
+      font-weight: bold;
+    }
+
+    .top-banner .shop-button {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 8px 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Bottom Navigation */
+    .nav-bar {
+      background-color: #ffffff;
+      color: #000;
+      display: flex;
+      align-items: center;
+      padding: 10px 30px;
+      font-size: 14px;
+      gap: 25px;
+      flex-wrap: wrap;
+      border-top: 1px solid #ddd;
+    }
+
+    .nav-bar span {
+      font-weight: bold;
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .nav-bar a:hover {
+      text-decoration: underline;
+    }
+    
+
+</style>
+
+<script>
+     document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const answer = button.nextElementSibling;
+            const isOpen = answer.style.display === 'block';
+
+            document.querySelectorAll('.faq-answer').forEach(el => {
+                el.style.display = 'none';
+                el.style.marginBottom = '0'; // Reset jarak bawah saat ditutup
+            });
+
+            if (!isOpen) {
+                answer.style.display = 'block';
+                answer.style.marginBottom = '15px'; // Tambahkan jarak bawah jika dibuka
+            }
+        });
+    });
+});
+
+</script>
+
+
+</head>
+
+<body>
+
+
+  <!-- Top Banner -->
+  <div class="top-banner">
+    <div class="left">Memorial Day Sale</div>
+    <div class="center">
+      <b>Save up to 58%</b> on select HP tech, <b>FREE shipping</b>, <b>24 months special financing</b> on purchases of $1,500 or more with the HP Credit Account.<sup>+</sup>
+    </div>
+    <button class="shop-button">SHOP</button>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="nav-bar">
+    <span>EXPERT SALES HELP:</span> <a href="tel:+18664298383">+1 (866)-429-8383</a>
+    <a href="#">ORDER STATUS</a>
+    <a href="#">CUSTOMER SERVICE</a>
+    <a href="#">DISCOUNT PROGRAMS ▼</a>
+    <a href="#">HP FINANCING</a>
+    <a href="#">SIGN IN/REGISTER ▼</a>
+  </div>
+    
+      <!-- navigation bar/bawah -->
+    <nav class="navbar navbar-light bg-white">
+        <div class="container-fluid d-flex">
+            <img src="./logo-hp.png"  class="nav2" >
+            <ul class="navbar-nav d-flex flex-row me-auto">
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Support</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Explore</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Shop</button>
+            </ul>
+
+            <!-- tabel penacarian -->
+            <div class="d-flex">
+                <form class="d-flex me-2" style="margin-right: auto;">
+                    <input class="form-control me-2 text-secondary border border-secondary rounded" type="search" placeholder="What Are You Looking for?" aria-label="Search">
+                </form>
+
+            <!-- icon troli -->
+                <div class="troli"> 
+                    <i class="bi bi-cart icon"></i> 
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    
+    <!-- sistem modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Support</h6>
+                            <ul>
+                                
+                                <li><a href="diagnostic_tools.html"> Diagnostic Tools </a></li>
+                                <li><a href="business_desktops.html"> Business Desktops </a></li>
+                                <li><a href="financing.html">Financing</a></li>
+                                <li><a href="client.html">HP client </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Explore</h6>
+                            <ul>
+                                 <li><a href="more_about.html">More About</a></li>
+                                 <li><a href="privacy_choices.html">Privacy Choices</a></li>
+                                 <li><a href="site_disclaimers.html">Site Disclaimers </a></li>
+                                  <li><a href="profil-bye-deny.html">Profile</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Shop</h6>
+                            <ul>
+                                 
+                               
+                                <li><a href="printers-issues.html">Printers Issues</a></li>
+                                 <li><a href="customer support.html">Customer Support</a></li>
+                                 <li><a href="smb-servers.html"> Small Business Servers </a></li>
+                                 <li><a href="terms-of-use.html"> Terms Of Use </a></li>
+                                 <li><a href="zworkstations.html"> Zworkstations </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- section/tengah -->
+    <section>
+
+    
+
+        
+          
+               <div class="container1">
+    <!-- Bagian kiri: gambar wanita dengan laptop -->
+    <div class="left1">
+      <img src="financingwoman.png" alt="Woman with laptop" class="image1"> <!-- Menampilkan gambar -->
+    </div>
+
+    <!-- Bagian kanan: konten teks -->
+    <div class="right1">
+      <div class="topRight1">
+        <h1 class="title1">Level up your purchasing powerwith HP Financing</h1> <!-- Judul utama -->
+      </div>
+      <div class="bottomRight1">
+        <div><h1 class="subheader1">Introducing a better way to get HP tech</h1></div> <!-- Subjudul -->
+        <p class="text1">
+          HP Financing offers consumer payment solutions to help you bring home the HP tech you need.
+          Check your eligibility now – it’s fast and won’t impact your credit score.** <!-- Paragraf penjelasan -->
+        </p>
+        <a href="#" class="button1">Prequalify now</a> <!-- Tombol ajakan -->
+      </div>
+    </div>
+  </div>
+               <div>
+                    <div class="color"> 
+                        <h1 class="jarak">Special offers available through HP Financing</h1>
+                    </div>
+
+           
+
+                <div class="hp-financing-wrapper">
+
+                    <div class="hp-financing-card hp-financing-card-6-months">
+                    <div class="hp-financing-header">
+                        <img src="logo kalender.jpg" alt="" class="hp-financing-icon">
+                        <h2 class="hp-financing-title">Months</h2>
+                    </div>
+                    <p class="hp-financing-description">
+                        Buy now, pay later.† Special financing for 6 months on purchases of $200 or more with the HP Credit Account.* </p>
+                    </div>
+
+                    <div class="hp-financing-card hp-financing-card-12-months">
+                    <div class="hp-financing-header">
+                        <img src="logo kalender.jpg" alt="" class="hp-financing-icon">
+                        <h2 class="hp-financing-title">Months</h2>
+                    </div>
+                    <p class="hp-financing-description">
+                    Buy now, pay later.† Special financing for 12 months on purchases of $750 or more with the HP Credit Account.*   </p>
+                    </div>
+
+                    <div class="hp-financing-card hp-financing-card-24-months">
+                    <div class="hp-financing-header">
+                        <img src="logo kalender.jpg" alt="" class="hp-financing-icon">
+                        <h2 class="hp-financing-title">Months</h2>
+                    </div>
+                    <p class="hp-financing-description">
+                    Buy now, pay later.† Special financing for 24 months on purchases of $1,500 or more with the HP Credit Account.*  </p>
+                    </div>
+
+                    <div class="hp-financing-card hp-financing-card-no-credit">
+                    <div class="hp-financing-header">
+                        <img src="logo kalender.jpg" alt="" class="hp-financing-icon">
+                        <h2 class="hp-financing-title">No Credit<br>Needed Solution</h2>
+                    </div>
+                    <p class="hp-financing-description">
+                    For customers who do not qualify for credit, HP Lease-to-Own financing looks beyond credit scores. Flexible payment options available.^
+                    </p>
+                    </div>
+
+                </div>
+            </div>
+               
+            
+           
+        
+             <div class="color"> 
+                <h1 class="jarak">Getting started is easy</h1>
+             </div>
+
+        <!-- Container semua langkah -->
+  <div class="financing-steps">
+    
+    <!-- Langkah 1: Prequalify -->
+    <div class="financing-box2">
+      <img src="buku.png" alt="Icon Prequalify" class="financing-icon2">
+          <h3 class="financing-title2">Prequalify Now <span class="arrow">→</span> </h3>
+      <p class="financing-description2">It's fast and secure.</p>
+    </div>
+
+    <!-- Langkah 2: Decision in Minutes -->
+    <div class="financing-box2">
+      <img src="jam.png" alt="Icon Decision" class="financing-icon2">
+      <h3 class="financing-title2">Get a Decision in Minutes</h3>
+      <p class="financing-description2">
+        If you prequalify for the HP Credit Account, you can accept your offer immediately.
+        If not, you will have the option to check your eligibility with other financing solutions.
+      </p>
+    </div>
+
+    <!-- Langkah 3: Checkout -->
+    <div class="financing-box2">
+      <img src="ikon keranjnag belanja.png" alt="Icon Checkout" class="financing-icon2">
+      <h3 class="financing-title2">Quick & Easy Checkout</h3>
+      <p class="financing-description2">
+        If you are approved, you can use HP Financing as your payment option instantly at checkout to complete your purchase.
+      </p>
+    </div>
+
+  </div>
+    
+               <div class="title3">Have an existing account?</div>
+    <div class="subtitle3">
+      Access convenient tools for managing your account such as online bill pay, paperless statements, and more through our partners’ customer portals.
+    </div>
+
+    <div class="cards3">
+      <div class="card3">
+        <div class="card-header3">HP Credit Account</div>
+        <div class="card-body3">
+          <img src="bread fnancial.png" alt="Bread Financial">
+        </div>
+        <div class="card-footer3">
+          <a href="#" class="btn-login3">Account login</a>
+        </div>
+      </div>
+
+      <div class="card3">
+        <div class="card-header3">HP Financing Account</div>
+        <div class="card-body3">
+          <img src="Concora_Credit_Logo.jpg" alt="Concora Credit" style="max-width: 140px;">
+        </div>
+        <div class="card-footer3">
+          <a href="#" class="btn-login3">Account login</a>
+        </div>
+      </div>
+
+      <div class="card3">
+        <div class="card-header3">HP Lease-to-Own</div>
+        <div class="card-body3">
+          <img src="koalafi.png" alt="Koalafi" >
+        </div>
+        <div class="card-footer3">
+          <a href="#" class="btn-login3">Account login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+                
+  
+  <div class="layout"> <!-- Kontainer utama yang membungkus dua kolom -->
+    <div class="left-side"> <!-- Kolom kiri untuk teks dan tombol -->
+      <h1>Weekly Deals</h1> <!-- Judul utama -->
+     <div  class="border"> </div>
+      <p>Don't miss out on limited-time deals on PCs, printers, and more. <br>
+      Free shipping included on every order.</p> <!-- Paragraf informasi promo -->
+      <button>Shop</button> <!-- Tombol aksi untuk belanja -->
+      
+    </div>
+    <div class="right-side"> <!-- Kolom kanan untuk gambar -->
+      <img src="financinglaptop.png" alt="HP Laptop Image"> <!-- Gambar produk -->
+    </div>
+  </div>
+           
+ 
+             
+           
+       <div class="spacing">     
+        <div class="jarak-faq">
+            <h2 class="underline">HP financing FAQs</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">What Is HP Financing?</button>
+                <div class="faq-answer">
+            <p>HP Financing offers a variety of payment solutions which you may be able to use to pay for your order over time, including:</p>        
+            <li>HP Credit Account, issued by Comenity Capital Bank, a Bread Financial™ company</li>
+            <li>HP Financing Account, issued by The Bank of Missouri and serviced by Concora® Credit Inc.</li>
+            <li>HP Lease-to-Own by Koalafi</li>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">How do I check my eligliibtiy?</button>
+                <div class="faq-answer">
+                 <p>You can click anywhere you see the “Prequalify now” link or button throughout HP.com to check your eligibility. You will be prompted to provide details about yourself to see if you prequalify for the HP Credit Account by Comenity Capital Bank, a Bread Financial Company. A soft inquiry will be used to check your eligibility which will not affect your credit score. If you aren't prequalified, you may choose to check your eligibility with our other financing solutions.</p>    
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">How do I apply for financing?</button>
+                <div class="faq-answer">
+                  
+                    <p>If you prequalify for the HP Credit Account by Comenity Capital Bank, a Bread Financial Company, you can continue with accepting the offer. If you aren't prequalified for the HP Credit Account, you can still apply for the account or you may be presented with checking your eligibility with our other financing solutions. Terms and conditions will be provided for the corresponding lender/lease provider</p>
+                 <p>If you are not eligible for offers through HP Financing, you can still place an order at checkout with an alternate payment method such as a credit or debit card</p>
+                </div>
+            </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">My account application was approved. How do i use financing at checkout?</button>
+                    <div class="faq-answer">
+                        <p>Once your new account application has been approved, you can use your financing immediately. In the payment section at checkout, select "HP Financing" as your payment option to look up your account. Follow the on-screen steps to complete your purchase.</p>
+                    </div>
+                    </div>
+        </div>
+               </div>         
+                
+                
+              
+                                
+    
+             
+            <div class="br-text">
+  <h2>Terms & Conditions</h2>
+
+  <hr />
+  <p><strong>HP Credit Account by Comenity Capital Bank, a Bread Financial Company:</strong></p>
+
+  <p>
+    *Deferred Interest, Payment Required Plan: Interest will be charged to your Account from the purchase date if the promotional plan balance is not paid in full within the promotional period. Minimum payments are required for each Credit Plan. <strong>Minimum payments are NOT guaranteed to pay the promotional plan balance within the promotional period. You may have to pay more than the minimum payment to avoid accrued interest charges.</strong> Valid for single transaction only. Gift cards do not qualify for promotional plans. Qualifying purchases will automatically be placed on a promotional plan. If purchase qualifies for more than one plan, it will be placed on the qualified plan with the longest promotional period. As of March 2025, terms for new Accounts: Purchase APR of 35.99%. Minimum interest charge is $3 in any billing period in which interest is due. A fee of $2.99 per month may apply for each paper billing statement mailed to you. You can avoid this fee by enrolling in paperless statements. Existing Account holders: see your credit card agreement for Account terms.
+  </p>
+
+  <p>
+    **A soft inquiry is used to check your eligibility which will not affect your credit score.
+  </p>
+
+  <p>
+    †Minimum payments required each billing period. Interest will apply according to your regular credit terms.
+  </p>
+
+  <p>
+    Credit account offers are subject to credit approval.
+  </p>
+
+  <p>
+    HP Credit Accounts are issued by Comenity Capital Bank, a Bread Financial™ Company.
+  </p>
+
+  <hr />
+  <p><strong>HP Financing Account, Issued by The Bank of Missouri and Serviced by Concor® Credit Inc.:</strong></p>
+
+  <p>
+    A soft credit check may be used to check your eligibility. Soft credit checks do not impact your credit score. Prequalified offers are not a guarantee of credit.
+  </p>
+
+  <p>
+    Applications are subject to issuer review and approval, which may include a hard credit check, ability-to-pay evaluation, and identity verification.
+  </p>
+
+  <p>
+    HP Financing Accounts are issued by The Bank of Missouri and serviced by Concor® Credit Inc.
+  </p>
+  </div>
+
+    
+    </section>
+    
+  <div class="top-footer">
+   
+    <div class="top-footer-item">
+      
+      <a href="#">FEEDBACK</a>
+    </div>
+
+    <div class="top-footer-item">
+     <a href="#">MORE USEFUL LINKS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="more_about.html">MORE ABOUT THESE PRODUCTS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="site_disclaimers.html">SITE DISCLAIMERS </a>
+    </div>
+  </div>
+ 
+<footer>
+  <div class="footer-container">
+    
+    <!-- Kolom 1: About Us -->
+    <div class="footer-column">
+      <h4 >ABOUT US</h4>
+    
+      <a href="#">Contact HP</a>
+      <a href="#">Careers</a>
+      <a href="#">Investor relations</a>
+      <a href="#">Sustainable impact</a>
+      <a href="#">Diversity, Equity and Inclusion</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Tech Takes</a>
+      <a href="#">HP Store Newsletter</a>
+      <a href="#">HP Printables Newsletter</a>
+    </div>
+
+    <!-- Kolom 2: Cara Membeli -->
+    <div class="footer-column">
+      <h4 >WAYS TO BUY</h4>
+      <a href="#">Shop online</a>
+      <a href="#">Call an HP rep</a>
+      <a href="#">Find a reseller</a>
+      <a href="#">Enterprise store</a>
+      <a href="#">Public sector purchasing</a>
+    </div>
+
+    <!-- Kolom 3: Dukungan -->
+    <div class="footer-column">
+      <h4 >SUPPORT</h4>
+      <a href="#">Download drivers</a>
+      <a href="#">Support & troubleshooting</a>
+      <a href="#">Community</a>
+      <a href="#">Register your product</a>
+      <a href="#">Authorized service providers</a>
+      <a href="#">Check repair status</a>
+      <a href="#">Fraud alert</a>
+      <a href="#">Security Center</a>
+    </div>
+
+    <!-- Kolom 4: Mitra HP -->
+    <div class="footer-column">
+      <h4 >HP PARTNERS</h4>
+      <a href="#">HP Amplify Partner Program</a>
+      <a href="#">HP Partner Portal</a>
+      <a href="#">Developers</a>
+    </div>
+
+
+ 
+  <div class="footer-bottom">
+    <!-- Kumpulan link legal -->
+    <div class="footer-links">
+      <a href="#">Recalls</a>
+      <a href="#">Product recycling</a>
+      <a href="#">Accessibility</a>
+      <a href="#">CA Supply Chains Act</a>
+      <a href="#">Privacy</a>
+      <a href="#">Use of cookies</a>
+      <a href="#">Your privacy choices</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Limited warranty statement</a>
+      <a href="#">Terms & conditions of sales & service</a>
+    </div>
+    
+    <p>©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.</p>
+  </div>
+</footer>
+    
+</body>
+</html>

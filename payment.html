@@ -1,0 +1,570 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   HP Payment Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-black">
+  <!-- Top red bar -->
+  <div class="bg-red-700 text-white text-xs font-semibold flex justify-between items-center px-4 py-1">
+   <div class="truncate max-w-[calc(100%-120px)]">
+    HP x Adobe! Nikmati bonus spesial - GRATIS Langganan Adobe Express selama 1 Tahun senilai Rp1.200.000
+   </div>
+   <button class="bg-black text-white text-xs font-semibold px-3 py-1 rounded-sm hover:bg-gray-900 transition">
+    Teliti Sekarang
+   </button>
+  </div>
+  <!-- Header -->
+  <header class="border-b border-gray-200">
+   <div class="max-w-[1200px] mx-auto flex items-center justify-between px-4 py-3">
+    <div class="flex items-center space-x-4">
+     <a class="block" href="#">
+      <img alt="HP logo in blue and white" class="h-7 w-auto" height="30" src="https://storage.googleapis.com/a1aa/image/7da47413-08ea-4601-ce7e-ae1891a5ffd1.jpg" width="100"/>
+     </a>
+     <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
+      <a class="hover:text-red-600" href="#">
+       Laptop
+      </a>
+      <a class="hover:text-red-600" href="#">
+       Desktop
+      </a>
+      <a class="hover:text-red-600" href="#">
+       Printer
+      </a>
+      <a class="hover:text-red-600" href="#">
+       Ink &amp; Toner
+      </a>
+      <a class="hover:text-red-600" href="#">
+       Monitor
+      </a>
+      <a class="hover:text-red-600" href="#">
+       Aksesoris
+      </a>
+      <a aria-current="page" class="text-red-600 font-semibold" href="#">
+       Pembayaran
+      </a>
+      <a class="hover:text-red-600" href="#">
+       Dukungan
+      </a>
+     </nav>
+    </div>
+    <div class="flex items-center space-x-4 text-gray-700 text-sm">
+     <a class="hover:text-red-600" href="#">
+      Login
+     </a>
+     <a class="hover:text-red-600" href="#">
+      Daftar
+     </a>
+     <button aria-label="Customer support" class="hover:text-red-600">
+      <i class="fas fa-headset">
+      </i>
+     </button>
+     <button aria-label="Wishlist" class="hover:text-red-600">
+      <i class="far fa-heart">
+      </i>
+     </button>
+     <button aria-label="Shopping cart" class="hover:text-red-600">
+      <i class="fas fa-shopping-cart">
+      </i>
+     </button>
+     <button aria-label="User account" class="hover:text-red-600">
+      <i class="far fa-user">
+      </i>
+     </button>
+    </div>
+   </div>
+  </header>
+  <!-- Breadcrumb -->
+  <nav class="max-w-[1200px] mx-auto px-4 py-2 text-xs text-gray-500 font-normal">
+   <ol class="list-reset flex space-x-1">
+    <li>
+     <a class="hover:underline" href="#">
+      Beranda
+     </a>
+    </li>
+    <li>
+     /
+    </li>
+    <li>
+     <a class="hover:underline" href="#">
+      Pembayaran
+     </a>
+    </li>
+    <li>
+     /
+    </li>
+    <li class="text-gray-900 font-semibold">
+     Pembayaran
+    </li>
+   </ol>
+  </nav>
+  <!-- Main content -->
+  <main class="max-w-[1200px] mx-auto px-4 py-6 flex flex-col md:flex-row gap-8">
+   <!-- Left sidebar -->
+   <aside class="md:w-1/4 text-xs text-gray-700 leading-relaxed space-y-3">
+    <h2 class="font-semibold text-sm mb-2">
+     Pembayaran
+    </h2>
+    <ul class="list-disc list-inside space-y-1">
+     <li>
+      <a class="text-blue-600 hover:underline" href="#">
+       Kartu Kredit/Debit
+      </a>
+     </li>
+     <li>
+      <a class="text-blue-600 hover:underline" href="#">
+       Kartu Kredit Cicilan Tanpa Bunga
+      </a>
+     </li>
+     <li>
+      <a class="text-blue-600 hover:underline" href="#">
+       Pembayaran Melalui Telepon Seluler
+      </a>
+     </li>
+     <li>
+      <a class="text-blue-600 hover:underline" href="#">
+       Pembayaran Melalui ATM/Internet Banking
+      </a>
+     </li>
+     <li>
+      <a class="text-blue-600 hover:underline" href="#">
+       Pembayaran Melalui Kantor Pos
+      </a>
+     </li>
+    </ul>
+    <a class="text-blue-600 hover:underline text-xs block mt-2" href="#">
+     Lihat semua metode pembayaran
+    </a>
+   </aside>
+   <!-- Right content -->
+   <section class="md:w-3/4 text-xs text-gray-700 leading-relaxed space-y-6">
+    <h2 class="font-semibold text-sm mb-2">
+     Pembayaran
+    </h2>
+    <!-- Kartu Kredit/Debit -->
+    <article>
+     <h3 class="font-semibold mb-1">
+      KARTU KREDIT/DEBIT
+     </h3>
+     <div class="flex items-center space-x-2 mb-2">
+      <img alt="Visa credit card logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/f9e16e40-ace7-4ee3-ab30-760f5845eadf.jpg" width="40"/>
+      <img alt="Mastercard credit card logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/b0ea7126-2fd8-4303-912f-f3cc948d0c44.jpg" width="40"/>
+     </div>
+     <p class="mb-2">
+      Saat melakukan transaksi, Masukkan Card 16 digit, Exp. XX/XX, dan tiga digit nomor keamanan (CVV) di belakang kartu
+          Anda untuk menyelesaikan proses pembayaran secara online.
+     </p>
+     <h4 class="font-semibold mb-1">
+      SEBAGIAN ANGSURAN TANPA BUNGA
+     </h4>
+     <p class="mb-2">
+      Dengan memasukkan kartu kredit tertentu, Anda dapat berbelanja lebih dengan cicilan bebas bunga.
+     </p>
+     <ul class="list-disc list-inside mb-2 space-y-1">
+      <li>
+       Nama Bank: BCA, BRI, BNI, dan Mandiri
+      </li>
+      <li>
+       Nomor kartu kredit yang digunakan
+      </li>
+      <li>
+       Nomor rekening pribadi di bank terkait
+      </li>
+      <li>
+       Cicilan mulai dari 3, 6, 12 bulan
+      </li>
+     </ul>
+     <p class="mb-2">
+      Untuk informasi lebih lanjut mengenai cicilan tanpa bunga, silakan kunjungi
+      <a class="text-blue-600 hover:underline" href="https://www.bca.co.id" target="_blank">
+       https://www.bca.co.id
+      </a>
+      .
+     </p>
+     <p class="mb-2">
+      Pastikan Anda memiliki kartu kredit yang valid dan aktif untuk melakukan transaksi ini.
+     </p>
+     <h4 class="font-semibold mb-1">
+      KARTU KREDIT CICILAN TANPA BUNGA 0%
+     </h4>
+     <div class="flex items-center space-x-4 mb-2">
+      <img alt="Mandiri bank logo for credit card installment" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/e879cc29-a215-46a2-7ba9-7ae20b037f54.jpg" width="80"/>
+      <img alt="BCA bank logo for credit card installment" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/011e5450-c325-47c0-43dd-a8369347f79c.jpg" width="80"/>
+     </div>
+     <p class="mb-2">
+      Syarat yang berlaku mengikuti BCA, MNC.
+     </p>
+     <table class="w-full text-xs border border-gray-300 mb-2">
+      <thead>
+       <tr class="bg-gray-100 text-gray-700 font-semibold">
+        <th class="border border-gray-300 px-2 py-1 text-left">
+         Periode
+        </th>
+        <th class="border border-gray-300 px-2 py-1 text-left">
+         Min
+        </th>
+        <th class="border border-gray-300 px-2 py-1 text-left">
+         Max
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td class="border border-gray-300 px-2 py-1">
+         3 bulan
+        </td>
+        <td class="border border-gray-300 px-2 py-1">
+         Rp 500.000
+        </td>
+        <td class="border border-gray-300 px-2 py-1">
+         Rp 2.000.000
+        </td>
+       </tr>
+       <tr>
+        <td class="border border-gray-300 px-2 py-1">
+         6 bulan
+        </td>
+        <td class="border border-gray-300 px-2 py-1">
+         Rp 2.000.000
+        </td>
+        <td class="border border-gray-300 px-2 py-1">
+         Rp 7.000.000
+        </td>
+       </tr>
+       <tr>
+        <td class="border border-gray-300 px-2 py-1">
+         12 bulan
+        </td>
+        <td class="border border-gray-300 px-2 py-1">
+         Rp 7.000.000
+        </td>
+        <td class="border border-gray-300 px-2 py-1">
+         Rp 20.000.000
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p class="mb-2 italic">
+      *Syarat dan ketentuan dapat berubah sewaktu-waktu tanpa pemberitahuan terlebih dahulu.
+     </p>
+     <h4 class="font-semibold mb-1">
+      DOMPET DIGITAL/ E-WALLET
+     </h4>
+     <div class="flex items-center space-x-4 mb-2">
+      <img alt="Gopay digital wallet logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/d69ac50a-2bd3-4fe0-c4b7-272d16737001.jpg" width="60"/>
+      <img alt="OVO digital wallet logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/38974650-b391-4b34-b2b4-039b89601726.jpg" width="60"/>
+     </div>
+     <p class="mb-2">
+      Metode pembayaran melalui dompet digital dengan:
+     </p>
+     <ol class="list-decimal list-inside mb-2 space-y-1">
+      <li>
+       Memiliki akun dompet digital yang valid dan aktif
+      </li>
+      <li>
+       Melakukan top-up saldo sebelum melakukan pembayaran
+      </li>
+      <li>
+       Memilih metode pembayaran dompet digital saat checkout
+      </li>
+     </ol>
+     <h4 class="font-semibold mb-1">
+      CICILAN KREDIT KONSUMEN
+     </h4>
+     <div class="mb-2">
+      <img alt="Kredivo credit consumer logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/60fed5df-d0b8-4344-7e6d-d5e0f4ba1347.jpg" width="100"/>
+     </div>
+     <p class="mb-2">
+      Cicilan menggunakan kartu kredit konsumen, mencicil tanpa kartu kredit dengan "Bayar cicilan" dan bayar minimum cicilan sesuai dengan ketentuan yang berlaku di Kredivo. Syarat dan ketentuan berlaku.
+     </p>
+     <button class="flex items-center space-x-2 text-xs text-blue-600 hover:underline" type="button">
+      <i class="fas fa-info-circle">
+      </i>
+      <span>
+       Pelajari Lebih Lanjut
+      </span>
+     </button>
+     <h4 class="font-semibold mb-1">
+      PEMBAYARAN MELALUI TELEPON SELULER
+     </h4>
+     <p class="mb-2">
+      Metode pembayaran melalui telepon seluler dengan metode berikut:
+     </p>
+     <ol class="list-decimal list-inside mb-2 space-y-1">
+      <li>
+       Hubungi layanan customer service HP di nomor 1500 123
+      </li>
+      <li>
+       Verifikasi data dan lakukan pembayaran
+      </li>
+      <li>
+       Transaksi selesai dan dapatkan bukti pembayaran
+      </li>
+     </ol>
+     <h4 class="font-semibold mb-1">
+      PEMBAYARAN MELALUI ATM/INTERNET BANKING
+     </h4>
+     <p class="mb-2">
+      Pembayaran dapat dilakukan melalui ATM dan internet banking dengan mengikuti instruksi yang diberikan oleh bank terkait.
+     </p>
+    </article>
+   </section>
+  </main>
+  <!-- Payment logos -->
+  <section class="max-w-[1200px] mx-auto px-4 py-4 border-t border-gray-200 flex flex-wrap items-center justify-center gap-4">
+   <img alt="Visa credit card logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/f9e16e40-ace7-4ee3-ab30-760f5845eadf.jpg" width="40"/>
+   <img alt="Mastercard credit card logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/b0ea7126-2fd8-4303-912f-f3cc948d0c44.jpg" width="40"/>
+   <img alt="JCB credit card logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/a805164f-b544-429e-6fc5-9ab262399384.jpg" width="40"/>
+   <img alt="American Express credit card logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/deaf8a63-2e6f-496d-0805-302e18c51a47.jpg" width="40"/>
+   <img alt="OVO digital wallet logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/38974650-b391-4b34-b2b4-039b89601726.jpg" width="40"/>
+   <img alt="Dana digital wallet logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/82219ede-d797-4d50-b220-eec833296e54.jpg" width="40"/>
+   <img alt="Kredivo credit consumer logo" class="h-[25px] w-auto" height="25" src="https://storage.googleapis.com/a1aa/image/60fed5df-d0b8-4344-7e6d-d5e0f4ba1347.jpg" width="40"/>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 text-xs leading-relaxed">
+   <div class="max-w-[1200px] mx-auto px-4 py-6 flex flex-col md:flex-row md:justify-between md:space-x-6 space-y-6 md:space-y-0">
+    <!-- Left column -->
+    <div class="flex flex-col space-y-4 md:w-1/3">
+     <div class="flex items-center space-x-2">
+      <img alt="Indonesian flag icon" class="h-3 w-auto" height="12" src="https://storage.googleapis.com/a1aa/image/d4fa6742-2c18-4a6a-8eda-40e066733fb6.jpg" width="20"/>
+      <span>
+       Indonesia
+      </span>
+     </div>
+     <div class="flex items-center space-x-2">
+      <img alt="Various payment method logos" class="h-5 w-auto" height="20" src="https://storage.googleapis.com/a1aa/image/2047f530-335d-4bfc-57e6-6a37ff7f2dd6.jpg" width="100"/>
+     </div>
+     <p class="text-gray-500 text-[10px] mt-2">
+      Site Disclaimer
+     </p>
+    </div>
+    <!-- Middle columns -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:w-2/3 text-gray-400">
+     <div>
+      <h4 class="text-gray-300 font-semibold mb-2"> <a href="contact.us.html"></a>
+       Hubungi Kami
+      </h4>
+      <ul class="space-y-1">
+       <li>
+        <a class="hover:text-white" href="customer service.html">
+         Pusat Bantuan &amp; Pertanyaan
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         HP Store
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         HP Official Store (Tokopedia)
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Pusat Layanan Pelanggan
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         HP Care
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         HP Store
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-gray-300 font-semibold mb-2">
+       Berbelanja Produk
+      </h4>
+      <ul class="space-y-1">
+       <li>
+        <a class="hover:text-white" href="#">
+         Laptop
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Desktop
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Ink &amp; Toner
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="accesoris.html">
+         Aksesoris
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Monitor
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Support
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-gray-300 font-semibold mb-2">
+       Pelayanan Pelanggan
+      </h4>
+      <ul class="space-y-1">
+       <li>
+        <a class="hover:text-white" href="#">
+         Tentang Kami
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Dukungan Teknis
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Sertifikasi &amp; Audit
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Standar Global Informasi
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Berita
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="contact.us.html">
+         Hubungi Kami
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Pusat Pengembalian
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Pengiriman
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h4 class="text-gray-300 font-semibold mb-2">
+       My HP
+      </h4>
+      <ul class="space-y-1">
+       <li>
+        <a class="hover:text-white" href="#">
+         Akun Saya
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Lacak Pesanan Anda
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Status Garansi
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Info Industri
+        </a>
+       </li>
+      </ul>
+      <h4 class="text-gray-300 font-semibold mt-4 mb-2">
+       HP STORIES
+      </h4>
+      <ul class="space-y-1">
+       <li>
+        <a class="hover:text-white" href="#">
+         HP Official Store
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         HP Employee Store
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Komunitas HP Indonesia
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         HP Advantage untuk Pelajar
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         HP untuk Pendidikan
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         Sustainability
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-white" href="#">
+         HP Special Edition Program
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <!-- Bottom social and copyright -->
+   <div class="max-w-[1200px] mx-auto px-4 py-4 border-t border-gray-800 flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
+    <div class="text-gray-500 text-[10px]">
+     Privacy Policy | Terms &amp; Conditions | Sitemap
+    </div>
+    <div class="flex space-x-4 text-gray-400 text-sm">
+     <a aria-label="Facebook" class="hover:text-white" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a aria-label="Twitter" class="hover:text-white" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a aria-label="Instagram" class="hover:text-white" href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a aria-label="YouTube" class="hover:text-white" href="#">
+      <i class="fab fa-youtube">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>

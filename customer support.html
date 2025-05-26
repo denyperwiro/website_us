@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>HP Anywhere Cards</title>
+  <style>
+    body {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+      
+      margin: 0;
+      background-color: #fff;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 550px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+      flex: 1;
+      
+      justify-items: center;
+    }
+
+    
+
+    .card h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+    }
+
+    .br{
+      margin-top: -12px;
+    }
+
+   
+    .card p {
+      color: #333;
+      line-height: 1.6;
+      font-size: 18px ;
+      margin-bottom: 10px;
+    }
+
+   .buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+     .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn-pink {
+      background-color: #d0006f;
+      color: white;
+    }
+
+    .btn-cyan {
+      background-color: #00838f;
+      color: white;
+     margin-top: 63px;
+     
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .header-title{
+      text-align: center;
+      font-weight: 490;
+      margin-top: 50px;
+      font-size: 50px;
+    }
+
+      /* Top navbar */
+    .navbar {
+      background-color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      color: white;
+      height: 90px;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-left: 50px;
+    }
+
+    .navbar-left img {
+      height: 50px;
+      width: 50px;
+    }
+
+    .search-bar {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .search-bar input {
+      width: 80%;
+      height: 30px;
+      padding: 8px 12px 8px 32px; /* extra left padding for icon */
+      border: 2px solid white;
+      background-color: #1a1a1a;
+      color: white;
+    }
+
+    .search-bar input::placeholder {
+      color: white;
+      padding-left: 25px;
+      font-size: 16px;
+    }
+
+    .icon-search{
+        height: 30px;
+        width: 30px;
+    }
+
+    .icon-login{
+        height: 40px;
+        width: 40px;
+    }
+
+    .search-bar .icon {
+      position: absolute;
+      left: calc(8% + 28px); /* aligns with input field */
+      top: 50%;
+      transform: translateY(-50%);
+      color: #ccc;
+      pointer-events: none;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-right: 50px;
+    }
+
+    .navbar-right i {
+      margin-right: 5x;
+    }
+
+    /* Bottom menu bar */
+    .menu-bar {
+      background-color: #f7f7f7;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 300px; /* Increased gap between menu items */
+    }
+
+    .menu-bar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .menu-bar a::after {
+      content: "▼";
+      font-size: 10px;
+      position: absolute;
+      right: -12px;
+      top: 0;
+    }
+
+    .menu-bar a:not(:nth-child(1))::after {
+      display: inline;
+    }
+
+    .menu-bar a:nth-child(1)::after {
+      content: "";
+    }
+
+    .title-anyware{
+        font-size: 30px;
+    }
+
+
+  
+   /* Container utama footer */
+    footer {
+      background-color: #000; /* Latar footer tetap hitam */
+      padding: 40px; /* Ruang di dalam footer */
+      border-top: 1px solid #444; /* Garis pemisah di atas footer */
+      margin-top: 50px;
+      
+    }
+
+    /* Atur tata letak kolom footer */
+    .footer-container {
+      display: flex; /* Gunakan flexbox untuk baris kolom */
+      flex-wrap: wrap; /* Kolom bisa turun ke bawah jika layar kecil */
+      justify-content: space-between; /* Jarak antar kolom */
+      max-width: 1200px;
+      margin: auto; /* Pusatkan footer di halaman */
+    }
+
+    /* Gaya untuk masing-masing kolom */
+    .footer-column {
+      flex: 1 1 180px; /* Responsif: 1 bagian, minimal 180px */
+      margin: 10px;
+    }
+
+    /* Judul kolom (About Us, Support, dll) */
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Link di dalam footer */
+    .footer-column a {
+      display: block;
+      color: #ccc; /* Abu-abu muda */
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 14px;
+      
+    }
+
+
+    /* Bagian bawah footer (copyright + links hukum) */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+
+    /* Baris link legal (privacy, terms, dll) */
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    /* Link individual pada bagian bawah */
+    .footer-links a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Top navbar -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="./icons8-hp-50.png"  alt="HP Logo" />
+      <strong class="title-anyware">Customer Support</strong>
+    </div>
+
+    <div class="search-bar">
+      <span class="icon"><img src="./icons8-search-50 (1).png" class="icon-search" alt=""></span>
+      <input type="text" placeholder= "Search the site..." />
+    </div>
+
+    <div class="navbar-right">
+      <i><img src="./icons8-user-50 (1).png" class="icon-login" alt=""></i>
+      <strong class="title-anyware">Log in</strong>
+    </div>
+  </div>
+
+  <!-- Bottom menu bar -->
+  <div class="menu-bar">
+    <a href="#">home</a>
+    <a href="#">Printers Support</a>
+    <a href="#">Business Support</a>
+    <a href="#">Partners Support</a>
+  </div>
+
+  <h1 class="header-title">Welcome To HP Customer Support</h1>
+
+<div class="container">
+  <!-- Card 1 -->
+  <div class="card">
+    <img src="anyware.png" alt="Digital Workspace">
+    <div class="card-content">
+      <h2>find Freedom In Our Site</h2> <center><h2 class="br">Powered by HP Customer Support</h2></center>
+      <p>We fully support your freedom in the world of technology, with all the support we can provide we will present to our loyal customers.</p>
+      <p>Go here to learn more about the HP Anyware solution and use cases.</p>
+      <div class="buttons">
+        <button class="btn btn-pink">find here</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <img src="anyware1.png" alt="Technical Support">
+    <div class="card-content">
+      <h2>Find Technician Support</h2>
+      <p>find our technician support anywhere and anytime for you and get back to you.</p>
+      <p>Go here for documentation, release notes, downloads, and customer support.</p>
+      <div class="buttons">
+        <button class="btn btn-cyan">Support </button>
+        <button class="btn btn-cyan">Documents and Downloads</button>
+        <button class="btn btn-cyan">Open a support case</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+
+  <div class="footer-container">
+    
+    <!-- Kolom 1: About Us -->
+    <div class="footer-column">
+      <h4 >ABOUT US</h4>
+    
+      <a href="#">Contact HP</a>
+      <a href="#">Careers</a>
+      <a href="#">Investor relations</a>
+      <a href="#">Sustainable impact</a>
+      <a href="#">Diversity, Equity and Inclusion</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Tech Takes</a>
+      <a href="#">HP Store Newsletter</a>
+      <a href="#">HP Printables Newsletter</a>
+    </div>
+
+    <!-- Kolom 2: Cara Membeli -->
+    <div class="footer-column">
+      <h4 >WAYS TO BUY</h4>
+      <a href="#">Shop online</a>
+      <a href="#">Call an HP rep</a>
+      <a href="#">Find a reseller</a>
+      <a href="#">Enterprise store</a>
+      <a href="#">Public sector purchasing</a>
+    </div>
+
+    <!-- Kolom 3: Dukungan -->
+    <div class="footer-column">
+      <h4 >SUPPORT</h4>
+      <a href="#">Download drivers</a>
+      <a href="#">Support & troubleshooting</a>
+      <a href="#">Community</a>
+      <a href="#">Register your product</a>
+      <a href="#">Authorized service providers</a>
+      <a href="#">Check repair status</a>
+      <a href="#">Fraud alert</a>
+      <a href="#">Security Center</a>
+    </div>
+
+    <!-- Kolom 4: Mitra HP -->
+    <div class="footer-column">
+      <h4 >HP PARTNERS</h4>
+      <a href="#">HP Amplify Partner Program</a>
+      <a href="#">HP Partner Portal</a>
+      <a href="#">Developers</a>
+    </div>
+
+
+ 
+  <div class="footer-bottom">
+    <!-- Kumpulan link legal -->
+    <div class="footer-links">
+      <a href="#">Recalls</a>
+      <a href="#">Product recycling</a>
+      <a href="#">Accessibility</a>
+      <a href="#">CA Supply Chains Act</a>
+      <a href="#">Privacy</a>
+      <a href="#">Use of cookies</a>
+      <a href="#">Your privacy choices</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Limited warranty statement</a>
+      <a href="#">Terms & conditions of sales & service</a>
+    </div>
+    
+    <p>©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.</p>
+  </div>
+
+</body>
+</html>

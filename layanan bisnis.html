@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Berita HP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      flex: 1 1 calc(50% - 10px); /* 2 kolom */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card .content {
+      padding: 15px;
+    }
+
+    .card .content h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .card .content p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .card .content a {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      text-decoration: none;
+      color: #0076ce;
+    }
+
+    .full-card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .full-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .full-card .text-overlay {
+      position: relative;
+      margin-top: -60px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px;
+    }
+
+    .full-card .text-overlay h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .full-card .text-overlay p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .full-card .text-overlay a {
+      color: #ffffff;
+      text-decoration: underline;
+      font-size: 13px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Kartu Berita Atas (2 kolom) -->
+    <div class="grid">
+      <div class="card">
+        <img src="cara-negosiasi-dengan-karyawan.webp" alt="Gambar Berita 1"> <!-- Ganti dengan gambar -->
+        <div class="content">
+          <h3>Bantu karyawan meraih kembali kemampuan terbaiknya</h3>
+          <p>Pelajari cara HP dapat membantu meningkatkan pengalaman karyawan dan kinerja perusahaan Anda.</p>
+          <a href="#">Unduh Laporan Risetnya</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="negoisasi.jpeg" alt="Gambar Berita 2"> <!-- Ganti dengan gambar -->
+        <div class="content">
+          <h3>Memenuhi tujuan TI yang sama di dunia kerja yang sepenuhnya baru</h3>
+          <p>Pelajari cara memaksimalkan layanan TI yang tepat untuk memberdayakan tenaga kerja organisasi Anda.</p>
+          <a href="#">Unduh Laporan Risetnya</a>
+        </div>
+      </div>
+    </div>
+    <!-- Kartu Lebar Bawah -->
+    <div class="full-card">
+      <img src="" alt="Gambar Video"> <!-- Ganti dengan gambar -->
+      <div class="text-overlay">
+        <h3>Para pemimpin IT HP berbicara tentang pekerjaan hybrid</h3>
+        <p>HP membahas bagaimana menjaga produktivitas, keterlibatan, dan keamanan di dunia kerja hybrid masa kini.</p>
+        <a href="comunitty 2.html">komunitas</a>
+        <a href="hubungi kami.html">hubungi kami</a>
+        <a href="privasy policy.html">privasy</a>
+        <a href="sign in.html">sign in</a>
+        <a href="topik.html">topik</a>
+        <a href="profil-bye-deny.html"></a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

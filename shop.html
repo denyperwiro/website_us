@@ -1,0 +1,414 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   HP Cart Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900">
+  <!-- Header with logo and steps -->
+  <header class="flex items-center justify-between px-6 py-4 border-b border-gray-200 max-w-[1200px] mx-auto">
+   <div class="flex items-center space-x-6">
+    <img alt="HP logo in blue circle" class="w-10 h-10" height="40" src="https://storage.googleapis.com/a1aa/image/d51eea15-2a51-469d-237d-dbb0020be46e.jpg" width="40"/>
+    <nav class="flex space-x-12 text-xs font-semibold text-gray-700 uppercase tracking-wide">
+     <div class="flex items-center space-x-2">
+      <div class="w-4 h-4 rounded-full border-2 border-blue-600 bg-white flex items-center justify-center">
+       <div class="w-2.5 h-2.5 rounded-full bg-blue-600">
+       </div>
+      </div>
+      <span class="whitespace-nowrap">
+       KERANJANG
+      </span>
+     </div>
+     <div class="flex items-center space-x-2">
+      <div class="w-4 h-4 rounded-full border-2 border-blue-600 bg-white flex items-center justify-center">
+       <div class="w-2.5 h-2.5 rounded-full bg-blue-600">
+       </div>
+      </div>
+      <span class="whitespace-nowrap">
+       PERIKSA
+      </span>
+     </div>
+     <div class="flex items-center space-x-2">
+      <div class="w-4 h-4 rounded-full border-2 border-blue-600 bg-blue-600">
+      </div>
+      <span class="whitespace-nowrap">
+       KONFIRMASI
+      </span>
+     </div>
+    </nav>
+   </div>
+   <button class="text-xs font-semibold uppercase bg-gray-300 text-gray-400 px-6 py-2 rounded cursor-not-allowed" disabled="">
+    LANJUTKAN KE CHECKOUT
+   </button>
+  </header>
+  <main class="max-w-[1200px] mx-auto flex flex-col lg:flex-row px-6 py-8 gap-8">
+   <!-- Left content -->
+   <section class="flex-1 max-w-[720px]">
+    <a class="text-xs font-bold text-blue-700 uppercase mb-4 inline-block" href="#">
+     KEMBALI BERBELANJA
+    </a>
+    <h2 class="text-sm font-bold mb-2">
+     KERANJANG ANDA KOSONG
+    </h2>
+    <p class="text-xs mb-4 font-normal leading-relaxed">
+     Mohon maaf keranjang Anda kosong
+    </p>
+    <p class="text-xs mb-6 font-normal leading-relaxed">
+     Klik salah satu kategori di bawah ini untuk memilih produk. Atau
+     <a class="text-blue-600 underline" href="#">
+      klik
+     </a>
+     kembali ke
+        halaman utama.
+    </p>
+    <h3 class="text-xs font-bold mb-4 uppercase">
+     LIHAT KATEGORI
+    </h3>
+    <div class="grid grid-cols-3 gap-4">
+     <!-- Laptop -->
+     <div class="bg-gray-100 p-3 flex flex-col items-center text-center">
+      <p class="text-xs mb-2 font-semibold text-gray-700">
+       Laptop
+      </p>
+      <img alt="Laptop computer with black and gold design on white background" class="mb-2" height="80" src="https://storage.googleapis.com/a1aa/image/d30343da-d3b6-4f9c-f5dd-0cb5a4259fa9.jpg" width="120"/>
+      <p class="text-xs font-semibold text-gray-700">
+       Dari: Rp 4.949.000
+      </p>
+     </div>
+     <!-- Desktop -->
+     <div class="bg-gray-100 p-3 flex flex-col items-center text-center">
+      <p class="text-xs mb-2 font-semibold text-gray-700">
+       Desktop
+      </p>
+      <img alt="White desktop computer with colorful screen on white background" class="mb-2" height="80" src="https://storage.googleapis.com/a1aa/image/19587b47-41f9-4dbb-80da-3ef07fb9bc2e.jpg" width="120"/>
+      <p class="text-xs font-semibold text-gray-700">
+       Dari: Rp 7.999.000
+      </p>
+     </div>
+     <!-- Monitor -->
+     <div class="bg-gray-100 p-3 flex flex-col items-center text-center">
+      <p class="text-xs mb-2 font-semibold text-gray-700">
+       Monitor
+      </p>
+      <img alt="White monitor showing aerial beach view on white background" class="mb-2" src="https://placehold.co/120x80/png?text=Monitor+Image"/>
+      <p class="text-xs font-semibold text-gray-700">
+       Dari: Rp 0
+      </p>
+     </div>
+     <!-- Printer -->
+     <div class="bg-gray-100 p-3 flex flex-col items-center text-center">
+      <p class="text-xs mb-2 font-semibold text-gray-700">
+       Printer
+      </p>
+      <img alt="White printer on white background" class="mb-2" height="80" src="https://storage.googleapis.com/a1aa/image/f05cb0b8-b4a8-450c-824a-5b495e92c71b.jpg" width="120"/>
+      <p class="text-xs font-semibold text-gray-700">
+       Dari: Rp 0
+      </p>
+     </div>
+     <!-- Aksesoris -->
+     <div class="bg-gray-100 p-3 flex flex-col items-center text-center">
+      <p class="text-xs mb-2 font-semibold text-gray-700">
+       Aksesoris
+      </p>
+      <img alt="Black keyboard, mouse, and headphones on white background" class="mb-2" height="80" src="https://storage.googleapis.com/a1aa/image/8e294650-6cd7-442e-f07f-beb04e5671c3.jpg" width="120"/>
+      <p class="text-xs font-semibold text-gray-700">
+       Dari: Rp 411.000
+      </p>
+     </div>
+     <!-- Promo menu -->
+     <div class="bg-gray-900 p-3 text-white text-xs flex flex-col justify-center">
+      <ul class="space-y-1">
+       <li class="flex justify-between items-center cursor-pointer">
+        <span>
+         Penawaran &amp; Promo
+        </span>
+        <i class="fas fa-chevron-right text-xs">
+        </i>
+       </li>
+       <li class="flex justify-between items-center cursor-pointer">
+        <span>
+         Multipack Ink HP
+        </span>
+        <i class="fas fa-chevron-right text-xs">
+        </i>
+       </li>
+       <li class="flex justify-between items-center cursor-pointer">
+        <span>
+         Laptop Gaming HP
+        </span>
+        <i class="fas fa-chevron-right text-xs">
+        </i>
+       </li>
+       <li class="flex justify-between items-center cursor-pointer">
+        <span>
+         HP Untuk Pendidikan
+        </span>
+        <i class="fas fa-chevron-right text-xs">
+        </i>
+       </li>
+       <li class="flex justify-between items-center cursor-pointer">
+        <span>
+         HP Untuk Bisnis
+        </span>
+        <i class="fas fa-chevron-right text-xs">
+        </i>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </section>
+   <!-- Right sidebar -->
+   <aside class="w-full lg:w-[320px] bg-gray-100 p-6 text-xs text-gray-700 flex flex-col gap-4">
+    <div>
+     <p class="font-bold uppercase mb-1">
+      BUTUH BANTUAN?
+     </p>
+     <p class="mb-1">
+      Hubungi
+      <span class="font-semibold">
+       007803331 5068
+      </span>
+     </p>
+     <p class="mb-4">
+      Senin - Jumat 09.00 - 18.00
+     </p>
+    </div>
+    <div class="mb-4">
+     <p class="font-semibold mb-1">
+      Informasi Pengiriman
+     </p>
+     <p class="mb-1 cursor-pointer hover:underline">
+      Instruksi dan metode Pembayaran
+     </p>
+     <p class="mb-1 cursor-pointer hover:underline">
+      Lacak pesanan saya
+     </p>
+     <p class="mb-1 cursor-pointer hover:underline">
+      Pembatalan pesanan saya
+     </p>
+     <p class="mb-1 cursor-pointer hover:underline">
+      Peraturan pengembalian
+     </p>
+    </div>
+    <div>
+     <p class="font-bold uppercase mb-2">
+      METODE PEMBAYARAN YANG DITERIMA
+     </p>
+     <div class="grid grid-cols-4 gap-2 mb-2">
+      <img alt="Mastercard logo" class="object-contain" height="24" src="https://storage.googleapis.com/a1aa/image/015955b1-1c48-4230-8392-75ec660b0bf6.jpg" width="48"/>
+      <img alt="Visa logo" class="object-contain" height="24" src="https://storage.googleapis.com/a1aa/image/8a35be0d-97e5-4a05-da86-28f14407e7fd.jpg" width="48"/>
+      <img alt="American Express logo" class="object-contain" height="24" src="https://storage.googleapis.com/a1aa/image/4e9e11af-6450-4344-b90a-88494ce20964.jpg" width="48"/>
+      <img alt="JCB logo" class="object-contain" height="24" src="https://storage.googleapis.com/a1aa/image/99e7ff7e-94a6-406f-57a8-de91d1ec4939.jpg" width="48"/>
+     </div>
+     <div class="grid grid-cols-4 gap-2 mb-2">
+      <img alt="Bank Transfer logo" class="object-contain" height="24" src="https://storage.googleapis.com/a1aa/image/8fc3cda4-36f3-44a5-9d2c-8bc206437e98.jpg" width="48"/>
+      <img alt="Interest Free logo" class="object-contain" height="24" src="https://storage.googleapis.com/a1aa/image/be41fd07-aa24-4e1d-2165-cda39e112282.jpg" width="48"/>
+      <img alt="OVO logo" class="object-contain" height="24" src="https://storage.googleapis.com/a1aa/image/40855fad-16e6-4cc9-5af3-18c43e75aa19.jpg" width="48"/>
+      <img alt="DANA logo" class="object-contain" height="24" src="https://storage.googleapis.com/a1aa/image/3dfc2205-9a26-490a-bebd-4ea779d986db.jpg" width="48"/>
+     </div>
+     <div class="grid grid-cols-4 gap-2">
+      <img alt="Kredivo logo" class="object-contain" height="24" src="https://storage.googleapis.com/a1aa/image/bbe29eda-a764-4f9e-b27f-b7d9897b3c0b.jpg" width="48"/>
+     </div>
+    </div>
+   </aside>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 text-xs leading-relaxed">
+   <div class="max-w-[1200px] mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-5 gap-8">
+    <div class="space-y-2">
+     <h4 class="font-bold text-white"> <a href="contact.us.html"></a>
+      Hubungi Kami
+     </h4>
+     <p>
+      Pelayanan Personal
+     </p>
+     <p>
+      021-508-51986
+     </p>
+     <p>
+      +62 215 086 4288 (WhatsApp ONLY)
+     </p>
+     <p class="pt-2">
+      Pelayanan Bisnis
+     </p>
+     <p>
+      007 803 331 5104
+     </p>
+     <p>
+      +62 215 086 4288 (Whatsapp ONLY)
+     </p>
+     <p class="pt-2">
+      Senin - Jumat, 9 pagi - 5:30 sore
+     </p>
+     <p>
+      (kecuali Hari Libur Nasional)
+     </p>
+    </div>
+    <div class="space-y-1">
+     <h4 class="font-bold text-white"> <a href="shop.html"></a>
+      Berbelanja Produk
+     </h4>
+     <p class="cursor-pointer hover:underline">
+      Laptop
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Desktop
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Printer
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Tinta &amp; Toner
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Monitor
+     </p>
+     <p class="cursor-pointer hover:underline"> <a href="accesoris.html">Aksesoris</a>
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Care Pack
+     </p>
+     <p class="cursor-pointer hover:underline"> <a href="buying guide.html">buying guide</a>
+     </p>
+     <p class="cursor-pointer hover:underline"> 
+      Penawaran Terbaru
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Latest Products
+     </p>
+    </div>
+    <div class="space-y-1">
+     <h4 class="font-bold text-white">
+      Pelayanan Pelanggan
+     </h4>
+     <p class="cursor-pointer hover:underline">
+      Tentang Kami
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Dukungan Teknis
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Software &amp; Driver
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Syarat dan Ketentuan
+     </p>
+     <p class="cursor-pointer hover:underline">
+      FAQs
+     </p>
+     <p class="cursor-pointer hover:underline"> <a href="contact.us.html"></a>
+      Hubungi Kami
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Komplain dan Saran
+     </p>
+     <p class="cursor-pointer hover:underline"> <a href="how to order.html"></a>
+      Bagaimana Cara Memesan
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Syarat Pengembalian
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Pengiriman
+     </p>
+    </div>
+    <div class="space-y-1">
+     <h4 class="font-bold text-white">
+      My HP
+     </h4>
+     <p class="cursor-pointer hover:underline"> <a href="sign.html"></a>
+      Akun Saya
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Lacak Pesanan Anda
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Store Locator
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Info Teknologi
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Dampak berkelanjutan
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Buletin Toko HP
+     </p>
+    </div>
+    <div class="space-y-1">
+     <h4 class="font-bold text-white">
+      HP STORES
+     </h4>
+     <p class="cursor-pointer hover:underline">
+      HP Online Store
+     </p>
+     <p class="cursor-pointer hover:underline">
+      HP Employee Store
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Penawaran Perusahaan Karyawan
+     </p>
+     <p class="cursor-pointer hover:underline">
+      HP Advantage untuk Bisnis
+     </p>
+     <p class="cursor-pointer hover:underline">
+      HP untuk Pendidikan
+     </p>
+     <p class="cursor-pointer hover:underline">
+      Sewa HP Bisnis
+     </p>
+     <p class="cursor-pointer hover:underline">
+      HP Subscription Program
+     </p>
+    </div>
+   </div>
+   <div class="max-w-[1200px] mx-auto px-6 border-t border-gray-700 pt-4 pb-6 flex flex-col md:flex-row justify-between text-gray-400">
+    <div class="flex flex-wrap gap-2 text-xs">
+     <a class="hover:underline" href="#">
+      Peta situs
+     </a>
+     <span>
+      |
+     </span>
+     <a class="hover:underline" href="#">
+      Privasi
+     </a>
+     <span>
+      |
+     </span>
+     <a class="hover:underline" href="#">
+      Syarat Penggunaan
+     </a>
+    </div>
+    <p class="text-xs mt-2 md:mt-0">
+     © Copyright 2025 HP Development Company, L.P.
+    </p>
+   </div>
+   <div class="max-w-[1200px] mx-auto px-6 flex items-center justify-between text-gray-400 text-xs pb-6">
+    <div class="flex items-center gap-2">
+     <img alt="Icon representing HP employee" class="w-4 h-4" height="16" src="https://storage.googleapis.com/a1aa/image/93e66049-7a3e-442e-c191-b9aac153f534.jpg" width="16"/>
+     <span>
+      Karyawan HP: Laporkan masalah di situs web
+     </span>
+    </div>
+    <div class="relative group cursor-pointer text-black text-[10px]">
+     Site Disclaimers
+     <i class="fas fa-chevron-down ml-1">
+     </i>
+     <!-- Dropdown not visible in screenshot, so no content -->
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>

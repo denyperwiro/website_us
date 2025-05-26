@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HP Service Center Finder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .search-bar {
+      max-width: 400px;
+    }
+    .bottom-nav {
+      background-color: black;
+    }
+    .bottom-nav a {
+      color: white;
+      font-size: 0.95rem;
+    }
+    .bottom-nav a:hover {
+      text-decoration: underline;
+    }
+    .location-list {
+      height: 600px;
+      overflow-y: scroll;
+      border-right: 1px solid #dee2e6;
+    }
+    .location-card {
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      background: #fff;
+    }
+    .map-container {
+      height: 600px;
+    }
+    .footer {
+      background-color: #212529;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer a {
+      color: #adb5bd;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: white;
+    }
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+    @media (max-width: 991.98px) {
+      .search-bar {
+        width: 100%;
+        max-width: none;
+        margin-top: 10px;
+      }
+      .bottom-nav .container-fluid {
+        flex-direction: column;
+        gap: 0;
+      }
+      .bottom-nav .dropdown {
+        width: 100%;
+      }
+      .bottom-nav a, .bottom-nav .dropdown-toggle {
+        display: block;
+        padding: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <!-- Top Navbar -->
+ <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#"><img src="assets/logo.svg" width="40" alt="HP Logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="topNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Explore</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Shop</a></li>
+
+          <!-- Support dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Support
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+              <li><a class="dropdown-item" href="check-warranty.html">Check Warranty</a></li>
+              <li><a class="dropdown-item" href="index.html">Authorized Service Provides</a></li>
+              <li><a class="dropdown-item" href="security-bulletins.html">Security Bulletins Archive</a></li>
+              <li><a class="dropdown-item" href="parts-store.html">Parts Store</a></li>
+              <li><a class="dropdown-item" href="customer-service.html">Consumer Service</a></li>
+              <li><a class="dropdown-item" href="business-service.html">Buseniss Service</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-3 mt-2 mt-lg-0" role="search">
+          <input class="form-control rounded-0 rounded-start" type="search" placeholder="Search HP.com" />
+          <button class="btn btn-outline-secondary rounded-end" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-cart"></i></a>
+        <a href="#" class="btn btn-dark text-white">Sign in</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bottom Black Menu -->
+  <div class="bottom-nav py-2 px-3 px-md-4">
+    <div class="container-fluid">
+      <button class="navbar-toggler d-lg-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBottom">
+        <span class="navbar-toggler-icon"></span> Menu
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarBottom">
+        <div class="d-flex flex-column flex-lg-row flex-wrap gap-3 py-2 py-lg-0">
+          <a href="#">Support Home</a>
+
+          <!-- Dropdown Products -->
+          <div class="dropdown">
+            <a class="dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Printers</a></li>
+              <li><a class="dropdown-item" href="#">Laptops</a></li>
+            </ul>
+          </div>
+
+          <!-- Dropdown Software -->
+          <div class="dropdown">
+            <a class="dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Software and Drivers</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Download</a></li>
+              <li><a class="dropdown-item" href="#">Updates</a></li>
+            </ul>
+          </div>
+
+          <!-- Enhanced Dropdown Support with 7 options -->
+          <div class="dropdown">
+            <a class="dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Support</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Contact Support</a></li>
+              <li><a class="dropdown-item" href="#">Warranty Check</a></li>
+              <li><a class="dropdown-item" href="#">Service Center Locator</a></li>
+              <li><a class="dropdown-item" href="#">Repair Status</a></li>
+              <li><a class="dropdown-item" href="#">Troubleshooting Guides</a></li>
+              <li><a class="dropdown-item" href="#">Knowledge Base</a></li>
+              <li><a class="dropdown-item" href="#">Community Forums</a></li>
+            </ul>
+          </div>
+
+          <!-- Dropdown Diagnostics -->
+          <div class="dropdown">
+            <a class="dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Diagnostics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Troubleshoot</a></li>
+              <li><a class="dropdown-item" href="#">Check Status</a></li>
+            </ul>
+          </div>
+
+          <a href="#">Contact Us</a>
+          <a href="#">Business Support</a>
+
+          <!-- Dropdown Account -->
+          <div class="dropdown">
+            <a class="dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">My HP Account</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Login</a></li>
+              <li><a class="dropdown-item" href="#">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Section -->
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <!-- Sidebar with locations -->
+      <div class="col-md-4 location-list px-4">
+        <div class="location-card">
+          <h6><i class="bi bi-building"></i> Valcom Salt Lake City LC</h6>
+          <p>852 E ARROWHEAD LN SALT LAKE CITY, Utah 84107-5211</p>
+          <p><i class="bi bi-telephone"></i> 1-800-871-1504</p>
+          <p><i class="bi bi-clock"></i> Closed - Opens at 8:00 AM</p>
+          <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-envelope"></i> Send Email</a>
+        </div>
+        <div class="location-card">
+          <h6><i class="bi bi-shop"></i> Best Buy</h6>
+          <p>2015 Birch Rd Ste 2300 Chula Vista, CA 91915</p>
+          <p><i class="bi bi-telephone"></i> 619-397-4050</p>
+        </div>
+        <div class="location-card">
+          <h6><i class="bi bi-shop"></i> Best Buy</h6>
+          <p>59 N Broadway Chula Vista, CA 91910</p>
+          <p><i class="bi bi-telephone"></i> 619-397-4050</p>
+        </div>
+        <!-- More items... -->
+      </div>
+
+      <!-- Google Maps -->
+      <div class="col-md-8">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24176.04748720886!2d-111.8882!3d40.7098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1633045600284!5m2!1sen!2sus"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"><h6>About Us</h6><a href="#">Contact HP</a><br><a href="#">Careers</a></div>
+        <div class="col-md-3"><h6>Support</h6><a href="#">Download Drivers</a><br><a href="#">Check Repair Status</a></div>
+        <div class="col-md-3"><h6>HP Partners</h6><a href="#">HP Amplify</a><br><a href="#">Developers</a></div>
+        <div class="col-md-3"><h6>Follow Us</h6>
+          <a href="#"><i class="bi bi-facebook me-2"></i></a>
+          <a href="#"><i class="bi bi-twitter me-2"></i></a>
+          <a href="#"><i class="bi bi-youtube me-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

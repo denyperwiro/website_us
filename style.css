@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-top: 10px;
+    background-color: #002244;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 10px 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: #0055aa;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #e6f0ff;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+.konten {
+  display: none;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.konten h3 {
+  color: #003366;
+}
+
+.konten.active {
+  display: block;
+}
+.pembuat-img {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.pembuat-img img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #003366;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

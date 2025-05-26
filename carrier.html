@@ -1,0 +1,500 @@
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   HP Karier
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-black">
+  <!-- Header -->
+  <header class="flex items-center justify-between px-4 py-3 max-w-[1280px] mx-auto">
+   <div class="flex items-center space-x-6 text-sm font-normal text-black">
+    <a class="hover:underline" href="#">
+     Peluang karier anda
+    </a>
+    <a class="hover:underline" href="#">
+     Talenta
+    </a>
+    <a class="hover:underline" href="#">
+     Pemberdayaan
+    </a>
+   </div>
+   <div class="flex items-center space-x-6">
+    <a aria-label="HP Logo" class="flex items-center" href="#">
+     <img alt="Logo HP biru" class="h-6 w-auto" height="24" src="https://storage.googleapis.com/a1aa/image/5ab4c4a1-1395-403f-1549-d22ec860c1c6.jpg" width="80"/>
+    </a>
+    <div class="hidden sm:flex items-center space-x-6 text-sm font-normal text-black">
+     <a class="hover:underline" href="#">
+      Indonesia
+     </a>
+     <a class="hover:underline" href="#">
+      My care
+     </a>
+    </div>
+    <button aria-label="Search" class="text-black hover:text-gray-700">
+     <i class="fas fa-search fa-lg">
+     </i>
+    </button>
+    <button aria-label="Cart" class="text-black hover:text-gray-700">
+     <i class="fas fa-shopping-cart fa-lg">
+     </i>
+    </button>
+   </div>
+  </header>
+  <!-- Main content -->
+  <main class="max-w-[1280px] mx-auto px-4">
+   <!-- Section: Career and slider -->
+   <section class="mt-4">
+    <div class="flex flex-col md:flex-row md:space-x-4">
+     <div class="w-full md:w-1/4 mb-4 md:mb-0">
+      <label class="block mb-1 font-semibold text-sm" for="career-select">
+       Pilih lokasi
+      </label>
+      <select class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600" id="career-select">
+       <option>
+        Indonesia
+       </option>
+       <option>
+        Global
+       </option>
+       <option>
+        Amerika
+       </option>
+       <option>
+        Asia
+       </option>
+      </select>
+     </div>
+     <div class="flex-1 relative">
+      <div class="relative bg-[#5bc0d8] text-black rounded-md overflow-hidden">
+       <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 p-6 flex flex-col justify-center space-y-4">
+         <h2 class="text-xl font-semibold leading-tight">
+          Ide Anda penting.
+          <br/>
+          Kesuksesan kami didorong oleh komunitas profesional global dan perspektif unik mereka.
+         </h2>
+         <p class="text-base font-normal">
+          Jadilah diri sendiri di HP
+         </p>
+         <button class="bg-black text-white text-sm font-semibold px-4 py-2 w-max hover:bg-gray-900" type="button">
+          Pelajari lebih lanjut
+         </button>
+        </div>
+        <div class="md:w-1/2 overflow-hidden relative">
+         <div class="flex transition-transform duration-500 ease-in-out" id="slider" style="width: 300%;">
+          <img alt="Orang-orang berbicara di lingkungan kantor dengan suasana ramah dan santai" class="w-full h-[300px] object-cover flex-shrink-0" height="300" src="https://storage.googleapis.com/a1aa/image/64ed151d-18e3-44bc-b989-724cd4e681d8.jpg" width="600"/>
+          <img alt="Gambar slider kedua dengan suasana kantor profesional" class="w-full h-[300px] object-cover flex-shrink-0" height="300" src="https://storage.googleapis.com/a1aa/image/7d193664-f1cc-4ca9-04e6-e80d6f416109.jpg" width="600"/>
+          <img alt="Gambar slider ketiga dengan suasana kantor profesional" class="w-full h-[300px] object-cover flex-shrink-0" height="300" src="https://storage.googleapis.com/a1aa/image/f5797387-5d5c-4c29-3fa3-0e296000a6ff.jpg" width="600"/>
+         </div>
+         <button aria-label="Previous slide" class="absolute top-1/2 left-2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75" id="prevBtn" type="button">
+          <i class="fas fa-chevron-left">
+          </i>
+         </button>
+         <button aria-label="Next slide" class="absolute top-1/2 right-2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75" id="nextBtn" type="button">
+          <i class="fas fa-chevron-right">
+          </i>
+         </button>
+        </div>
+       </div>
+      </div>
+      <!-- Slider dots -->
+      <div class="flex justify-center space-x-2 mt-2">
+       <button aria-label="Slide 1" class="w-2 h-2 rounded-full bg-black" data-slide="0" type="button">
+       </button>
+       <button aria-label="Slide 2" class="w-2 h-2 rounded-full bg-gray-400" data-slide="1" type="button">
+       </button>
+       <button aria-label="Slide 3" class="w-2 h-2 rounded-full bg-gray-400" data-slide="2" type="button">
+       </button>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Blue bar below slider -->
+   <section class="bg-[#5bc0d8] mt-6 rounded-md flex flex-col md:flex-row items-center justify-between text-black text-sm font-semibold px-4 py-3 max-w-[1280px] mx-auto">
+    <div class="mb-2 md:mb-0">
+     syarat dan ketentuan
+    </div>
+    <div class="mb-2 md:mb-0">
+     kebijakan cookie versi 100.0.0.0
+    </div>
+    <a class="underline hover:text-gray-900" href="#">
+     Mencari ?
+    </a>
+   </section>
+   <!-- Section: Jelajahi bagaimana HP mengubah dunia -->
+   <section class="mt-10 max-w-[1280px] mx-auto px-4">
+    <h3 class="text-center text-lg font-semibold mb-6">
+     Jelajahi bagaimana HP mengubah dunia
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+     <div class="bg-[#e6e6e6] rounded-md overflow-hidden">
+      <img alt="Wanita tersenyum memegang kopi di tempat kerja yang cerah dan modern" class="w-full h-48 object-cover" height="250" src="https://storage.googleapis.com/a1aa/image/912c2afa-c8bc-404b-bd16-b0bb9edb224a.jpg" width="400"/>
+      <div class="bg-[#5bc0d8] text-black text-center py-2 font-semibold text-sm">
+       Budaya Inklusif di HP
+      </div>
+     </div>
+     <div class="bg-[#e6e6e6] rounded-md overflow-hidden">
+      <img alt="Kelompok orang beragam berkolaborasi menggunakan laptop di ruang kerja" class="w-full h-48 object-cover" height="250" src="https://storage.googleapis.com/a1aa/image/fa06e915-54d5-4849-abf2-fad1edaae9be.jpg" width="400"/>
+      <div class="bg-[#5bc0d8] text-black text-center py-2 font-semibold text-sm">
+       Inklusi dan Keberagaman
+      </div>
+     </div>
+     <div class="bg-[#e6e6e6] rounded-md overflow-hidden">
+      <img alt="Orang-orang bekerja bersama di lingkungan kreatif dan kolaboratif" class="w-full h-48 object-cover" height="250" src="https://storage.googleapis.com/a1aa/image/75609922-ee46-4568-30d1-0bd5b7821204.jpg" width="400"/>
+      <div class="bg-[#5bc0d8] text-black text-center py-2 font-semibold text-sm">
+       Menciptakan Masa Depan
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Section: Temukan peluang karier -->
+   <section class="mt-10 max-w-[1280px] mx-auto px-4 text-center">
+    <h4 class="text-base font-normal mb-8 max-w-3xl mx-auto">
+     Temukan peluang karier di berbagai bidang dan jelajahi berbagai bisnis di HP
+    </h4>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+     <a class="border border-black rounded-md p-4 flex flex-col items-center space-y-2 hover:bg-[#d0f0d0]" href="#">
+      <img alt="Ikon gear hijau melambangkan peluang karier di bidang Teknologi dan Pengembangan" class="w-16 h-16" height="64" src="https://storage.googleapis.com/a1aa/image/f13f2dfa-3a9a-43d9-495c-8de3de170886.jpg" width="64"/>
+      <span class="text-xs font-semibold">
+       Teknologi dan Pengembangan
+      </span>
+     </a>
+     <a class="border border-black rounded-md p-4 flex flex-col items-center space-y-2 hover:bg-[#d0f0d0]" href="#">
+      <img alt="Ikon dolar hijau melambangkan peluang karier di bidang Keuangan" class="w-16 h-16" height="64" src="https://storage.googleapis.com/a1aa/image/d4b72937-a07a-4918-ebce-b56361677308.jpg" width="64"/>
+      <span class="text-xs font-semibold">
+       Keuangan
+      </span>
+     </a>
+     <a class="border border-black rounded-md p-4 flex flex-col items-center space-y-2 hover:bg-[#d0f0d0]" href="#">
+      <img alt="Ikon topi wisuda hijau melambangkan peluang karier di bidang Pelatihan dan Pembelajaran" class="w-16 h-16" height="64" src="https://storage.googleapis.com/a1aa/image/acb288ff-cdd0-47b1-db7c-0dc029a7ad95.jpg" width="64"/>
+      <span class="text-xs font-semibold">
+       Pelatihan dan Pembelajaran
+      </span>
+     </a>
+     <a class="border border-black rounded-md p-4 flex flex-col items-center space-y-2 hover:bg-[#d0f0d0]" href="#">
+      <img alt="Ikon headset hijau melambangkan peluang karier di bidang Dukungan" class="w-16 h-16" height="64" src="https://storage.googleapis.com/a1aa/image/4e6828c6-b2bd-4d90-d586-42322cf391fd.jpg" width="64"/>
+      <span class="text-xs font-semibold">
+       Dukungan
+      </span>
+     </a>
+     <a class="border border-black rounded-md p-4 flex flex-col items-center space-y-2 hover:bg-[#d0f0d0]" href="#">
+      <img alt="Ikon grafik hijau melambangkan peluang karier di bidang Pemasaran dan Penjualan" class="w-16 h-16" height="64" src="https://storage.googleapis.com/a1aa/image/37eb0529-5540-4e50-eba4-1eccc2de15f5.jpg" width="64"/>
+      <span class="text-xs font-semibold">
+       Pemasaran dan Penjualan
+      </span>
+     </a>
+     <a class="border border-black rounded-md p-4 flex flex-col items-center space-y-2 hover:bg-[#d0f0d0]" href="#">
+      <img alt="Ikon globe hijau melambangkan peluang karier di bidang Administrasi" class="w-16 h-16" height="64" src="https://storage.googleapis.com/a1aa/image/7dcb1229-80e1-454d-1028-1f4a3abd9e80.jpg" width="64"/>
+      <span class="text-xs font-semibold">
+       Administrasi
+      </span>
+     </a>
+     <a class="border border-black rounded-md p-4 flex flex-col items-center space-y-2 hover:bg-[#d0f0d0]" href="#">
+      <img alt="Ikon jaringan hijau melambangkan peluang karier di bidang Keamanan" class="w-16 h-16" height="64" src="https://storage.googleapis.com/a1aa/image/180c7812-6d0f-4ae5-448a-a13cc7b396a1.jpg" width="64"/>
+      <span class="text-xs font-semibold">
+       Keamanan
+      </span>
+     </a>
+     <a class="border border-black rounded-md p-4 flex flex-col items-center space-y-2 hover:bg-[#d0f0d0]" href="#">
+      <img alt="Ikon jabat tangan hijau melambangkan peluang karier di bidang Manajemen dan Operasi" class="w-16 h-16" height="64" src="https://storage.googleapis.com/a1aa/image/ba7c5160-ce90-4462-61c7-8cc3009fe897.jpg" width="64"/>
+      <span class="text-xs font-semibold">
+       Manajemen dan Operasi
+      </span>
+     </a>
+     <a class="border border-black rounded-md p-4 flex flex-col items-center space-y-2 hover:bg-[#d0f0d0]" href="#">
+      <img alt="Ikon kaca pembesar hijau melambangkan peluang karier di bidang Lainnya" class="w-16 h-16" height="64" src="https://storage.googleapis.com/a1aa/image/e15a6bf0-dbca-448f-8484-7797f9df8eae.jpg" width="64"/>
+      <span class="text-xs font-semibold">
+       Lainnya
+      </span>
+     </a>
+    </div>
+   </section>
+   <!-- Section: Bergabunglah dengan komunitas global -->
+   <section class="mt-10 max-w-[1280px] mx-auto px-4 text-center">
+    <h5 class="text-base font-normal max-w-3xl mx-auto mb-6">
+     Bergabunglah dengan komunitas global yang akan mendukung Anda dalam melakukan pekerjaan terbaik Anda
+    </h5>
+    <p class="text-xs max-w-3xl mx-auto mb-6">
+     Temukan dukungan, inspirasi, dan peluang internal bagi karyawan dan alumni di komunitas bakat global kami.
+    </p>
+    <button class="bg-black text-white text-sm font-semibold px-6 py-2 hover:bg-gray-900" type="button">
+     Bergabunglah dengan Komunitas Bakat
+    </button>
+   </section>
+  </main>
+  <!-- Footer top blue bar -->
+  <footer class="mt-12 bg-[#5bc0d8] text-black text-xs font-semibold max-w-[1280px] mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
+   <div class="flex items-center space-x-4">
+    <a aria-label="Instagram" class="hover:text-gray-900" href="#">
+     <i class="fab fa-instagram fa-lg">
+     </i>
+    </a>
+    <a aria-label="LinkedIn" class="hover:text-gray-900" href="#">
+     <i class="fab fa-linkedin fa-lg">
+     </i>
+    </a>
+    <a aria-label="Twitter" class="hover:text-gray-900" href="#">
+     <i class="fab fa-twitter fa-lg">
+     </i>
+    </a>
+    <a aria-label="Facebook" class="hover:text-gray-900" href="#">
+     <i class="fab fa-facebook-f fa-lg">
+     </i>
+    </a>
+    <a aria-label="YouTube" class="hover:text-gray-900" href="#">
+     <i class="fab fa-youtube fa-lg">
+     </i>
+    </a>
+    <a aria-label="GitHub" class="hover:text-gray-900" href="#">
+     <i class="fab fa-github fa-lg">
+     </i>
+    </a>
+   </div>
+   <nav class="flex flex-wrap gap-6 text-xs font-semibold">
+    <a class="hover:underline" href="#">
+     Akun saya
+    </a>
+    <a class="hover:underline" href="#">
+     Karier saya
+    </a>
+    <a class="hover:underline" href="#">
+     Notifikasi saya
+    </a>
+    <a class="hover:underline" href="#">
+     Pemberitahuan
+    </a>
+    <a class="hover:underline" href="#">
+     Pengaturan
+    </a>
+    <a class="hover:underline" href="#">
+     Keluar
+    </a>
+   </nav>
+  </footer>
+  <!-- Footer bottom black bar -->
+  <section class="bg-black text-white text-xs max-w-[1280px] mx-auto px-4 py-8 mt-4">
+   <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 max-w-[1280px] mx-auto">
+    <div>
+     <h6 class="font-semibold mb-2">
+      Tentang Kami
+     </h6>
+     <ul class="space-y-1">
+      <li>
+       <a class="hover:underline" href="carrier.html">
+        Karier di HP
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Berita HP
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Diversity &amp; Inclusion
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Sustainability
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Hubungan Investor
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Berita Pers
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Blog HP
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h6 class="font-semibold mb-2">
+      Governance
+     </h6>
+     <ul class="space-y-1">
+      <li>
+       <a class="hover:underline" href="#">
+        Kebijakan
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Laporan Keberlanjutan
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Etika dan Kepatuhan
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Keamanan Informasi
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Privasi
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Pengungkapan
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Laporan Tahunan
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h6 class="font-semibold mb-2">
+      Unduhan
+     </h6>
+     <ul class="space-y-1">
+      <li>
+       <a class="hover:underline" href="#">
+        Driver dan Software
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Manual Pengguna
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Aplikasi HP
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Firmware
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Dokumen Teknis
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Panduan Produk
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Sumber Daya
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h6 class="font-semibold mb-2">
+      Support
+     </h6>
+     <ul class="space-y-1">
+      <li>
+       <a href="contact.us.html">
+        Kontak Kami
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        FAQ
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Status Layanan
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Garansi
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Pengembalian Produk
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Perbaikan
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Panduan Pengguna
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <p class="mt-6 text-center text-[10px] leading-tight">
+    Pemberitahuan merek dagang: Semua merek dagang yang disebutkan adalah milik pemiliknya masing-masing. HP dan logo HP adalah merek dagang dari Hewlett-Packard Development Company, L.P. Informasi produk dan layanan dapat berubah tanpa pemberitahuan. Ketersediaan produk dan layanan dapat bervariasi menurut wilayah.
+   </p>
+  </section>
+  <script>
+   const slider = document.getElementById('slider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dots = document.querySelectorAll('[data-slide]');
+    let currentIndex = 0;
+    const totalSlides = slider.children.length;
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${(100 / totalSlides) * currentIndex}%)`;
+      dots.forEach((dot, idx) => {
+        if (idx === currentIndex) {
+          dot.classList.add('bg-black');
+          dot.classList.remove('bg-gray-400');
+        } else {
+          dot.classList.add('bg-gray-400');
+          dot.classList.remove('bg-black');
+        }
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        currentIndex = parseInt(dot.getAttribute('data-slide'));
+        updateSlider();
+      });
+    });
+  </script>
+ </body>
+</html>

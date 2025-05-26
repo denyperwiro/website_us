@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> profile-us </title>
+  <style>
+   
+
+    body {
+
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+      letter-spacing: 0px;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #000;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-left img {
+      height: 50px;
+      width: auto;
+      margin-right: 30px;
+    }
+
+    .navbar-left a {
+      color: white;
+      text-decoration: none;
+      margin-right: 25px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .navbar-right button {
+      padding: 10px 15px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+
+
+    .image-slot {
+      text-align: center;
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-slot img {
+      max-width: 100%;
+      height: 550;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      display: block;
+    }
+
+    .image-description {
+      position: absolute;
+      text-align: left;
+      bottom: 5px;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 30px 0;
+      margin-bottom: -5px;
+      
+      width: 100%;
+    }
+
+    .title-image{
+        padding-left: 10px;
+        font-size: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2.5px solid white;
+         padding-right: px;
+
+       
+        
+    }
+
+    .sub-title-image{
+        padding-left: 10px;
+        font-size: 16px;
+        padding-top: 20px;
+        padding-right: 100px;
+        line-height: 20px;
+        font-weight: normal;
+
+    }
+
+    .sub-title-bottom{
+        padding-left: 10px;
+        font-size: 16px;
+        padding-top: 20px;
+        padding-right: 100px;
+        line-height: 20px;
+        font-weight: normal;
+        padding-top: 10px;
+
+    }
+
+
+
+       .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 50px;
+
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-title a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .card-title a:hover {
+      border-bottom: 2px solid blue;
+      color: blue;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .description-contact {
+      font-size: 14px;
+      color: #444;
+      padding-top: 10px;
+    }
+
+    .description a {
+      font-size: 15px;
+      color:  #444;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+
+    .title-profile{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 80px;
+        font-weight: bold;
+       
+    }
+
+    .title-profile1{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 80px;
+        font-weight: bold;
+        padding-top: 15px;
+  
+       
+    }
+
+    .bg-title-profile{
+         border-bottom: black 3px solid;
+       margin: 0px 300px ;
+      
+    }
+    
+    .bg-title-profile1{
+        background-color: white;
+        height: 80px;
+              border-bottom: black 2px solid;
+              
+      
+
+      
+      
+    }
+
+   .line-br{
+    padding-top: 10px ;
+   }
+
+       .about-me {
+      padding: 60px 20px;
+    }
+
+   
+
+    .about-container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .about-image img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-content h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+      border-bottom: 2px solid black;
+     
+    }
+
+    .letter-bottom{
+      padding-bottom: 5px;
+      font-size: 18px;
+      
+
+    }
+
+
+    .about-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .about-content a {
+      font-size: 16px;
+      color: black;
+      text-decoration: none;
+      
+    }
+
+   
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-image img {
+        margin-bottom: 20px;
+      }
+    }
+   
+   
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="./icon.png" class="icon-profile" alt="">
+      <a href="#our-profile">OUR PROFILE</a>
+      <a href="#our-project-list">OUR PROJECT LIST</a>
+      <a href="#">ABOUT US</a>
+    </div>
+
+  </div>
+
+  <div class="image-slot">
+    <img src="./profil header.jpeg" alt="Fiji Recovery Story">
+    <div class="image-description">
+      <h4 class="title-image">this is our group for website creation project</h4>
+      <p class="sub-title-image">ini adalah kelompok kami yang penuh dengan rintangan dalam menyelesaikan project ini,
+         tapi kami semua tidak pernah menyerah atau pun patah semangat atas kegagalan dalam pembuatan website ini karena kami 
+         saling membantu dan bertukar pikiran dan canda tawa adalah cara kami untuk mengerjakan tugas ini tanpa mengeluh 
+         maupun patah semangat, karena kami yakin sesuatu yang berat akan ringan jika bersama sama.</p>
+         <p class="sub-title-bottom">semoga website ini memberikan hasil yang memuaskan bagi kami. </p>
+         
+    </div>
+  </div>
+
+
+    <div class="bg-title-profile">
+        <h1 class="title-profile" id="our-profile">profile picture of our group</h1>
+    </div>
+
+
+  <div class="container">
+    <div class="card">
+      <img src="./deny profil.jpeg" alt="">
+      <div class="card-content">
+       
+        <div class="card-title"><a href="#">Deny maulana perwiro</a></div>
+        <div class="description">Hallo! Saya Deny maulana perwiro, Saya Ikut Berkontribusi Dalam Pembuatan Project Website Ini Hingga Selesai.</div>
+         <div class="description-contact">Contact Me <strong> 087811007622</strong></div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./wais rahmadani.jpeg" alt="">
+      <div class="card-content">
+       
+        <div class="card-title"><a href="#">Wais rahmadani</a></div>
+        <div class="description">Hallo! Saya Wais rahmadani, Saya Adalah Pelajar Jurusan TKJ Yang suka Dengan Teknologi Terkini Dan Saya Hobi Melihat Tampilan Website Yang Menarik.</div>
+        <div class="description-contact">Contact Me <strong>085829288968</strong></div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./galih.jpeg" alt="">
+      <div class="card-content">
+        
+        <div class="card-title"><a href="#">Galih putra</a></div>
+        <div class="description">Hallo! Saya Galih putra, Saya Paling Suka Dengan Pemrograman Website Karena Saya Bisa Dan Punya Peluang Untuk Ke Sana.</div>
+        <div class="description-contact">Contact Me <strong>089695156976</strong></div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="ibel.jpeg" alt="">
+      <div class="card-content">
+        
+        <div class="card-title"><a href="#">Ibel dwi putra ngilawane</a></div>
+        <div class="description">Hallo! Saya Ibel dwi putra ngilawane, Saya Bisa Ikut Berkontribusi Dalam Project Ini Dengan Belajar Langsung Ke Website Yang Menyediakan Pembelajaran Coding Gratis. </div>
+        <div class="description-contact">Contact Me <strong>0895339368815</strong></div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="ramansyah.jpeg" alt="">
+      <div class="card-content">
+        
+        <div class="card-title"><a href="#">Ramansya aula agustin</a></div>
+        <div class="description">Hallo! Saya Ramansyah Aula Agustim, Saya Suka Dengan Coding Dan Saya Bangga Dengan Hasil Saya Yang Saya Kerjakan Sendiri.</div>
+        <div class="description-contact">Contact Me <strong>082337867070</strong></div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="ardi putra.jpeg" alt="">
+      <div class="card-content">
+        
+        <div class="card-title"><a href="#">Ardi putra pratama</a></div>
+        <div class="description">Hallo! Saya Ardi Putra Pratama, Saya Telah Menyelesaikan Project Ini Dengan Penuh Perjuangan Yang Tidak Mudah Semoga Perjuangan Saya Tidak Menghianati Hasil</div>
+        <div class="description-contact">Contact Me <strong>08816394296</strong></div>
+      </div>
+
+    </div>
+    <div class="card">
+      <img src="firansyah.jpeg" alt="">
+      <div class="card-content">
+        
+        <div class="card-title"><a href="#">Firansyah</a></div>
+        <div class="description">Hallo! Saya Firansyah, Saya Paling Suka Dengan Pemrograman Website Karena Saya Bisa Dan Punya Peluang Untuk Ke Sana.</div>
+          <div class="description-contact">Contact Me <strong>081232371882</strong></div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="bg-title-profile1">
+        <h1 class="title-profile1" id="our-project-list">our project list</h1>
+    </div>
+
+    <section class="about-me">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="deny profil.jpeg" alt="Foto Profil">
+      </div>
+      <div class="about-content">
+        <h2>Deny maulana perwiro</h2>
+        <p><strong>Ini Adalah Website Yang Telah Saya Kerjakan:</strong> </p>
+        <li class="letter-bottom"><a href="business_desktops.html">Business Desktops</a></li>
+        <li class="letter-bottom"><a href="financing.html">HP Financing</a></li>
+        <li class="letter-bottom"><a href="more_about.html">HP More About</a></li>
+        
+        <li class="letter-bottom"><a href="diagnostic_tools.html">Diagnostic Tools</a></li>
+        <li class="letter-bottom"><a href="smb-servers.html">SMB Servers</a></li>
+        <li class="letter-bottom"><a href="site_disclaimers.html">Site Disclaimers</a></li>
+        
+        <li class="letter-bottom"><a href="printers-issues.html">Printers Issues</a></li>
+        <li class="letter-bottom"><a href="privacy_choices.html">Privacy Choices</a></li> 
+        <li class="letter-bottom"><a href="profil-bye-deny.html">Profil Us</a></li> 
+
+        <li class="letter-bottom"><a href="customer support.html">Customer Support</a></li> 
+        <li class="letter-bottom"><a href="client.html">Hp Client</a></li>
+        <li class="letter-bottom"><a href="zworkstations.html">Z Workstations</a></li>
+        <li class="letter-bottom"><a href="terms-of-use.html">Terms Of Use</a></li>
+      </div>
+    </div>
+  
+  
+    <div class="about-container">
+      <div class="about-image">
+        <img src="galih.jpeg" alt="Foto Profil">
+      </div>
+      <div class="about-content">
+        <h2>Galih putra</h2>
+        <p><strong>Ini Adalah Website Yang Telah Saya Kerjakan:</strong> </p>
+        <li class="letter-bottom"><a href="accesoris.html">accesories</a></li>
+        <li class="letter-bottom"><a href="bussines monitor.html">bussines.monitor</a></li>
+        <li class="letter-bottom"><a href="buying guide.html">buying.guide.</a></li>
+        <li class="letter-bottom"><a href="gaming accesoris.html">gaming.accesories</a></li>
+        <li class="letter-bottom"><a href="how to order.html">how.to.order</a></li>
+        <li class="letter-bottom"><a href="hp public sector.html">hp public sector</a></li>
+        <li class="letter-bottom"><a href="payment.html">payment</a></li>
+        <li class="letter-bottom"><a href="personal monitor.html">personal monitor</a></li>
+        <li class="letter-bottom"><a href="personals laptop.html">personal laptop</a></li>
+        <li class="letter-bottom"><a href="shop.html">shop</a></li>
+        <li class="letter-bottom"><a href="sign.html">sign</a></li>
+        
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div class="about-container">
+      <div class="about-image">
+        <img src="ardi putra.jpeg" alt="Foto Profil">
+      </div>
+      <div class="about-content">
+        <h2>Ardi putra</h2>
+        <p><strong>Ini Adalah Website Yang Telah Saya Kerjakan:</strong> </p>
+         <li class="letter-bottom"><a href="BLJR.html">BLJR</a></li>
+         <li class="letter-bottom"><a href="Bootsrep.html">Bootsrep</a></li>
+         <li class="letter-bottom"><a href="dokumenprintservice.html">dokumenprintservice</a></li>
+         <li class="letter-bottom"><a href="security.html">security</a></li>
+         <li class="letter-bottom"><a href="skpc.html">skpc</a></li>
+         <li class="letter-bottom"><a href="specalty.html">specalty</a></li>
+         <li class="letter-bottom"><a href="src.html">src</a></li>
+         <li class="letter-bottom"><a href="ujicoba.html">ujicoba</a></li>
+         <li class="letter-bottom"><a href="ujicobaj.html">ujicobaj</a></li>
+         <li class="letter-bottom"><a href="wrkforfceexprience.html">wrkforfceexprience</a></li>
+         
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div class="about-container">
+      <div class="about-image">
+        <img src="ramansyah.jpeg" alt="Foto Profil">
+      </div>
+      <div class="about-content">
+        <h2>Ramansyah aula agustin</h2>
+        <p><strong>Ini Adalah Website Yang Telah Saya Kerjakan:</strong> </p>
+         <li class="letter-bottom"><a href="business-service.html">business service</a></li>
+         <li class="letter-bottom"><a href="check-warranty.html">check warranty</a></li>
+         <li class="letter-bottom"><a href="contact.html">contact</a></li>
+         <li class="letter-bottom"><a href="customer-service.html">customer service</a></li>
+         <li class="letter-bottom"><a href="index.html">index</a></li>
+         <li class="letter-bottom"><a href="parts-store.html">parts store</a></li>
+         <li class="letter-bottom"><a href="security-bulletins.html">security bulletins</a></li>
+        
+
+
+
+
+
+        
+      </div>
+    </div>
+
+    <div class="about-container">
+      <div class="about-image">
+        <img src="ibel.jpeg" alt="Foto Profil">
+      </div>
+      <div class="about-content">
+        <h2>Ibel dwi putra ngilawane</h2>
+        <p><strong>Ini Adalah Website Yang Telah Saya Kerjakan:</strong> </p>
+         <li class="letter-bottom"><a href="Comunitty 2.html">Comunitty 2</a></li>
+         <li class="letter-bottom"><a href="Hubungi kami.html">Hubungi kami</a></li>
+         <li class="letter-bottom"><a href="Layanan bisnis.html">Layanan Bisnis</a></li>
+         <li class="letter-bottom"><a href="Privasi policy.html">Privasi policy</a></li>
+         <li class="letter-bottom"><a href="Sign in.html">Sign in</a></li>
+         <li class="letter-bottom"><a href="Topik.html">Topik</a></li>
+        
+      </div>
+    </div>
+
+    <div class="about-container">
+      <div class="about-image">
+        <img src="wais rahmadani.jpeg" alt="Foto Profil">
+      </div>
+      <div class="about-content">
+        <h2>Wais Rahmadani</h2>
+        <p><strong>Ini Adalah Website Yang Telah Saya Kerjakan:</strong> </p>
+         <li class="letter-bottom"><a href="carrier.html">carrier</a></li>
+         <li class="letter-bottom"><a href="fraud.alert.html">fraud alert</a></li>
+         <li class="letter-bottom"><a href="checkrepairstatus.html">checkrepairstatus</a></li>
+         <li class="letter-bottom"><a href="customer service.html">customer.service</a></li>
+         <li class="letter-bottom"><a href="contact.us.html">contact.us</a></li>
+         <li class="letter-bottom"><a href="download.drivers.html">download.drivers</a></li>
+         <li class="letter-bottom"><a href="find a reseller.html">find a reseller</a></li>
+         <li class="letter-bottom"><a href="newspace.html">newspace</a></li>
+         <li class="letter-bottom"><a href="hp anyware.html">hp anyware</a></li>
+         <li class="letter-bottom"><a href="newspace.html">newspace</a></li>
+        
+
+
+
+
+
+
+
+       
+      </div>
+    </div>
+
+    <div class="about-container">
+      <div class="about-image">
+        <img src="firansyah.jpeg" alt="Foto Profil">
+      </div>
+      <div class="about-content">
+        <h2>Firansyah</h2>
+        <p><strong>Ini Adalah Website Yang Telah Saya Kerjakan:</strong> </p>
+         <li class="letter-bottom"><a href="index1.html">index</a></li>
+        
+      </div>
+    </div>
+
+    
+  </section>
+
+</body>
+</html>

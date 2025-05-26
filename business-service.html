@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future of Work</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    .hero {
+      background-image: url('assets/hero2.avif');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+      color: white;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.85);
+      color: black;
+      padding: 2rem;
+      width: 100%;
+    }
+
+    .blue-section {
+      background-color: #0047FF;
+      color: white;
+      padding: 4rem 1rem;
+    }
+
+    .card-custom {
+      background-color: white;
+      color: black;
+    }
+
+    .slider-img {
+      width: 100%;
+      height: auto;
+    }
+
+    .slider-controls button {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .btn-black {
+      background-color: black;
+      color: white;
+    }
+
+    .nav-link.active {
+      font-weight: bold;
+      border-bottom: 2px solid white;
+    }
+
+    .bottom-nav {
+      background-color: black;
+    }
+
+    .bottom-nav a {
+      color: white;
+      font-size: 0.95rem;
+    }
+
+    .bottom-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .customer-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .event-box,
+    .solution-box {
+      background-color: #f8f9fa;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      height: 100%;
+    }
+
+    .btn-custom {
+      margin-top: 1rem;
+    }
+
+    .scroll-arrows {
+      text-align: right;
+    }
+
+    .hp-footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        .hp-footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .hp-footer a:hover {
+            color: white;
+        }
+        .hp-footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .search-box input {
+            padding-right: 50px;
+            border-radius: 50px;
+        }
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            border-radius: 50px;
+            background-color: var(--hp-blue);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+        }
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+        }
+        .hp-badge {
+            background-color: #e74c3c;
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: auto;
+        padding-top: 4rem;
+      }
+
+      .hero-overlay {
+        position: static;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#"><img src="assets/logo.svg" width="40" alt="HP Logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar"
+        aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="topNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Explore</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Shop</a></li>
+
+          <!-- Support dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Support
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+              <li><a class="dropdown-item" href="check-warranty.html">Check Warranty</a></li>
+              <li><a class="dropdown-item" href="index.html">Authorized Service Provides</a></li>
+              <li><a class="dropdown-item" href="security-bulletins.html">Security Bulletins Archive</a></li>
+              <li><a class="dropdown-item" href="parts-store.html">Parts Store</a></li>
+              <li><a class="dropdown-item" href="customer-service.html">Consumer Service</a></li>
+              <li><a class="dropdown-item" href="business-service.html">Buseniss Service</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-3 mt-2 mt-lg-0" role="search">
+          <input class="form-control rounded-0 rounded-start" type="search" placeholder="Search HP.com" />
+          <button class="btn btn-outline-secondary rounded-end" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-cart"></i></a>
+        <a href="#" class="btn btn-dark text-white">Sign in</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero d-flex align-items-end">
+    <div class="hero-overlay">
+      <h1 class="display-5 fw-bold">Shape the future of work</h1>
+      <p>Through digital transformation and unified AI-powered solutions, HP enables you to drive growth and deliver
+        more fulfilling work experiences, wherever employees may be.</p>
+      <a href="#" class="btn btn-black mt-2">Contact us</a>
+    </div>
+  </section>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-wrap">
+        <li class="nav-item"><a class="nav-link active" href="#">Business Solutions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Thought Leadership</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Our Customers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Industry Events</a></li>
+      </ul>
+      <a href="#" class="btn btn-light">Contact us</a>
+    </div>
+  </nav>
+
+  <!-- SLIDER SECTION -->
+  <section class="d-flex flex-column justify-content-center align-items-center py-5">
+    <div class="container text-center mb-4">
+      <img src="assets/a1.avif" alt="Slider" class="img-fluid rounded slider-img" id="sliderImage" />
+      <h4 class="mt-3">Are your employees ready for the AI era?</h4>
+      <p>Are your employees ready for the AI era?</p>
+      <a href="#" class="btn btn-dark">Take the Quiz</a>
+    </div>
+    <div class="slider-controls d-flex gap-3">
+      <button onclick="prevSlide()"><i class="bi bi-arrow-left-circle"></i></button>
+      <button onclick="nextSlide()"><i class="bi bi-arrow-right-circle"></i></button>
+    </div>
+  </section>
+
+  <!-- BLUE SECTION: ARTICLES -->
+  <section class="blue-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Discover the future of work</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-custom h-100">
+            <img src="assets/a2.avif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">HP Work Relationship Index</h5>
+              <p class="card-text">Explore the fundamental shift needed to improve society's relationship with work with
+                HP's latest annual report.</p>
+              <a href="#" class="btn btn-primary">Read</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-custom h-100">
+            <img src="assets/a1.avif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bringing Zero Downtime to Anywhere Work</h5>
+              <p class="card-text">Dive into ways IT can keep help employees stay productive and happy in the modern way
+                of work.</p>
+              <a href="#" class="btn btn-primary">Read</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-custom h-100">
+            <img src="assets/a2.avif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">The Future of Workplace is Workspace</h5>
+              <p class="card-text">Hybrid workplaces, or workspaces? Learn how today’s successful companies are evolving
+                to a multi-dimensional approach.</p>
+              <a href="#" class="btn btn-primary">Read</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container py-5">
+    <!-- Customer Testimonials -->
+    <div class="mb-5 customer-section">
+      <div class="section-title">See what our customers say</div>
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-4">
+          <ul class="list-unstyled">
+            <li>Carlsberg</li>
+            <li>Wrexham AFC</li>
+            <li>Ericsson</li>
+            <li><strong>Ulster University</strong>
+              <small class="text-muted">Ulster University enables future leaders with a transformed HP collaboration
+                experience.</small>
+            </li>
+            <li>CANCOM</li>
+            <li>SGL Carbon</li>
+          </ul>
+          <button class="btn btn-dark btn-sm btn-custom">Read</button>
+          <button class="btn btn-outline-dark btn-sm btn-custom">Watch</button>
+        </div>
+        <div class="col-lg-8">
+          <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45" class="img-fluid"
+            alt="Customer testimonial image">
+        </div>
+      </div>
+    </div>
+
+    <!-- Industry Events -->
+    <div class="mb-5">
+      <div class="section-title">Industry Events</div>
+      <div class="scroll-arrows">
+        <button class="btn btn-light">&#8592;</button>
+        <button class="btn btn-light">&#8594;</button>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="event-box">
+            <h6>HP Fast Company New World of Work Summit</h6>
+            <small>May 20 | New York City, USA</small>
+            <p>This year’s foremost thought-leadership C-Suite symposium, bringing together visionary leaders to shape
+              the future of work through discussions on trends, insights and future strategies.</p>
+            <button class="btn btn-dark btn-sm">Visit</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="event-box">
+            <h6>InfoComm 2025</h6>
+            <small>June 11-13 | Orlando, USA</small>
+            <p>InfoComm is the most comprehensive pro AV trade show that brings together manufacturers, integrators, and
+              end-users to showcase the latest technologies, products, and services.</p>
+            <button class="btn btn-dark btn-sm">Visit</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="event-box">
+            <h6>Gartner Digital Workplace Summit 2025</h6>
+            <small>May 19-20 | London, England</small>
+            <p>The premier conference to help digital workplace leaders tasked with enhancing digital employee
+              experience, leveraging GenAI and improving technology adoption.</p>
+            <button class="btn btn-dark btn-sm">Visit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Business IT Solutions -->
+    <div>
+      <div class="section-title">Explore our Business IT Solutions</div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="solution-box">
+            <img src="assets/p1.avif" class="img-fluid mb-3"
+              alt="Software & Services">
+            <h6>Software & Services</h6>
+            <p>Empower your modern workforce with world-class IT solutions and services, delivering across PC, Print and
+              Collaboration.</p>
+            <button class="btn btn-dark btn-sm">Explore</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="solution-box">
+            <img src="assets/p2.avif" class="img-fluid mb-3"
+              alt="Business Computing">
+            <h6>Business Computing</h6>
+            <p>Equip your teams for the future of computing with AI business PCs that deliver power, security and
+              collaboration tools.</p>
+            <button class="btn btn-dark btn-sm">Explore</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="solution-box">
+            <img src="assets/p3.avif" class="img-fluid mb-3"
+              alt="Workstation Computers">
+            <h6>Workstation Computers & Solutions</h6>
+            <p>Power through your heaviest workloads with high-performance AI workstation laptops, desktops, and
+              solutions.</p>
+            <button class="btn btn-dark btn-sm">Explore</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="solution-box">
+            <img src="assets/p4.avif" class="img-fluid mb-3"
+              alt="Video Conferencing">
+            <h6>Video Conferencing & Collaboration Solutions</h6>
+            <p>HP empowers everyone with the same great meeting experience, so you can look and sound your best wherever
+              you are.</p>
+            <button class="btn btn-dark btn-sm">Explore</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="solution-box">
+            <img src="assets/p5.avif" class="img-fluid mb-3"
+              alt="Business Printers">
+            <h6>Business Printers</h6>
+            <p>Equip your teams for the future of work with AI business printers that simplify workflows, IT, and
+              security.</p>
+            <button class="btn btn-dark btn-sm">Explore</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="solution-box">
+            <img src="assets/p6.avif" class="img-fluid mb-3"
+              alt="Large Format Printers">
+            <h6>Large Format Printers</h6>
+            <p>Discover our large-format printers and plotters. Print a broad range of technical drawings, signage, and
+              photo art.</p>
+            <button class="btn btn-dark btn-sm">Explore</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <footer class="hp-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Printers</a></li>
+                        <li><a href="#">Desktops</a></li>
+                        <li><a href="#">Monitors</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Software & Drivers</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Warranty Check</a></li>
+                        <li><a href="#">Repair Services</a></li>
+                        <li><a href="#">Community Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About HP</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect</h5>
+                    <div class="social-icons mb-3">
+                        <a href="#" class="me-2 text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                    <h5>Stay informed</h5>
+                    <p class="small">Sign up for HP emails and get exclusive offers, product alerts, and more.</p>
+                    <button class="btn btn-hp-primary btn-sm">Sign up</button>
+                </div>
+            </div>
+            <div class="row hp-footer-bottom">
+                <div class="col-md-6">
+                    <p class="small">© Copyright 2023 HP Development Company, L.P.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="small me-3">Privacy</a>
+                    <a href="#" class="small me-3">Terms of Use</a>
+                    <a href="#" class="small me-3">Cookies</a>
+                    <a href="#" class="small">CA Supply Chains Act</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- SCRIPT -->
+  <script>
+    const images = [
+      "@assets/a1.avif",
+      "https://via.placeholder.com/600x300?text=Slide+2",
+      "https://via.placeholder.com/600x300?text=Slide+3"
+    ];
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const img = document.getElementById("sliderImage");
+      img.src = images[index];
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showSlide(currentIndex);
+    }
+  </script>
+</body>
+
+</html>

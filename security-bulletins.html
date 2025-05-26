@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Bulletins | HP® Customer Support</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hp-header {
+            background-color: #000;
+            padding: 15px 0;
+        }
+        .hp-logo {
+            height: 32px;
+        }
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+        }
+        .btn-hp-blue {
+            background-color: #0096D6;
+            color: white;
+        }
+        .btn-hp-blue:hover {
+            background-color: #0079ad;
+            color: white;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+        .security-card {
+            border-left: 4px solid #0096D6;
+            margin-bottom: 20px;
+        }
+        .critical-badge {
+            background-color: #dc3545;
+        }
+        .high-badge {
+            background-color: #fd7e14;
+        }
+        .medium-badge {
+            background-color: #ffc107;
+            color: #212529;
+        }
+        .low-badge {
+            background-color: #28a745;
+        }
+        .filter-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .pagination .page-item.active .page-link {
+            background-color: #0096D6;
+            border-color: #0096D6;
+        }
+        .pagination .page-link {
+            color: #0096D6;
+        }
+
+            .hp-footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        .hp-footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .hp-footer a:hover {
+            color: white;
+        }
+        .hp-footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .search-box input {
+            padding-right: 50px;
+            border-radius: 50px;
+        }
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            border-radius: 50px;
+            background-color: var(--hp-blue);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+        }
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+        }
+        .hp-badge {
+            background-color: #e74c3c;
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+ <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#"><img src="assets/logo.svg" width="40" alt="HP Logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="topNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Explore</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Shop</a></li>
+
+          <!-- Support dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Support
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+              <li><a class="dropdown-item" href="check-warranty.html">Check Warranty</a></li>
+              <li><a class="dropdown-item" href="index.html">Authorized Service Provides</a></li>
+              <li><a class="dropdown-item" href="security-bulletins.html">Security Bulletins Archive</a></li>
+              <li><a class="dropdown-item" href="parts-store.html">Parts Store</a></li>
+              <li><a class="dropdown-item" href="customer-service.html">Consumer Service</a></li>
+              <li><a class="dropdown-item" href="business-service.html">Buseniss Service</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-3 mt-2 mt-lg-0" role="search">
+          <input class="form-control rounded-0 rounded-start" type="search" placeholder="Search HP.com" />
+          <button class="btn btn-outline-secondary rounded-end" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-cart"></i></a>
+        <a href="#" class="btn btn-dark text-white">Sign in</a>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Support</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Security Bulletins</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="mb-4">Security Bulletins</h1>
+                <p class="lead">Stay informed about the latest security vulnerabilities and updates for HP products.</p>
+                
+                <div class="filter-section">
+                    <h2 class="h5 mb-3">Filter bulletins</h2>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="productCategory" class="form-label">Product category</label>
+                            <select class="form-select" id="productCategory">
+                                <option value="all" selected>All Categories</option>
+                                <option value="laptops">Laptops</option>
+                                <option value="printers">Printers</option>
+                                <option value="desktops">Desktops</option>
+                                <option value="workstations">Workstations</option>
+                                <option value="servers">Servers</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="severity" class="form-label">Severity</label>
+                            <select class="form-select" id="severity">
+                                <option value="all" selected>All Severities</option>
+                                <option value="critical">Critical</option>
+                                <option value="high">High</option>
+                                <option value="medium">Medium</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="year" class="form-label">Year</label>
+                            <select class="form-select" id="year">
+                                <option value="all" selected>All Years</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="search" class="form-label">Search</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="search" placeholder="Search bulletins...">
+                                <button class="btn btn-hp-blue" type="button">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="h5">Recent Security Bulletins</h2>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="showOnlyCritical">
+                        <label class="form-check-label" for="showOnlyCritical">Show only critical</label>
+                    </div>
+                </div>
+                
+                <div id="securityBulletins">
+                    <!-- Bulletins will be loaded here by JavaScript -->
+                </div>
+                
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">Security Bulletin Subscription</h3>
+                        <p class="card-text">Get the latest security bulletins delivered to your inbox.</p>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your email address">
+                        </div>
+                        <button class="btn btn-hp-blue w-100">Subscribe</button>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">Security Resources</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item border-0 px-0">
+                                <a href="#"><i class="fas fa-shield-alt me-2"></i> HP Security Center</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <a href="#"><i class="fas fa-book me-2"></i> Security White Papers</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <a href="#"><i class="fas fa-tools me-2"></i> Security Tools</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <a href="#"><i class="fas fa-question-circle me-2"></i> Security FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">Severity Definitions</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item border-0 px-0">
+                                <span class="badge critical-badge me-2">Critical</span>
+                                Vulnerability can be exploited over the network with no user credentials
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <span class="badge high-badge me-2">High</span>
+                                Vulnerability can result in compromise of confidentiality or integrity
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <span class="badge medium-badge me-2">Medium</span>
+                                Vulnerability is difficult to exploit or impact is minimized
+                            </li>
+                            <li class="list-group-item border-0 px-0">
+                                <span class="badge low-badge me-2">Low</span>
+                                Vulnerability has minimal impact or requires unlikely conditions
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="hp-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Printers</a></li>
+                        <li><a href="#">Desktops</a></li>
+                        <li><a href="#">Monitors</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Software & Drivers</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Warranty Check</a></li>
+                        <li><a href="#">Repair Services</a></li>
+                        <li><a href="#">Community Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About HP</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect</h5>
+                    <div class="social-icons mb-3">
+                        <a href="#" class="me-2 text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                    <h5>Stay informed</h5>
+                    <p class="small">Sign up for HP emails and get exclusive offers, product alerts, and more.</p>
+                    <button class="btn btn-hp-primary btn-sm">Sign up</button>
+                </div>
+            </div>
+            <div class="row hp-footer-bottom">
+                <div class="col-md-6">
+                    <p class="small">© Copyright 2023 HP Development Company, L.P.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="small me-3">Privacy</a>
+                    <a href="#" class="small me-3">Terms of Use</a>
+                    <a href="#" class="small me-3">Cookies</a>
+                    <a href="#" class="small">CA Supply Chains Act</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mock data for security bulletins
+            const bulletins = [
+                {
+                    id: "HPESBHF-2023-001",
+                    title: "Critical Security Update for HP BIOS",
+                    date: "2023-05-15",
+                    severity: "critical",
+                    category: "laptops",
+                    summary: "A vulnerability in HP BIOS could allow arbitrary code execution.",
+                    affected: "Multiple HP laptop models",
+                    cve: "CVE-2023-12345"
+                },
+                {
+                    id: "HPESBHF-2023-002",
+                    title: "Firmware Update for HP Printers",
+                    date: "2023-04-28",
+                    severity: "high",
+                    category: "printers",
+                    summary: "Security vulnerability in firmware could allow unauthorized access.",
+                    affected: "HP OfficeJet, HP LaserJet series",
+                    cve: "CVE-2023-12346"
+                },
+                {
+                    id: "HPESBHF-2023-003",
+                    title: "Driver Security Update for HP Workstations",
+                    date: "2023-04-15",
+                    severity: "medium",
+                    category: "workstations",
+                    summary: "Privilege escalation vulnerability in graphics drivers.",
+                    affected: "HP Z-series workstations",
+                    cve: "CVE-2023-12347"
+                },
+                {
+                    id: "HPESBHF-2023-004",
+                    title: "Security Patch for HP ProLiant Servers",
+                    date: "2023-03-30",
+                    severity: "high",
+                    category: "servers",
+                    summary: "Remote code execution vulnerability in iLO firmware.",
+                    affected: "HP ProLiant Gen10 servers",
+                    cve: "CVE-2023-12348"
+                },
+                {
+                    id: "HPESBHF-2023-005",
+                    title: "Update for HP Support Assistant",
+                    date: "2023-03-22",
+                    severity: "medium",
+                    category: "software",
+                    summary: "Security vulnerability in HP Support Assistant software.",
+                    affected: "HP Support Assistant versions prior to 9.8",
+                    cve: "CVE-2023-12349"
+                },
+                {
+                    id: "HPESBHF-2022-012",
+                    title: "End-of-Year Security Updates",
+                    date: "2022-12-15",
+                    severity: "low",
+                    category: "laptops",
+                    summary: "Multiple security updates for various HP laptop components.",
+                    affected: "Various consumer and business laptops",
+                    cve: "CVE-2022-45678, CVE-2022-45679"
+                }
+            ];
+            
+            // Function to render bulletins
+            function renderBulletins(filteredBulletins = bulletins) {
+                const container = document.getElementById('securityBulletins');
+                container.innerHTML = '';
+                
+                if (filteredBulletins.length === 0) {
+                    container.innerHTML = '<div class="alert alert-info">No bulletins match your filters.</div>';
+                    return;
+                }
+                
+                filteredBulletins.forEach(bulletin => {
+                    let severityBadgeClass;
+                    switch(bulletin.severity) {
+                        case 'critical':
+                            severityBadgeClass = 'critical-badge';
+                            break;
+                        case 'high':
+                            severityBadgeClass = 'high-badge';
+                            break;
+                        case 'medium':
+                            severityBadgeClass = 'medium-badge';
+                            break;
+                        case 'low':
+                            severityBadgeClass = 'low-badge';
+                            break;
+                    }
+                    
+                    const bulletinElement = document.createElement('div');
+                    bulletinElement.className = 'card security-card mb-3';
+                    bulletinElement.innerHTML = `
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h3 class="h6 card-title">${bulletin.title}</h3>
+                                <span class="badge ${severityBadgeClass}">${bulletin.severity.charAt(0).toUpperCase() + bulletin.severity.slice(1)}</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <small class="text-muted">Bulletin ID: ${bulletin.id}</small>
+                                <small class="text-muted">Date: ${bulletin.date}</small>
+                            </div>
+                            <p class="card-text">${bulletin.summary}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small><strong>Affected:</strong> ${bulletin.affected}</small>
+                                <a href="#" class="btn btn-sm btn-hp-blue">View details</a>
+                            </div>
+                            ${bulletin.cve ? `<small class="text-muted d-block mt-2"><strong>CVE:</strong> ${bulletin.cve}</small>` : ''}
+                        </div>
+                    `;
+                    container.appendChild(bulletinElement);
+                });
+            }
+            
+            // Initial render
+            renderBulletins();
+            
+            // Filter functionality
+            document.getElementById('productCategory').addEventListener('change', applyFilters);
+            document.getElementById('severity').addEventListener('change', applyFilters);
+            document.getElementById('year').addEventListener('change', applyFilters);
+            document.getElementById('showOnlyCritical').addEventListener('change', applyFilters);
+            
+            function applyFilters() {
+                const category = document.getElementById('productCategory').value;
+                const severity = document.getElementById('severity').value;
+                const year = document.getElementById('year').value;
+                const showOnlyCritical = document.getElementById('showOnlyCritical').checked;
+                
+                let filtered = bulletins;
+                
+                if (category !== 'all') {
+                    filtered = filtered.filter(b => b.category === category);
+                }
+                
+                if (severity !== 'all') {
+                    filtered = filtered.filter(b => b.severity === severity);
+                }
+                
+                if (year !== 'all') {
+                    filtered = filtered.filter(b => b.date.startsWith(year));
+                }
+                
+                if (showOnlyCritical) {
+                    filtered = filtered.filter(b => b.severity === 'critical');
+                }
+                
+                renderBulletins(filtered);
+            }
+            
+            // Search functionality
+            document.querySelector('.btn-hp-blue').addEventListener('click', function() {
+                const searchTerm = document.getElementById('search').value.toLowerCase();
+                if (!searchTerm) {
+                    renderBulletins(bulletins);
+                    return;
+                }
+                
+                const filtered = bulletins.filter(b => 
+                    b.title.toLowerCase().includes(searchTerm) || 
+                    b.summary.toLowerCase().includes(searchTerm) ||
+                    b.affected.toLowerCase().includes(searchTerm) ||
+                    (b.cve && b.cve.toLowerCase().includes(searchTerm))
+                );
+                
+                renderBulletins(filtered);
+            });
+        });
+    </script>
+</body>
+</html>

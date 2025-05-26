@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HP Support Clone</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .custom-shadow {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+    .footer-links a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 14px;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Top Navbar -->
+ <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#"><img src="assets/logo.svg" width="40" alt="HP Logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="topNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Explore</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Shop</a></li>
+
+          <!-- Support dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Support
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+              <li><a class="dropdown-item" href="check-warranty.html">Check Warranty</a></li>
+              <li><a class="dropdown-item" href="index.html">Authorized Service Provides</a></li>
+              <li><a class="dropdown-item" href="security-bulletins.html">Security Bulletins Archive</a></li>
+              <li><a class="dropdown-item" href="parts-store.html">Parts Store</a></li>
+              <li><a class="dropdown-item" href="customer-service.html">Consumer Service</a></li>
+              <li><a class="dropdown-item" href="business-service.html">Buseniss Service</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-3 mt-2 mt-lg-0" role="search">
+          <input class="form-control rounded-0 rounded-start" type="search" placeholder="Search HP.com" />
+          <button class="btn btn-outline-secondary rounded-end" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-cart"></i></a>
+        <a href="#" class="btn btn-dark text-white">Sign in</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bottom Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-1">
+    <div class="container-fluid px-4">
+      <button class="navbar-toggler text-white border-white" type="button" data-bs-toggle="collapse" data-bs-target="#bottomNavbar" aria-controls="bottomNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bottomNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Support Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Laptops</a></li>
+              <li><a class="dropdown-item" href="#">Desktops</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Software and Drivers</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Diagnostics</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Online Check</a></li>
+              <li><a class="dropdown-item" href="#">Tools</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Business Support</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">My HP Account</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="container-fluid p-0 position-relative">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" class="img-fluid w-100" style="height: 350px; object-fit: cover;" />
+    <div class="position-absolute top-50 start-50 translate-middle bg-white p-4 custom-shadow rounded w-75 w-md-50 text-center">
+      <h5>Contact HP</h5>
+      <p class="mb-0 text-muted">How may we help you?</p>
+    </div>
+  </div>
+
+  <!-- 3 Cards -->
+  <div class="container text-center my-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <i class="bi bi-cart-fill" style="font-size: 2rem;"></i>
+        <h5 class="mt-2">Shopping</h5>
+        <p class="text-muted">Sales consultations and order status</p>
+        <button class="btn btn-primary btn-sm">Go</button>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-question-circle-fill" style="font-size: 2rem;"></i>
+        <h5 class="mt-2">Contact support</h5>
+        <p class="text-muted">Find support contact options like chat, phone or email for your HP Products</p>
+        <button class="btn btn-primary btn-sm">Go</button>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-people-fill" style="font-size: 2rem;"></i>
+        <h5 class="mt-2">Company</h5>
+        <p class="text-muted">General questions and office locations</p>
+        <button class="btn btn-primary btn-sm">Go</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scam Alert -->
+  <div class="container text-center mb-5">
+    <p class="text-muted mb-1">HP fraudulent caller alert – protect yourself from scams</p>
+    <p class="text-muted small">This could be a scam; do not provide any personal information. <a href="#">View article</a></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row footer-links">
+        <div class="col-md-2"><h6>About Us</h6><a href="#">Contact HP</a><br><a href="#">Careers</a><br><a href="#">Newsroom</a></div>
+        <div class="col-md-2"><h6>Ways to Buy</h6><a href="#">Shop online</a><br><a href="#">Call an HP rep</a></div>
+        <div class="col-md-2"><h6>Support</h6><a href="#">Download drivers</a><br><a href="#">Check repair status</a></div>
+        <div class="col-md-2"><h6>HP Partners</h6><a href="#">HP Partner Portal</a><br><a href="#">Developers</a></div>
+        <div class="col-md-2"><h6>Stay connected</h6>
+          <i class="bi bi-facebook me-2"></i>
+          <i class="bi bi-instagram me-2"></i>
+          <i class="bi bi-youtube me-2"></i>
+          <i class="bi bi-linkedin me-2"></i>
+        </div>
+      </div>
+      <hr class="bg-white" />
+      <p class="small text-muted">©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

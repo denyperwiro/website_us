@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More About This Products</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<style>
+
+    body{
+        margin: 0;
+        letter-spacing: 0;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+    }
+
+
+   
+
+    .title-letter{
+        margin: 30px 60px;
+    }
+
+    .title-privacy{
+        color: black;
+        font-size: 35px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        margin-top: 50px;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+    }
+
+    .sub-title-privacy{
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+        line-height: 1.5;
+        padding-bottom:5px ;
+        
+        
+    }
+
+    .list{
+        font-weight: 400;
+        color: black;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    .link-sub-title{
+       
+        border-bottom: black 1px solid;
+        color: black;
+        text-decoration: none;
+       
+
+    }
+
+    .s-height{
+        padding-top: 80px;
+    }
+
+
+
+     /* Mengatur style untuk seluruh footer */
+    .top-footer {
+      background-color: #f5f5f5; /* Warna abu-abu muda */
+      padding: 20px ; /* Padding atas dan bawah */
+      display: flex; /* Mengatur agar isi footer bisa disusun horizontal */
+      justify-content: center; /* Menengahkan isi secara horizontal */
+      gap: 40px; /* Jarak antar item */
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+       margin-top: 120px;
+    }
+
+    .top-footer-item a{
+        color: black;
+        text-decoration: underline;
+    }
+
+    
+   /* Container utama footer */
+    footer {
+      background-color: #000; /* Latar footer tetap hitam */
+      padding: 40px; /* Ruang di dalam footer */
+      border-top: 1px solid #444; /* Garis pemisah di atas footer */
+      
+    }
+
+    /* Atur tata letak kolom footer */
+    .footer-container {
+      display: flex; /* Gunakan flexbox untuk baris kolom */
+      flex-wrap: wrap; /* Kolom bisa turun ke bawah jika layar kecil */
+      justify-content: space-between; /* Jarak antar kolom */
+      max-width: 1200px;
+      margin: auto; /* Pusatkan footer di halaman */
+    }
+
+    /* Gaya untuk masing-masing kolom */
+    .footer-column {
+      flex: 1 1 180px; /* Responsif: 1 bagian, minimal 180px */
+      margin: 10px;
+    }
+
+    /* Judul kolom (About Us, Support, dll) */
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Link di dalam footer */
+    .footer-column a {
+      display: block;
+      color: #ccc; /* Abu-abu muda */
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 14px;
+      
+    }
+
+
+    /* Bagian bawah footer (copyright + links hukum) */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+
+    /* Baris link legal (privacy, terms, dll) */
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    /* Link individual pada bagian bawah */
+    .footer-links a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+
+
+
+    .nav2{
+          height: 50px;
+          width: 55px;
+          
+        }
+ 
+        .btn-link {
+            font-size: 1.25rem;
+        }
+        .form-control {
+            font-size: 1.25rem;
+            height: 50px;
+            width: 500px;
+           
+        
+        }
+        .btn-outline-secondary {
+            font-size: 1.25rem;
+            padding: 10px 15px;
+        }
+
+        .troli {
+        
+            font-size: 30px;
+            color: black; 
+            margin-top: 2,5px;
+        }
+
+        .container-sign{
+            display: inline-block;
+            justify-items: center;
+            padding-left: 17px;
+            padding-top: 6px;
+            padding-right: 30px;
+           
+        }
+
+        .button-sign{
+            background-color: black;
+            justify-items: center;
+            height: 40px;
+            width: 90px;
+        }
+
+        .sub-title-sign{
+            color: white;
+            font-size: 20px ;
+           
+            font-weight: 400;
+            
+
+        }
+
+        
+
+
+        
+
+
+
+   
+
+</style>
+
+<body>
+
+   
+    
+      <!-- navigation bar/bawah -->
+    <nav class="navbar navbar-light bg-white">
+        <div class="container-fluid d-flex">
+            <img src="./logo-hp.png"  class="nav2" >
+            <ul class="navbar-nav d-flex flex-row me-auto">
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Support</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Explore</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Shop</button>
+            </ul>
+
+            <!-- tabel penacarian -->
+            <div class="d-flex">
+                <form class="d-flex me-2" style="margin-right: auto;">
+                    <input class="form-control me-2 text-secondary border border-secondary rounded" type="search" placeholder="What Are You Looking for?" aria-label="Search">
+                </form>
+
+            <!-- icon troli -->
+                <div class="troli"> 
+                    <i class="bi bi-cart icon"></i> 
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    
+    <!-- sistem modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Support</h6>
+                            <ul>
+                                
+                                <li><a href="diagnostic_tools.html"> Diagnostic Tools </a></li>
+                                <li><a href="business_desktops.html"> Business Desktops </a></li>
+                                <li><a href="financing.html">Financing</a></li>
+                                <li><a href="client.html">HP client </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Explore</h6>
+                            <ul>
+                                 <li><a href="more_about.html">More About</a></li>
+                                 <li><a href="privacy_choices.html">Privacy Choices</a></li>
+                                 <li><a href="site_disclaimers.html">Site Disclaimers </a></li>
+                                  <li><a href="profil-bye-deny.html">Profile</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Shop</h6>
+                            <ul>
+                                 
+                               
+                                <li><a href="printers-issues.html">Printers Issues</a></li>
+                                 <li><a href="customer support.html">Customer Support</a></li>
+                                 <li><a href="smb-servers.html"> Small Business Servers </a></li>
+                                 <li><a href="terms-of-use.html"> Terms Of Use </a></li>
+                                 <li><a href="zworkstations.html"> Zworkstations </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+<div class="title-letter">
+    <h1 class="title-privacy">More About These Products</h1>
+    <div class="sub-title-privacy">
+        <p><strong class="s-height">Power Up Your Productivity with HP Desktops and Workstations</strong></p>
+
+        <p>
+            You're looking for a desktop or workstation that can handle your everyday tasks, whether it's browsing the web, creating spreadsheets, or editing photos. You want something reliable, powerful, and maybe even stylish. That's where HP comes in! We've got a wide range of desktops and workstations to fit your needs and budget, from sleek and compact models to powerful machines built for demanding tasks.
+        </p>
+
+        <p>
+           <strong class="s-height">Find the Perfect Desktop for You</strong>
+        </p>
+
+        <p>
+            If you're looking for a desktop that's perfect for everyday use, the HP Pavilion™ line is a great place to start. These desktops are known for their affordability and performance, making them perfect for students, families, and anyone who needs a reliable computer for basic tasks. You can even find Pavilion™ models with powerful graphics cards to handle light gaming or creative tasks.
+        </p>
+
+        <p>
+            If you need more power for demanding tasks like video editing or 3D modeling, an HP ENVY™ desktop might be a better fit. These desktops are packed with features like high-end processors, ample RAM, and dedicated graphics cards. They're also stylish and compact, so they won't take up too much space on your desk.
+        </p>
+
+        <p>
+            The personal information you provide will be used according to the HP Privacy Statement
+        </p>
+
+        <p>
+            <strong class="s-height">✦America’s most trusted printer brand: Based on 2022 semi-annual internal brand surveys commissioned by HP.</strong>  
+        </p>
+
+        <p>
+            For professionals who need the ultimate in performance and reliability, HP offers a range of powerful workstations. These machines are built for demanding tasks like engineering, design, and scientific research. They feature high-end processors, specialized graphics cards, and robust memory, ensuring you can handle even the most complex projects.
+        </p>
+
+        <li>
+            HP Z workstations are designed for demanding workloads and offer a wide range of features and customization options. They're perfect for professionals who need the most powerful and reliable machines available.
+        </li>
+
+        <li>
+            HP EliteDesk™ workstations are a great option for businesses that need a balance of performance and affordability. They're packed with features and offer a variety of configurations to meet your specific needs.
+     
+        </li>
+
+        <p>
+            <strong class="s height">Features and Benefits</strong>
+        </p>
+        
+        <p>
+            No matter which HP desktop or workstation you choose, you can be sure you're getting a machine that's built to last. Our desktops are designed with high-quality components and come with a variety of features, including:    
+        </p>
+
+        
+         <li>
+            Powerful processors: From Intel® Core™ processors to AMD Ryzen™ processors, our desktops are equipped with the latest technology to ensure smooth performance for all your tasks.
+
+         </li>
+         
+         <li>
+            Ample memory: With options for up to 32GB of RAM, you can easily multitask and run demanding applications without any lag.
+
+         </li>
+         
+         <li>
+            High-performance graphics: Whether you're gaming, editing videos, or working with 3D models, our desktops offer a range of graphics options to meet your needs.
+
+         </li>
+         
+         <li>
+            Large storage capacity: With options for up to 2TB of hard drive space or fast SSDs, you'll have plenty of room for all your files, photos, and videos.
+
+         </li>
+         
+         <li>
+            Sleek and stylish designs: Our desktops are designed to look great on your desk, with a variety of colors and finishes to choose from.
+
+         </li>
+         
+         <li>
+            Reliable and durable: HP desktops are built to last, with rigorous testing to ensure they can withstand everyday use.
+
+         </li>
+        
+        <p>
+           <strong class="s-height">What HP Desktop Users Say</strong>
+        </p>
+
+        <p>
+            HP desktops are known for their reliability, performance, and user-friendliness. Customers often praise the ease of setup, the smooth performance, and the sleek designs. Many users also appreciate the variety of models available to fit different budgets and needs.  </p>
+
+        <p>
+            <strong class="s-height">Finding the Right HP Desktop for You</strong>
+        </p>
+
+        <p>
+            With so many great options available, it's easy to find the perfect HP desktop or workstation for you. Consider your budget, your needs, and the tasks you'll be using the computer for. If you need help deciding, our customer support team is available to answer any questions you may have.
+        </p>
+        
+        <p>
+            Please be advised that product availability, features, and specifications mentioned in this content are subject to change without notice and may vary by country or region. Some models, configurations, or accessories referenced may have been discontinued or may not be available in all markets. For the most current information on product availability and specifications in your area, please visit the HP store website for your country or region. HP reserves the right to modify or discontinue any product, service, or specification at any time without notice.
+        </p>
+       
+
+    </div>
+</div>
+
+ <div class="top-footer">
+   
+    <div class="top-footer-item">
+      
+      <a href="#">FEEDBACK</a>
+    </div>
+
+    <div class="top-footer-item">
+     <a href="#">MORE USEFUL LINKS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="more_about.html">MORE ABOUT THESE PRODUCTS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="site_disclaimers.html">SITE DISCLAIMERS </a>
+    </div>
+  </div>
+
+
+<footer>
+  <div class="footer-container">
+    
+    <!-- Kolom 1: About Us -->
+    <div class="footer-column">
+      <h4 >ABOUT US</h4>
+    
+      <a href="#">Contact HP</a>
+      <a href="#">Careers</a>
+      <a href="#">Investor relations</a>
+      <a href="#">Sustainable impact</a>
+      <a href="#">Diversity, Equity and Inclusion</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Tech Takes</a>
+      <a href="#">HP Store Newsletter</a>
+      <a href="#">HP Printables Newsletter</a>
+    </div>
+
+    <!-- Kolom 2: Cara Membeli -->
+    <div class="footer-column">
+      <h4 >WAYS TO BUY</h4>
+      <a href="#">Shop online</a>
+      <a href="#">Call an HP rep</a>
+      <a href="#">Find a reseller</a>
+      <a href="#">Enterprise store</a>
+      <a href="#">Public sector purchasing</a>
+    </div>
+
+    <!-- Kolom 3: Dukungan -->
+    <div class="footer-column">
+      <h4 >SUPPORT</h4>
+      <a href="#">Download drivers</a>
+      <a href="#">Support & troubleshooting</a>
+      <a href="#">Community</a>
+      <a href="#">Register your product</a>
+      <a href="#">Authorized service providers</a>
+      <a href="#">Check repair status</a>
+      <a href="#">Fraud alert</a>
+      <a href="#">Security Center</a>
+    </div>
+
+    <!-- Kolom 4: Mitra HP -->
+    <div class="footer-column">
+      <h4 >HP PARTNERS</h4>
+      <a href="#">HP Amplify Partner Program</a>
+      <a href="#">HP Partner Portal</a>
+      <a href="#">Developers</a>
+    </div>
+
+
+ 
+  <div class="footer-bottom">
+    <!-- Kumpulan link legal -->
+    <div class="footer-links">
+      <a href="#">Recalls</a>
+      <a href="#">Product recycling</a>
+      <a href="#">Accessibility</a>
+      <a href="#">CA Supply Chains Act</a>
+      <a href="#">Privacy</a>
+      <a href="#">Use of cookies</a>
+      <a href="#">Your privacy choices</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Limited warranty statement</a>
+      <a href="#">Terms & conditions of sales & service</a>
+    </div>
+    
+    <p>©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.</p>
+  </div>
+</footer>
+        
+
+</body>
+</html>

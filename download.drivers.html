@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HP Software and Drivers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    header {
+      background-color: #0077c8;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #005a9e;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 2rem;
+      text-align: center;
+    }
+    h2 {
+      color: #00732f;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .product-tile {
+      background-color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    .product-tile:hover {
+      transform: translateY(-5px);
+    }
+    .product-tile img {
+      width: 40px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 2rem;
+    }
+    .footer-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+    .footer-columns h4 {
+      margin-bottom: 0.5rem;
+    }
+    .footer-columns ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-columns ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-columns ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .footer-columns ul li a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 1rem;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Official HP® Drivers and Software</h1>
+  </header>
+
+  <nav>
+    <a href="#">Support Home</a>
+    <a href="#">Products</a>
+    <a href="#">Software and Drivers</a>
+    <a href="#">Diagnostics</a>
+    <a href="contact.us.html">Contact Us</a>
+    <a href="#">My HP Account</a>
+  </nav>
+
+  <div class="container">
+    <h2>Welcome to HP Software and Drivers</h2>
+    <p>Select your product type below</p>
+    <div class="product-grid">
+      <div class="product-tile">
+        <img src="https://img.icons8.com/ios-filled/50/000000/print.png" alt="Printer">
+        <p>Printer</p>
+      </div>
+      <div class="product-tile">
+        <img src="https://img.icons8.com/ios-filled/50/000000/laptop.png" alt="Laptop">
+        <p>Laptop</p>
+      </div>
+      <div class="product-tile">
+        <img src="https://img.icons8.com/ios-filled/50/000000/monitor.png" alt="Desktop">
+        <p>Desktop</p>
+      </div>
+      <div class="product-tile">
+        <img src="https://img.icons8.com/ios-filled/50/000000/headphones.png" alt="Poly">
+        <p>Poly</p>
+      </div>
+      <div class="product-tile">
+        <img src="https://img.icons8.com/ios-filled/50/000000/device-manager.png" alt="Other">
+        <p>Other</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-columns">
+      <div>
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="contact.us.html">Contact HP</a></li>
+          <li><a href="carrier.html">Careers</a></li>
+          <li><a href="#">Investor relations</a></li>
+          <li><a href="#">Sustainable impact</a></li>
+          <li><a href="#">Diversity, Equity and Inclusion</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ways to Buy</h4>
+        <ul>
+          <li><a href="shop.html">Shop online</a></li>
+          <li><a href="#">Call an HP rep</a></li>
+          <li><a href="find a reseller.html">Find a reseller</a></li>
+          <li><a href="#">Enterprise store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Download drivers</a></li>
+          <li><a href="#">Support & troubleshooting</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Register your product</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>HP Partners</h4>
+        <ul>
+          <li><a href="#">HP Amplify Partner Program</a></li>
+          <li><a href="#">HP Partner Portal</a></li>
+          <li><a href="#">Developers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        Recalls | Product recycling | Accessibility | CA Supply Chains Act | Privacy | Cookie Preferences | Terms of use | Limited warranty statement<br>
+        &copy;2025 HP Development Company, L.P. The information contained herein is subject to change without notice.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

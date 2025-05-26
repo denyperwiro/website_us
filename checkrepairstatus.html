@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HP Customer Support</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+      color: #1a73e8;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    nav {
+      padding: 10px 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #0071c5;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0071c5;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    footer {
+      background-color: #000;
+      color: #ccc;
+      padding: 40px 20px 20px;
+      font-size: 14px;
+    }
+
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+
+    .footer-column h4 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #ccc;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 10px;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HP Customer Support</h1>
+  </header>
+  <nav>
+    <a href="#">Explore</a>
+    <a href="#">Shop</a>
+    <a href="#">Support</a>
+  </nav>
+  <div class="container">
+    <h2>Check your HP service order status online</h2>
+    <p>We are sincerely sorry about the problem you experienced with your HP product. Rest assured that your service order is our top priority.</p>
+    <p>Simply enter your service order number and then either your email address or the serial number of your product.</p>
+    
+    <label for="serviceOrder">Service Order Number</label>
+    <input type="text" id="serviceOrder" placeholder="Enter Service Order Number" />
+
+    <label for="email">Email Address</label>
+    <input type="text" id="email" placeholder="Enter Email Address" />
+
+    <p style="text-align:center">or</p>
+
+    <label for="serial">Serial Number</label>
+    <input type="text" id="serial" placeholder="Enter Serial Number" />
+
+    <button onclick="getStatus()">Get Status</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="contact.us.html">Contact HP</a></li>
+          <li><a href="carrier.html">Careers</a></li>
+          <li><a href="#">Investor relations</a></li>
+          <li><a href="#">Sustainable impact</a></li>
+          <li><a href="#">Newsroom</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Ways to buy</h4>
+        <ul>
+          <li><a href="shop.html">Shop online</a></li>
+          <li><a href="#">Call an HP rep</a></li>
+          <li><a href="find a reseller.html">Find a reseller</a></li>
+          <li><a href="#">Enterprise store</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="download.drivers.html">Download drivers</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Register your product</a></li>
+          <li><a href="checkrepairstatus.html">Check repair status</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>HP Partners</h4>
+        <ul>
+          <li><a href="#">HP Amplify Partner</a></li>
+          <li><a href="#">Developer</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#">🔗</a>
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+          <a href="#">🐦</a>
+          <a href="#">▶️</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      ©2025 HP Development Company, L.P. | Privacy | Terms | Accessibility
+    </div>
+  </footer>
+
+  <script>
+    function getStatus() {
+      const order = document.getElementById("serviceOrder").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const serial = document.getElementById("serial").value.trim();
+      const result = document.getElementById("result");
+
+      if (!order || (!email && !serial)) {
+        result.textContent = "Please enter the service order number and either your email or serial number.";
+        result.style.color = "red";
+        return;
+      }
+
+      result.style.color = "green";
+      result.textContent = `Fetching status for Order #${order}... (Simulated)`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,690 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   HP Monitors
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900">
+  <!-- Top header with HP logo and navigation -->
+  <header class="border-b border-gray-300">
+   <div class="max-w-[1280px] mx-auto flex items-center justify-between px-4 py-2">
+    <a class="flex items-center space-x-2" href="#">
+     <img alt="HP Logo" class="h-8 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/HP_logo_2012.svg/2560px-HP_logo_2012.svg.png"/>
+    </a>
+    <nav class="hidden md:flex space-x-6 text-sm font-semibold text-gray-700">
+     <a class="hover:text-black" href="#">
+      Laptops
+     </a>
+     <a class="hover:text-black" href="#">
+      Desktops
+     </a>
+     <a class="hover:text-black" href="#">
+      Printers
+     </a>
+     <a class="hover:text-black" href="#">
+      Monitors
+     </a>
+     <a class="hover:text-black" href="#">
+      Accessories
+     </a>
+     <a class="hover:text-black" href="#">
+      Support
+     </a>
+    </nav>
+    <div class="hidden md:flex items-center space-x-4 text-gray-700 text-sm">
+     <a class="hover:text-black" href="#">
+      Sign In
+     </a>
+     <a class="hover:text-black" href="#">
+      Cart (0)
+     </a>
+    </div>
+    <button aria-label="Open menu" class="md:hidden text-gray-700 hover:text-black focus:outline-none">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+  </header>
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="max-w-[1280px] mx-auto px-4 py-3 text-xs text-gray-600">
+   <ol class="list-reset flex space-x-1 md:space-x-2">
+    <li>
+     <a class="hover:underline" href="#">
+      HP.com
+     </a>
+     <span class="mx-1">
+      /
+     </span>
+    </li>
+    <li>
+     <a class="hover:underline" href="#">
+      Monitors
+     </a>
+     <span class="mx-1">
+      /
+     </span>
+    </li>
+    <li aria-current="page" class="text-gray-900 font-semibold">
+     All Monitors
+    </li>
+   </ol>
+  </nav>
+  <!-- Main content container -->
+  <main class="max-w-[1280px] mx-auto px-4 pb-12">
+   <div class="flex flex-col md:flex-row md:space-x-6">
+    <!-- Sidebar filters -->
+    <aside class="w-full md:w-64 border border-gray-300 rounded-md p-4 mb-6 md:mb-0">
+     <h2 class="text-lg font-semibold mb-4">
+      Filters
+     </h2>
+     <!-- Price filter -->
+     <section class="mb-6">
+      <h3 class="font-semibold mb-2">
+       Price
+      </h3>
+      <div class="flex items-center space-x-2 mb-2">
+       <input checked="" class="accent-blue-600" id="price-all" name="price" type="radio" value="all"/>
+       <label class="text-sm cursor-pointer" for="price-all">
+        All
+       </label>
+      </div>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="price-under-200" name="price" type="radio" value="under-200"/>
+       <label class="text-sm cursor-pointer" for="price-under-200">
+        Under $200
+       </label>
+      </div>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="price-200-400" name="price" type="radio" value="200-400"/>
+       <label class="text-sm cursor-pointer" for="price-200-400">
+        $200 - $400
+       </label>
+      </div>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="price-400-600" name="price" type="radio" value="400-600"/>
+       <label class="text-sm cursor-pointer" for="price-400-600">
+        $400 - $600
+       </label>
+      </div>
+      <div class="flex items-center space-x-2">
+       <input class="accent-blue-600" id="price-over-600" name="price" type="radio" value="over-600"/>
+       <label class="text-sm cursor-pointer" for="price-over-600">
+        Over $600
+       </label>
+      </div>
+     </section>
+     <!-- Screen Size filter -->
+     <section class="mb-6">
+      <h3 class="font-semibold mb-2">
+       Screen Size
+      </h3>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="size-24" name="size" type="checkbox" value="24"/>
+       <label class="text-sm cursor-pointer" for="size-24">
+        24"
+       </label>
+      </div>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="size-27" name="size" type="checkbox" value="27"/>
+       <label class="text-sm cursor-pointer" for="size-27">
+        27"
+       </label>
+      </div>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="size-32" name="size" type="checkbox" value="32"/>
+       <label class="text-sm cursor-pointer" for="size-32">
+        32"
+       </label>
+      </div>
+      <div class="flex items-center space-x-2">
+       <input class="accent-blue-600" id="size-34" name="size" type="checkbox" value="34"/>
+       <label class="text-sm cursor-pointer" for="size-34">
+        34"
+       </label>
+      </div>
+     </section>
+     <!-- Resolution filter -->
+     <section class="mb-6">
+      <h3 class="font-semibold mb-2">
+       Resolution
+      </h3>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="res-1080p" name="resolution" type="checkbox" value="1080p"/>
+       <label class="text-sm cursor-pointer" for="res-1080p">
+        1080p
+       </label>
+      </div>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="res-1440p" name="resolution" type="checkbox" value="1440p"/>
+       <label class="text-sm cursor-pointer" for="res-1440p">
+        1440p
+       </label>
+      </div>
+      <div class="flex items-center space-x-2">
+       <input class="accent-blue-600" id="res-4k" name="resolution" type="checkbox" value="4k"/>
+       <label class="text-sm cursor-pointer" for="res-4k">
+        4K
+       </label>
+      </div>
+     </section>
+     <!-- Panel Type filter -->
+     <section class="mb-6">
+      <h3 class="font-semibold mb-2">
+       Panel Type
+      </h3>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="panel-ips" name="panel" type="checkbox" value="IPS"/>
+       <label class="text-sm cursor-pointer" for="panel-ips">
+        IPS
+       </label>
+      </div>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="panel-tn" name="panel" type="checkbox" value="TN"/>
+       <label class="text-sm cursor-pointer" for="panel-tn">
+        TN
+       </label>
+      </div>
+      <div class="flex items-center space-x-2">
+       <input class="accent-blue-600" id="panel-va" name="panel" type="checkbox" value="VA"/>
+       <label class="text-sm cursor-pointer" for="panel-va">
+        VA
+       </label>
+      </div>
+     </section>
+     <!-- Refresh Rate filter -->
+     <section class="mb-6">
+      <h3 class="font-semibold mb-2">
+       Refresh Rate
+      </h3>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="refresh-60hz" name="refresh" type="checkbox" value="60hz"/>
+       <label class="text-sm cursor-pointer" for="refresh-60hz">
+        60Hz
+       </label>
+      </div>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="refresh-75hz" name="refresh" type="checkbox" value="75hz"/>
+       <label class="text-sm cursor-pointer" for="refresh-75hz">
+        75Hz
+       </label>
+      </div>
+      <div class="flex items-center space-x-2">
+       <input class="accent-blue-600" id="refresh-144hz" name="refresh" type="checkbox" value="144hz"/>
+       <label class="text-sm cursor-pointer" for="refresh-144hz">
+        144Hz
+       </label>
+      </div>
+     </section>
+     <!-- Connectivity filter -->
+     <section class="mb-6">
+      <h3 class="font-semibold mb-2">
+       Connectivity
+      </h3>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="conn-hdmi" name="connectivity" type="checkbox" value="HDMI"/>
+       <label class="text-sm cursor-pointer" for="conn-hdmi">
+        HDMI
+       </label>
+      </div>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="conn-displayport" name="connectivity" type="checkbox" value="DisplayPort"/>
+       <label class="text-sm cursor-pointer" for="conn-displayport">
+        DisplayPort
+       </label>
+      </div>
+      <div class="flex items-center space-x-2">
+       <input class="accent-blue-600" id="conn-usb-c" name="connectivity" type="checkbox" value="USB-C"/>
+       <label class="text-sm cursor-pointer" for="conn-usb-c">
+        USB-C
+       </label>
+      </div>
+     </section>
+     <!-- Brand filter -->
+     <section class="mb-6">
+      <h3 class="font-semibold mb-2">
+       Brand
+      </h3>
+      <div class="flex items-center space-x-2 mb-2">
+       <input checked="" class="accent-blue-600" id="brand-hp" name="brand" type="checkbox" value="HP"/>
+       <label class="text-sm cursor-pointer" for="brand-hp">
+        HP
+       </label>
+      </div>
+      <div class="flex items-center space-x-2 mb-2">
+       <input class="accent-blue-600" id="brand-other" name="brand" type="checkbox" value="Other"/>
+       <label class="text-sm cursor-pointer" for="brand-other">
+        Other
+       </label>
+      </div>
+     </section>
+    </aside>
+    <!-- Products grid -->
+    <section class="flex-1">
+     <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-bold">
+       Monitors
+      </h1>
+      <div class="text-sm text-gray-600">
+       Showing 1-15 of 15 results
+      </div>
+     </div>
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Product 1 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 27f FHD Monitor with a colorful abstract wave pattern on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/e30be2da-95cb-4fb2-bcd2-44b2fd2be2f1.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 27f FHD Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        27" diagonal, 1920 x 1080 resolution, IPS panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        AMD FreeSync, 75Hz refresh rate
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $179.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 2 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 24mh FHD Monitor with a green and purple abstract wave pattern on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/39e3297c-e09b-4436-dd04-fb722ed5ab7a.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 24mh FHD Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        23.8" diagonal, 1920 x 1080 resolution, IPS panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        75Hz refresh rate, built-in speakers
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $159.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 3 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 27x Gaming Monitor with a dark background and colorful gaming graphics on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/bedfbe36-ebf3-415d-73b2-3490641cf3c1.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 27x Gaming Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        27" diagonal, 1920 x 1080 resolution, TN panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        144Hz refresh rate, 1ms response time
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $249.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 4 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 34f Curved Monitor with a yellow and blue abstract wave pattern on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/a28cd2fd-4f1f-4ab4-4d6c-619f5807bb7b.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 34f Curved Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        34" diagonal, 3440 x 1440 resolution, IPS panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        75Hz refresh rate, curved screen
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $399.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 5 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 27f FHD Monitor with a yellow and blue abstract wave pattern on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/58e40861-8abe-49f3-d306-202666a061c7.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 27f FHD Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        27" diagonal, 1920 x 1080 resolution, IPS panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        AMD FreeSync, 75Hz refresh rate
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $179.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 6 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 27x Gaming Monitor with a dark background and colorful gaming graphics on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/bedfbe36-ebf3-415d-73b2-3490641cf3c1.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 27x Gaming Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        27" diagonal, 1920 x 1080 resolution, TN panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        144Hz refresh rate, 1ms response time
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $249.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 7 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 24mh FHD Monitor with a green and purple abstract wave pattern on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/39e3297c-e09b-4436-dd04-fb722ed5ab7a.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 24mh FHD Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        23.8" diagonal, 1920 x 1080 resolution, IPS panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        75Hz refresh rate, built-in speakers
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $159.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 8 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 27f FHD Monitor with a colorful abstract wave pattern on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/e30be2da-95cb-4fb2-bcd2-44b2fd2be2f1.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 27f FHD Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        27" diagonal, 1920 x 1080 resolution, IPS panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        AMD FreeSync, 75Hz refresh rate
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $179.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 9 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 27x Gaming Monitor with a dark background and colorful gaming graphics on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/bedfbe36-ebf3-415d-73b2-3490641cf3c1.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 27x Gaming Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        27" diagonal, 1920 x 1080 resolution, TN panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        144Hz refresh rate, 1ms response time
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $249.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 10 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 34f Curved Monitor with a yellow and blue abstract wave pattern on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/a28cd2fd-4f1f-4ab4-4d6c-619f5807bb7b.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 34f Curved Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        34" diagonal, 3440 x 1440 resolution, IPS panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        75Hz refresh rate, curved screen
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $399.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 11 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 27f FHD Monitor with a yellow and blue abstract wave pattern on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/58e40861-8abe-49f3-d306-202666a061c7.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 27f FHD Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        27" diagonal, 1920 x 1080 resolution, IPS panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        AMD FreeSync, 75Hz refresh rate
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $179.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 12 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 27x Gaming Monitor with a dark background and colorful gaming graphics on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/bedfbe36-ebf3-415d-73b2-3490641cf3c1.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 27x Gaming Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        27" diagonal, 1920 x 1080 resolution, TN panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        144Hz refresh rate, 1ms response time
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $249.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 13 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 24mh FHD Monitor with a green and purple abstract wave pattern on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/39e3297c-e09b-4436-dd04-fb722ed5ab7a.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 24mh FHD Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        23.8" diagonal, 1920 x 1080 resolution, IPS panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        75Hz refresh rate, built-in speakers
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $159.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 14 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 27f FHD Monitor with a colorful abstract wave pattern on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/e30be2da-95cb-4fb2-bcd2-44b2fd2be2f1.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 27f FHD Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        27" diagonal, 1920 x 1080 resolution, IPS panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        AMD FreeSync, 75Hz refresh rate
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $179.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+      <!-- Product 15 -->
+      <article class="border border-gray-300 rounded-md p-4 flex flex-col">
+       <img alt="HP 27x Gaming Monitor with a dark background and colorful gaming graphics on screen" class="w-full h-auto mb-4 object-contain" height="300" src="https://storage.googleapis.com/a1aa/image/bedfbe36-ebf3-415d-73b2-3490641cf3c1.jpg" width="400"/>
+       <h2 class="text-lg font-semibold mb-1">
+        HP 27x Gaming Monitor
+       </h2>
+       <p class="text-sm text-gray-700 mb-1">
+        27" diagonal, 1920 x 1080 resolution, TN panel
+       </p>
+       <p class="text-sm text-gray-700 mb-2">
+        144Hz refresh rate, 1ms response time
+       </p>
+       <div class="text-xl font-bold mb-4">
+        $249.99
+       </div>
+       <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" type="button">
+        Add to Cart
+       </button>
+      </article>
+     </div>
+    </section>
+   </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 text-sm">
+   <div class="max-w-[1280px] mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+     <h3 class="font-semibold mb-3 text-white"> <a href="customer service.html"></a>
+      Customer Service
+     </h3>
+     <ul class="space-y-2">
+      <li>
+       <a class="hover:underline" href="buying guide.html" Contact Us="0">
+        buying guide
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="how to order.html">
+        Order Status
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Returns
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Shipping
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        FAQs
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="font-semibold mb-3 text-white">
+      About HP
+     </h3>
+     <ul class="space-y-2">
+      <li>
+       <a class="hover:underline" href="#">
+        Company Info
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="carrier.html">
+        Careers
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Newsroom
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Sustainability
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="font-semibold mb-3 text-white">
+      Support
+     </h3>
+     <ul class="space-y-2">
+      <li>
+       <a class="hover:underline" href="#">
+        Product Support
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Drivers &amp; Downloads
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Warranty Check
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Community Forums
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="font-semibold mb-3 text-white">
+      Follow Us
+     </h3>
+     <div class="flex space-x-4 text-lg">
+      <a aria-label="Facebook" class="hover:text-white" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a aria-label="Twitter" class="hover:text-white" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a aria-label="Instagram" class="hover:text-white" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a aria-label="LinkedIn" class="hover:text-white" href="#">
+       <i class="fab fa-linkedin-in">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="border-t border-gray-700 text-center py-4 text-xs text-gray-500">
+    © 2024 HP Development Company, L.P.
+   </div>
+  </footer>
+ </body>
+</html>

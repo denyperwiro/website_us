@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Discalimers</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<style>
+
+    body{
+        margin: 0;
+        letter-spacing: 0;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+    }
+
+
+   
+
+    .title-letter{
+        margin: 30px 60px;
+    }
+
+    .title-privacy{
+        color: black;
+        font-size: 35px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        margin-top: 50px;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+    }
+
+    .sub-title-privacy{
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+        line-height: 1.5;
+        padding-bottom:5px ;
+        
+    }
+
+    .list{
+        font-weight: 400;
+        color: black;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    .link-sub-title{
+       
+        border-bottom: black 1px solid;
+        color: black;
+        text-decoration: none;
+       
+
+    }
+
+
+
+     /* Mengatur style untuk seluruh footer */
+    .top-footer {
+      background-color: #f5f5f5; /* Warna abu-abu muda */
+      padding: 20px ; /* Padding atas dan bawah */
+      display: flex; /* Mengatur agar isi footer bisa disusun horizontal */
+      justify-content: center; /* Menengahkan isi secara horizontal */
+      gap: 40px; /* Jarak antar item */
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+       margin-top: 120px;
+    }
+
+    .top-footer-item a{
+        color: black;
+        text-decoration: underline;
+    }
+
+    
+   /* Container utama footer */
+    footer {
+      background-color: #000; /* Latar footer tetap hitam */
+      padding: 40px; /* Ruang di dalam footer */
+      border-top: 1px solid #444; /* Garis pemisah di atas footer */
+      
+    }
+
+    /* Atur tata letak kolom footer */
+    .footer-container {
+      display: flex; /* Gunakan flexbox untuk baris kolom */
+      flex-wrap: wrap; /* Kolom bisa turun ke bawah jika layar kecil */
+      justify-content: space-between; /* Jarak antar kolom */
+      max-width: 1200px;
+      margin: auto; /* Pusatkan footer di halaman */
+    }
+
+    /* Gaya untuk masing-masing kolom */
+    .footer-column {
+      flex: 1 1 180px; /* Responsif: 1 bagian, minimal 180px */
+      margin: 10px;
+    }
+
+    /* Judul kolom (About Us, Support, dll) */
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Link di dalam footer */
+    .footer-column a {
+      display: block;
+      color: #ccc; /* Abu-abu muda */
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 14px;
+      
+    }
+
+
+    /* Bagian bawah footer (copyright + links hukum) */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+
+    /* Baris link legal (privacy, terms, dll) */
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    /* Link individual pada bagian bawah */
+    .footer-links a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+
+
+
+    .nav2{
+          height: 50px;
+          width: 55px;
+          
+        }
+ 
+        .btn-link {
+            font-size: 1.25rem;
+        }
+        .form-control {
+            font-size: 1.25rem;
+            height: 50px;
+            width: 500px;
+           
+        
+        }
+        .btn-outline-secondary {
+            font-size: 1.25rem;
+            padding: 10px 15px;
+        }
+
+        .troli {
+        
+            font-size: 30px;
+            color: black; 
+            margin-top: 2,5px;
+        }
+
+        .container-sign{
+            display: inline-block;
+            justify-items: center;
+            padding-left: 17px;
+            padding-top: 6px;
+            padding-right: 30px;
+           
+        }
+
+        .button-sign{
+            background-color: black;
+            justify-items: center;
+            height: 40px;
+            width: 90px;
+        }
+
+        .sub-title-sign{
+            color: white;
+            font-size: 20px ;
+           
+            font-weight: 400;
+            
+
+        }
+
+
+
+        
+
+
+
+   
+
+</style>
+
+<body>
+
+   
+    
+     <!-- navigation bar/bawah -->
+    <nav class="navbar navbar-light bg-white">
+        <div class="container-fluid d-flex">
+            <img src="./logo-hp.png"  class="nav2" >
+            <ul class="navbar-nav d-flex flex-row me-auto">
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Support</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Explore</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Shop</button>
+            </ul>
+
+            <!-- tabel penacarian -->
+            <div class="d-flex">
+                <form class="d-flex me-2" style="margin-right: auto;">
+                    <input class="form-control me-2 text-secondary border border-secondary rounded" type="search" placeholder="What Are You Looking for?" aria-label="Search">
+                </form>
+
+            <!-- icon troli -->
+                <div class="troli"> 
+                    <i class="bi bi-cart icon"></i> 
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    
+    <!-- sistem modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Support</h6>
+                            <ul>
+                                
+                                <li><a href="diagnostic_tools.html"> Diagnostic Tools </a></li>
+                                <li><a href="business_desktops.html"> Business Desktops </a></li>
+                                <li><a href="financing.html">Financing</a></li>
+                                <li><a href="client.html">HP client </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Explore</h6>
+                            <ul>
+                                 <li><a href="more_about.html">More About</a></li>
+                                 <li><a href="privacy_choices.html">Privacy Choices</a></li>
+                                 <li><a href="site_disclaimers.html">Site Disclaimers </a></li>
+                                  <li><a href="profil-bye-deny.html">Profile</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Shop</h6>
+                            <ul>
+                                 
+                               <li><a href="printers-issues.html">Printers Issues</a></li>
+                                 <li><a href="customer support.html">Customer Support</a></li>
+                                
+                                 <li><a href="smb-servers.html"> Small Business Servers </a></li>
+                                 <li><a href="terms-of-use.html"> Terms Of Use </a></li>
+                                 <li><a href="zworkstations.html"> Zworkstations </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+<div class="title-letter">
+    <h1 class="title-privacy">Site Disclaimers</h1>
+    <div class="sub-title-privacy">
+        <p>Offers subject to change, not combinable with all other offers, and exclusions may apply, while supplies last.
+            HP may impose a purchase quantity limit (for example, 3 units per order). Taxes, shipping, and other fees may apply
+            as applicable. HP reserves the right to cancel orders arising from pricing or other errors. Prices, specifications,
+            availability, and terms of offers may change without notice. Price protection, price matching or price guarantees
+            do not apply to Intra-day, Daily Deals or limited-time promotions. These terms apply only to products sold by HP.
+            com; reseller offers may vary. Items sold by HP.com are not for immediate resale. Orders that do not comply with 
+            HP.com terms, conditions, and limitations may be cancelled. Contract and volume customers not eligible.
+        </p>
+
+        <p>
+            ✻ HP’s strikethrough price is HP’s MSRP, which is HP’s suggested retail price for authorized channel partners, 
+            based on a number of factors, including but not limited
+            to manufacturing and component parts. The MSRP may not be the prevailing market price or regular retail price.
+        </p>
+
+        <p>
+            Microsoft and Windows are US registered of Microsoft Corporation. Ultrabook, Celeron, Celeron Inside, Core Inside, Intel, Intel Logo,
+            Intel Atom, Intel Atom Inside, Intel Core, Intel Inside, Intel Inside Logo, Intel vPro, Itanium, Itanium Inside, Intel Evo, Intel Optane, 
+            Iris, Itanium, MAX, Pentium, Pentium Inside, vPro Inside, Xeon, Xeon Phi and Xeon Inside are trademarks of Intel Corporation
+            or its subsidiaries in the U.S. and/or other countries.
+        </p>
+
+        <p>
+            Not all features are available in all editions or versions of Windows. Systems may require upgraded and/or 
+            separately purchased hardware, drivers, software or BIOS update to take full advantage of Windows functionality.
+            Windows is automatically updated and enabled. High speed internet and Microsoft account required. ISP fees may 
+            apply and additional requirements may apply over time for updates. <strong>See http://www.windows.com.</strong> 
+        </p>
+
+        <p>
+            Earn HP Rewards on select products from the following categories: Laptops, Desktops, Printers, Business PC’s, 
+            select Accessories, and select Ink, Toner & Paper. Exclusions apply, and program membership required. See details HP Rewards
+        </p>
+
+        <p>
+            The personal information you provide will be used according to the HP Privacy Statement
+        </p>
+
+        <p>
+            ✦America’s most trusted printer brand: Based on 2022 semi-annual internal brand surveys commissioned by HP.
+        </p>
+
+        <p>
+            *2 years of ink included with the best print quality every time: Based upon 150 and 200 pages per month of HP Smart 
+            Tank customers’ usage. Actual yield varies considerably based on content of printed pages and other factors. Average
+             yield based on ISO/IEC 24711 or HP testing methodology and continuous printing. Some ink from included bottles is 
+             used to start up the printer. For details, see: <strong> www.hp.com/go/learnaboutsupplies.</strong> Print quality tested on everyday 
+             paper. Compared to the majority of in-class, 3:1 and 4:1 duplex, wireless A4 ink tank printers under $552 USD. Printers 
+             selected by market share as reported by IDC Quarterly Hardcopy Peripherals Tracker – Final Historical CYQ2 2023. Claim 
+             based on publicly available information as of September 2023 and Keypoint Intelligence hands-on testing and study 
+            in September 2023 commissioned by HP. Details: <strong> www.keypointintelligence.com/hpbesteverydayprintquality.</strong>
+        </p>
+
+        <p>
+            **Copilot in Windows (in preview) is available in select global markets and will be rolled out to additional 
+            markets over time. See microsoft.com/en-us/windows/windows-10-specifications for more information.
+        </p>
+        
+        <p>
+            ++Offer good on select business laptops and desktops. Transactions are subject to equipment pricing and credit 
+            approval. Deal sizes include: $3,000-$250,000 on a 36-month term. Fair Market Value deals only. The 2.99% is on a 
+            stream of payments, and the actual yield to GreatAmerica Financial Services may vary. Hardware must exceed 50% of 
+            total transaction, excluding printers and other print products. Chromebooks are ineligible for the promotion. The 
+            agreement must be commenced by 07/31/25 and funded by 08/31/25. Contact an advisor for details. +1-(888)-230-6817.
+        </p>
+
+        <p>
+            +Deferred Interest, Payment Required Plan: Interest will be charged to your Account from the purchase date 
+            if the promotional plan balance is not paid in full within the promotional period. <strong>Minimum payments are required for each Credit Plan.</strong>
+            Minimum payments are NOT guaranteed to pay the promotional plan balance within the promotional period. 
+            <strong>You may have to pay more than the minimum payment to avoid accrued interest charges.</strong> Valid for single 
+            transaction only. Gift cards do not qualify for promotional plans. Qualifying purchases will 
+            automatically be placed on a promotional plan. If purchase qualifies for more than one 
+            plan, it will be placed on the qualified plan with the longest promotional period. 
+            As of May 2025, terms for new Accounts: Purchase APR of 35.99%. Variable Penalty 
+            APR up to 39.99%, based on Prime Rate. Minimum interest charge is $3 in any 
+            billing period in which interest is due. A fee of $2.99 per month may apply 
+            for each paper billing statement mailed to you. You can avoid this fee by 
+            enrolling in paperless statements. Existing Account holders: see your 
+            credit card agreement for Account terms.
+        </p>
+        
+        <p>
+            Credit account offers are subject to credit approval.
+        </p>
+
+        <p>
+            HP Credit Accounts are issued by Comenity Capital Bank, a Bread Financial™ Company.
+        </p>
+
+        <p>
+            <strong>*HP.com exclusive product!</strong> This product is only available for purchase on HP.com US Store and HyperX.com. 
+            You will not find it at any other authorized HP retailers. SKUs included: 67J25AA#ABA, 4P5L2AA, 4P5L3AA, 7P5J2AA, 
+            4P5E3AA, 67J23AA, 4Z7X3AA, 4S7T2AA, 683M4AA, 67J22AA. Availability may be limited and subject to change. Prices 
+            and promotions may vary between HP.com US Store and HyperX.com. HP disclaims all liability 
+            for products sold by unauthorized third-party sellers.
+        </p>
+        
+       
+
+    </div>
+</div>
+
+<div class="top-footer">
+   
+    <div class="top-footer-item">
+      
+      <a href="#">FEEDBACK</a>
+    </div>
+
+    <div class="top-footer-item">
+     <a href="#">MORE USEFUL LINKS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="more_about.html">MORE ABOUT THESE PRODUCTS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="site_disclaimers.html">SITE DISCLAIMERS </a>
+    </div>
+  </div>
+
+
+<footer>
+  <div class="footer-container">
+    
+    <!-- Kolom 1: About Us -->
+    <div class="footer-column">
+      <h4 >ABOUT US</h4>
+    
+      <a href="#">Contact HP</a>
+      <a href="#">Careers</a>
+      <a href="#">Investor relations</a>
+      <a href="#">Sustainable impact</a>
+      <a href="#">Diversity, Equity and Inclusion</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Tech Takes</a>
+      <a href="#">HP Store Newsletter</a>
+      <a href="#">HP Printables Newsletter</a>
+    </div>
+
+    <!-- Kolom 2: Cara Membeli -->
+    <div class="footer-column">
+      <h4 >WAYS TO BUY</h4>
+      <a href="#">Shop online</a>
+      <a href="#">Call an HP rep</a>
+      <a href="#">Find a reseller</a>
+      <a href="#">Enterprise store</a>
+      <a href="#">Public sector purchasing</a>
+    </div>
+
+    <!-- Kolom 3: Dukungan -->
+    <div class="footer-column">
+      <h4 >SUPPORT</h4>
+      <a href="#">Download drivers</a>
+      <a href="#">Support & troubleshooting</a>
+      <a href="#">Community</a>
+      <a href="#">Register your product</a>
+      <a href="#">Authorized service providers</a>
+      <a href="#">Check repair status</a>
+      <a href="#">Fraud alert</a>
+      <a href="#">Security Center</a>
+    </div>
+
+    <!-- Kolom 4: Mitra HP -->
+    <div class="footer-column">
+      <h4 >HP PARTNERS</h4>
+      <a href="#">HP Amplify Partner Program</a>
+      <a href="#">HP Partner Portal</a>
+      <a href="#">Developers</a>
+    </div>
+
+
+ 
+  <div class="footer-bottom">
+    <!-- Kumpulan link legal -->
+    <div class="footer-links">
+      <a href="#">Recalls</a>
+      <a href="#">Product recycling</a>
+      <a href="#">Accessibility</a>
+      <a href="#">CA Supply Chains Act</a>
+      <a href="#">Privacy</a>
+      <a href="#">Use of cookies</a>
+      <a href="#">Your privacy choices</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Limited warranty statement</a>
+      <a href="#">Terms & conditions of sales & service</a>
+    </div>
+    
+    <p>©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.</p>
+  </div>
+</footer>
+        
+
+</body>
+</html>

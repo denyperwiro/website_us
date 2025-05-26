@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta charset untuk mengatur encoding karakter -->
+  <meta charset="UTF-8" />
+  <!-- Meta viewport untuk responsif di perangkat mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diagnostic</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+  <style>
+   
+   
+
+
+     body {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+      letter-spacing: 0px;
+      margin: 0;
+      background-color: #fff;
+    }
+
+
+
+
+
+            .nav2{
+          height: 50px;
+          width: 60px;
+        }
+ 
+       .navbar {
+            font-size: 1.25rem;
+            padding: 1rem; 
+        }
+        .navbar img {
+            height: 70px;
+            width: auto;
+        }
+        .btn-link {
+            font-size: 1.25rem;
+        }
+        .form-control {
+            font-size: 1.25rem;
+            height: 50px;
+            width: 500px;
+        
+        }
+        .btn-outline-secondary {
+            font-size: 1.25rem;
+            padding: 10px 15px;
+        }
+
+        
+
+        .troli {
+        
+            font-size: 30px;
+            color: black; 
+            margin-top: 2,5px;
+
+            
+        }
+
+    /* Header bagian atas halaman */
+    header {
+      background: #000; /* Latar belakang hitam */
+      height: 60px;
+      color: white; /* Teks berwarna putih */
+
+      display: flex; /* Gunakan flexbox untuk tata letak */
+      justify-content: center; /* Jarak antar elemen di header */
+      align-items: center; /* Vertikal center */
+      font-size: 16px; /* Ukuran font */
+    }
+
+    /* Link navigasi dalam header */
+    header nav a {
+      color: white; /* Warna teks link putih */
+      text-decoration: none; /* Hilangkan garis bawah */
+      margin: 0 10px; /* Jarak kiri kanan antar link */
+      padding: 0 10px;
+    }
+
+    /* Bagian hero: konten utama awal */
+    .hero {
+      display: flex; /* Flexbox agar gambar dan teks sejajar horizontal */
+      align-items: center; /* Vertikal center antar item */
+      justify-content: center; /* Posisi konten di tengah horizontal */
+      gap: 40px; /* Jarak antara gambar dan teks */
+      padding: 40px 20px; /* Padding dalam area hero */
+      background: white; /* Latar belakang putih agar kontras */
+      flex-wrap: wrap; /* Membungkus jika layar sempit (responsif) */
+    }
+
+    /* Gambar di bagian hero */
+    .hero img {
+      max-width: 600px; /* Ukuran maksimum lebar gambar */
+      height: auto; /* Tinggi otomatis sesuai proporsi */
+      flex-shrink: 0; /* Gambar tidak menyusut jika ruang terbatas */
+    }
+
+    /* Container teks di sebelah kanan gambar */
+    .hero-text {
+      max-width: 600px; /* Batas lebar maksimal teks agar nyaman dibaca */
+    }
+
+    /* Judul besar di hero */
+    .hero-text h1 {
+      font-size: 28px; /* Ukuran font judul */
+      margin-bottom: 10px; /* Jarak bawah judul */
+      color: #333; /* Warna teks abu gelap */
+    }
+
+    /* Paragraf deskripsi di hero */
+    .hero-text p {
+      font-size: 20px; /* Ukuran font paragraf */
+      padding-top: 30px;
+      color: #555; /* Warna abu lebih terang */
+      margin: 0; /* Hilangkan margin default paragraf */
+      padding-right: 100px;
+    }
+
+    /* Tab navigasi di bawah hero */
+    .tabs {
+      display: flex; /* Flexbox untuk tab */
+      justify-content: center; /* Tab berada di tengah horizontal */
+      margin-top: 20px; /* Jarak atas */
+      background: #fff; /* Latar belakang putih */
+      padding: 10px 0; /* Padding atas bawah */
+     
+    }
+
+    /* Setiap tab */
+    .tab {
+      padding: 10px 20px; /* Ruang dalam tab */
+      border-bottom: 3px solid transparent; /* Border bawah transparan default */
+      cursor: pointer; /* Tanda klik saat hover */
+      font-weight: bold; /* Tulisan tebal */
+      color: #333; /* Warna teks abu gelap */
+    }
+
+    /* Tab yang aktif diberi warna dan border biru */
+    .tab.active {
+      border-bottom: 3px solid #0078d4; /* Border bawah biru */
+      color: #0078d4; /* Teks biru */
+    }
+
+    .link-tab{
+      color: #333;
+      text-decoration: none;
+    }
+
+    .link-tab-active{
+      text-decoration: none;
+    }
+
+    /* Container kotak-kotak isu masalah */
+    .issues-container {
+      background-color: #82cbea;
+      padding: 30px 20px; /* Padding dalam container */
+      display: flex; /* Flexbox untuk isi kotak isu */
+      flex-wrap: wrap; /* Membungkus isi ke baris baru jika perlu */
+      justify-content: center; /* Posisi isi di tengah */
+      gap: 20px; /* Jarak antar kotak */
+    }
+
+    /* Setiap kotak masalah */
+    .issue-box {
+      background: white; /* Latar putih untuk kotak */
+      border-radius: 8px; /* Sudut membulat */
+      width: 250px; /* Lebar tetap kotak */
+      height: 120px; /* Tinggi tetap kotak */
+      display: flex; /* Flexbox untuk isi kotak */
+      flex-direction: column; /* Susun isi secara vertikal */
+      align-items: center; /* Posisi horizontal tengah */
+      justify-content: center; /* Posisi vertikal tengah */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bayangan halus */
+      transition: transform 0.2s; /* Animasi transform saat hover */
+      cursor: pointer; /* Kursor pointer saat hover */
+      text-align: center; /* Teks rata tengah */
+      padding: 10px; /* Padding dalam kotak */
+    }
+
+    /* Efek hover pada kotak isu */
+    .issue-box:hover {
+      transform: translateY(-5px); /* Mengangkat kotak sedikit */
+    }
+
+    /* Ikon di dalam kotak isu */
+    .issue-box i {
+      
+      margin-bottom: 10px; /* Jarak bawah ikon ke teks */
+
+    }
+
+    /* Bagian pencarian di bawah */
+    .search-bar {
+      text-align: center; /* Teks rata tengah */
+      padding: 30px 20px; /* Padding dalam area pencarian */
+      background: white; /* Latar putih */
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    /* Input teks pencarian */
+    .search-bar input {
+      width: 500px; /* Lebar input */
+      max-width: 90%; /* Maksimal 90% layar untuk responsif */
+      padding: 10px; /* Padding dalam input */
+      border: 1px solid #333; /* Border abu */
+      border-radius: 4px 0 0 4px; /* Sudut membulat kiri */
+      font-size: 16px; /* Ukuran font */
+      
+    }
+
+  
+
+    .picturesolve{
+      max-height: 50px;
+      max-width: auto;
+    }
+
+
+   
+
+     /* Mengatur style untuk seluruh footer */
+    .top-footer {
+      background-color: #f5f5f5; /* Warna abu-abu muda */
+      padding: 20px ; /* Padding atas dan bawah */
+      display: flex; /* Mengatur agar isi footer bisa disusun horizontal */
+      justify-content: center; /* Menengahkan isi secara horizontal */
+      gap: 40px; /* Jarak antar item */
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+       margin-top: 30px;
+    }
+
+    .top-footer-item a{
+        color: black;
+        text-decoration: underline;
+    }
+
+
+      /* Container utama footer */
+    footer {
+      background-color: #000; /* Latar footer tetap hitam */
+      padding: 40px; /* Ruang di dalam footer */
+      border-top: 1px solid #444; /* Garis pemisah di atas footer */
+      
+    }
+
+    /* Atur tata letak kolom footer */
+    .footer-container {
+      display: flex; /* Gunakan flexbox untuk baris kolom */
+      flex-wrap: wrap; /* Kolom bisa turun ke bawah jika layar kecil */
+      justify-content: space-between; /* Jarak antar kolom */
+      max-width: 1200px;
+      margin: auto; 
+    }
+
+    /* Gaya untuk masing-masing kolom */
+    .footer-column {
+      flex: 1 1 180px; /* Responsif: 1 bagian, minimal 180px */
+      margin: 10px;
+    }
+
+    /* Judul kolom (About Us, Support, dll) */
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Link di dalam footer */
+    .footer-column a {
+      display: block;
+      color: #ccc; /* Abu-abu muda */
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 14px;
+      
+    }
+
+
+    /* Bagian bawah footer (copyright + links hukum) */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+     
+    }
+
+    /* Baris link legal (privacy, terms, dll) */
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    /* Link individual pada bagian bawah */
+    .footer-links a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+
+  </style>
+</head>
+<body>
+
+   
+
+  <!-- navigation bar/bawah -->
+    <nav class="navbar navbar-light bg-white">
+        <div class="container-fluid d-flex">
+            <img src="./logo-hp.png"  class="nav2" >
+            <ul class="navbar-nav d-flex flex-row me-auto">
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Support</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Explore</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Shop</button>
+            </ul>
+
+            <!-- tabel penacarian -->
+            <div class="d-flex">
+                <form class="d-flex me-2" style="margin-right: auto;">
+                    <input class="form-control me-2 text-secondary border border-secondary rounded" type="search" placeholder="What Are You Looking for?" aria-label="Search">
+                </form>
+
+            <!-- icon troli -->
+                <div class="troli"> 
+                    <i class="bi bi-cart icon"></i> 
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    
+    <!-- sistem modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Support</h6>
+                            <ul>
+                                
+                                <li><a href="diagnostic_tools.html"> Diagnostic Tools </a></li>
+                                <li><a href="business_desktops.html"> Business Desktops </a></li>
+                                <li><a href="financing.html">Financing</a></li>
+                                <li><a href="client.html">HP client </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Explore</h6>
+                            <ul>
+                                 <li><a href="more_about.html">More About</a></li>
+                                 <li><a href="privacy_choices.html">Privacy Choices</a></li>
+                                 <li><a href="site_disclaimers.html">Site Disclaimers </a></li>
+                                  <li><a href="profil-bye-deny.html">Profile</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Shop</h6>
+                            <ul>
+                                 
+                               
+                                <li><a href="printers-issues.html">Printers Issues</a></li>
+                                 <li><a href="customer support.html">Customer Support</a></li>
+                                 <li><a href="smb-servers.html"> Small Business Servers </a></li>
+                                 <li><a href="terms-of-use.html"> Terms Of Use </a></li>
+                                 <li><a href="zworkstations.html"> Zworkstations </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <!-- Bagian header di atas halaman -->
+  <header>
+   
+    <nav>
+      <!-- Navigasi link ke halaman lain -->
+    <a href="#">Support Home</a>
+      <a href="#">Products</a>
+      <a href="#">Software and Drivers</a>
+      <a href="#">Diagnostics</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Business Support</a>
+      <a href="#">My HP Account</a>
+    </nav>
+  </header>
+
+  <!-- Bagian hero: gambar di kiri, teks di kanan -->
+  <div class="hero">
+   <img src="./solve.png" alt="HP Devices" />
+    <div class="hero-text">
+      <h1>Diagnose and solve</h1> <!-- Judul besar -->
+      <p>In this troubleshooting hub, you’ll find the top automated and self-service solutions for common computer and printer problems. Click the tabs to switch between computer and printer topics, then select an issue to view solutions.</p> <!-- Deskripsi -->
+    </div>
+  </div>
+
+  <!-- Tab untuk pilih kategori isu -->
+  <div class="tabs">
+    <div class="tab "><a class="link-tab" href="diagnostic_tools.html">Computer Issues</a></div> <!-- Tab aktif -->
+    <div class="tab active"><a class="link-tab-active" href="printers-issues.html">Printer Issues</a></div> <!-- Tab tidak aktif -->
+  </div>
+
+  <!-- Container kotak-kotak isu masalah -->
+  <div class="issues-container">
+    <!-- Setiap kotak isu terdiri dari ikon dan teks -->
+      <div class="issue-box"><i><img src="./icons8-printer-50.png" class="picturesolve" alt=""></i> setup issues</div>
+      <div class="issue-box"><i><img src="./icons8-power-off-50.png" class="picturesolve" alt=""></i>Printing offline</div>
+      <div class="issue-box"><i><img src="./icons8-hotspot-48.png" class="picturesolve" alt=""></i>Wireless printer issues</div>
+      <div class="issue-box"><i><img src="./icons8-scanner-64.png" class="picturesolve" alt=""></i>Scanner issues</div>
+      <div class="issue-box"><i><img src="./icons8-water-50.png" class="picturesolve" alt=""></i>Color or black ink not printing</div>
+      <div class="issue-box"><i><img src="./icons8-cartridge-64.png" class="picturesolve" alt=""></i>Cartridge issues</div>
+      <div class="issue-box"><i><img src="./icons8-sand-watch-50.png" class="picturesolve" alt=""></i>Print job stuck in queue</div>
+      <div class="issue-box"><i><img src="./icons8-issue-80.png" class="picturesolve" alt=""></i>Paper jam issues</div>
+      <div class="issue-box"><i><img src="./icons8-why-50.png" class="picturesolve" alt=""></i>HP Instant Ink issues</div>
+      <div class="issue-box"><i><img src="icons8-documents-50.png" class="picturesolve" alt=""></i>Carriage is jammed</div>
+      <div class="issue-box"><i><img src="./icons8-issues-80.png" class="picturesolve" alt=""></i>Fax issues</div>
+  </div>
+
+  <!-- Bagian pencarian artikel support -->
+  <div class="search-bar">
+    <h3>Search our support articles</h3>
+    <!-- Input teks pencarian -->
+    <input type="text" placeholder="What can we help you with?"/>
+   
+
+  </div>
+
+<div class="top-footer">
+   
+    <div class="top-footer-item">
+      
+      <a href="#">FEEDBACK</a>
+    </div>
+
+    <div class="top-footer-item">
+     <a href="#">MORE USEFUL LINKS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="more_about.html">MORE ABOUT THESE PRODUCTS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="site_disclaimers.html">SITE DISCLAIMERS </a>
+    </div>
+  </div>
+
+
+  <footer>
+
+  <div class="footer-container">
+    
+    <!-- Kolom 1: About Us -->
+    <div class="footer-column">
+      <h4 >ABOUT US</h4>
+    
+      <a href="#">Contact HP</a>
+      <a href="#">Careers</a>
+      <a href="#">Investor relations</a>
+      <a href="#">Sustainable impact</a>
+      <a href="#">Diversity, Equity and Inclusion</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Tech Takes</a>
+      <a href="#">HP Store Newsletter</a>
+      <a href="#">HP Printables Newsletter</a>
+    </div>
+
+    <!-- Kolom 2: Cara Membeli -->
+    <div class="footer-column">
+      <h4 >WAYS TO BUY</h4>
+      <a href="#">Shop online</a>
+      <a href="#">Call an HP rep</a>
+      <a href="#">Find a reseller</a>
+      <a href="#">Enterprise store</a>
+      <a href="#">Public sector purchasing</a>
+    </div>
+
+    <!-- Kolom 3: Dukungan -->
+    <div class="footer-column">
+      <h4 >SUPPORT</h4>
+      <a href="#">Download drivers</a>
+      <a href="#">Support & troubleshooting</a>
+      <a href="#">Community</a>
+      <a href="#">Register your product</a>
+      <a href="#">Authorized service providers</a>
+      <a href="#">Check repair status</a>
+      <a href="#">Fraud alert</a>
+      <a href="#">Security Center</a>
+    </div>
+
+    <!-- Kolom 4: Mitra HP -->
+    <div class="footer-column">
+      <h4 >HP PARTNERS</h4>
+      <a href="#">HP Amplify Partner Program</a>
+      <a href="#">HP Partner Portal</a>
+      <a href="#">Developers</a>
+    </div>
+
+
+ 
+  <div class="footer-bottom">
+    <!-- Kumpulan link legal -->
+    <div class="footer-links">
+      <a href="#">Recalls</a>
+      <a href="#">Product recycling</a>
+      <a href="#">Accessibility</a>
+      <a href="#">CA Supply Chains Act</a>
+      <a href="#">Privacy</a>
+      <a href="#">Use of cookies</a>
+      <a href="#">Your privacy choices</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Limited warranty statement</a>
+      <a href="#">Terms & conditions of sales & service</a>
+    </div>
+    
+    <p>©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.</p>
+  </div>
+  
+
+</body>
+</html>

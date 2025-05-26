@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Warranty Status | HP® Customer Support</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <style>
+         .search-bar {
+      max-width: 400px;
+    }
+    .bottom-nav {
+      background-color: black;
+    }
+    .bottom-nav a {
+      color: white;
+      font-size: 0.95rem;
+    }
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+        }
+        .warranty-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .btn-hp-blue {
+            background-color: #0096D6;
+            color: white;
+        }
+        .btn-hp-blue:hover {
+            background-color: #0079ad;
+            color: white;
+        }
+         footer {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+   <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#"><img src="assets/logo.svg" width="40" alt="HP Logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="topNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Explore</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Shop</a></li>
+
+          <!-- Support dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Support
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+              <li><a class="dropdown-item" href="check-warranty.html">Check Warranty</a></li>
+              <li><a class="dropdown-item" href="index.html">Authorized Service Provides</a></li>
+              <li><a class="dropdown-item" href="security-bulletins.html">Security Bulletins Archive</a></li>
+              <li><a class="dropdown-item" href="parts-store.html">Parts Store</a></li>
+              <li><a class="dropdown-item" href="customer-service.html">Consumer Service</a></li>
+              <li><a class="dropdown-item" href="business-service.html">Buseniss Service</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-3 mt-2 mt-lg-0" role="search">
+          <input class="form-control rounded-0 rounded-start" type="search" placeholder="Search HP.com" />
+          <button class="btn btn-outline-secondary rounded-end" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-cart"></i></a>
+        <a href="#" class="btn btn-dark text-white">Sign in</a>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Support</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Check Warranty</li>
+            </ol>
+        </nav>
+
+        <h1 class="mb-4">Check warranty status</h1>
+        
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="warranty-card">
+                    <h2 class="h4 mb-4">Enter your product information</h2>
+                    
+                    <div class="mb-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="searchType" id="serialNumber" value="serial" checked>
+                            <label class="form-check-label" for="serialNumber">Serial number</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="searchType" id="productNumber" value="product">
+                            <label class="form-check-label" for="productNumber">Product number</label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="productId" class="form-label">Serial number</label>
+                        <input type="text" class="form-control" id="productId" placeholder="Example: ABC12345">
+                        <div class="form-text">Find your serial number or product number</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country/Region</label>
+                        <select class="form-select" id="country">
+                            <option value="US" selected>United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                            <!-- More countries would be listed here -->
+                        </select>
+                    </div>
+                    
+                    <button id="checkWarrantyBtn" class="btn btn-hp-blue">Check warranty</button>
+                    <div class="loading-spinner mt-3" id="loadingSpinner">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <span class="ms-2">Checking warranty status...</span>
+                    </div>
+                </div>
+                
+                <div class="warranty-card" id="warrantyResults">
+                    <h2 class="h4 mb-4">Warranty results</h2>
+                    <div class="alert alert-success" id="warrantyStatus"></div>
+                    
+                    <div class="row" id="warrantyDetails">
+                        <!-- Filled by JavaScript -->
+                    </div>
+                    
+                    <h3 class="h5 mt-4">Recommended support options</h3>
+                    <div class="row mt-3" id="supportOptions">
+                        <!-- Filled by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="warranty-card">
+                    <h2 class="h4 mb-4">Warranty information</h2>
+                    <p>HP hardware products come with a standard warranty that covers hardware defects and malfunctions.</p>
+                    
+                    <div class="warranty-feature">
+                        <h3 class="h6"><i class="fas fa-shield-alt text-primary me-2"></i> Standard warranty coverage</h3>
+                        <p class="small">Typically 1 year for consumer products, may vary by product and region.</p>
+                    </div>
+                    
+                    <div class="warranty-feature">
+                        <h3 class="h6"><i class="fas fa-sync-alt text-primary me-2"></i> Extended warranty options</h3>
+                        <p class="small">Extend your coverage with HP Care Packs for additional protection.</p>
+                    </div>
+                    
+                    <div class="warranty-feature">
+                        <h3 class="h6"><i class="fas fa-tools text-primary me-2"></i> Repair services</h3>
+                        <p class="small">HP-authorized technicians use genuine HP parts for repairs.</p>
+                    </div>
+                    
+                    <a href="#" class="btn btn-outline-primary mt-2">Learn about HP warranties</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+     <footer class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h6>About Us</h6>
+          <a href="#">Contact HP</a><br>
+          <a href="#">Careers</a><br>
+          <a href="#">Sustainable impact</a>
+        </div>
+        <div class="col-md-3">
+          <h6>Ways to Buy</h6>
+          <a href="#">Shop online</a><br>
+          <a href="#">Find a reseller</a>
+        </div>
+        <div class="col-md-3">
+          <h6>Support</h6>
+          <a href="#">Download drivers</a><br>
+          <a href="#">Check repair status</a>
+        </div>
+        <div class="col-md-3">
+          <h6>Stay connected</h6>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle between serial number and product number
+            const serialRadio = document.getElementById('serialNumber');
+            const productRadio = document.getElementById('productNumber');
+            const productIdLabel = document.querySelector('label[for="productId"]');
+            
+            serialRadio.addEventListener('change', function() {
+                if(this.checked) {
+                    productIdLabel.textContent = 'Serial number';
+                    document.getElementById('productId').placeholder = 'Example: ABC12345';
+                }
+            });
+            
+            productRadio.addEventListener('change', function() {
+                if(this.checked) {
+                    productIdLabel.textContent = 'Product number';
+                    document.getElementById('productId').placeholder = 'Example: XYZ67890';
+                }
+            });
+            
+            // Check warranty button click handler
+            document.getElementById('checkWarrantyBtn').addEventListener('click', function() {
+                const productId = document.getElementById('productId').value.trim();
+                const country = document.getElementById('country').value;
+                const loadingSpinner = document.getElementById('loadingSpinner');
+                const warrantyResults = document.getElementById('warrantyResults');
+                
+                if(!productId) {
+                    alert('Please enter a serial number or product number');
+                    return;
+                }
+                
+                // Show loading spinner
+                loadingSpinner.style.display = 'block';
+                
+                // Simulate API call with timeout
+                setTimeout(function() {
+                    loadingSpinner.style.display = 'none';
+                    
+                    // Generate mock data based on input
+                    const warrantyStatus = document.getElementById('warrantyStatus');
+                    const warrantyDetails = document.getElementById('warrantyDetails');
+                    const supportOptions = document.getElementById('supportOptions');
+                    
+                    // Mock response data
+                    const mockData = {
+                        productName: "HP Pavilion 15 Laptop",
+                        serialNumber: productId.length > 5 ? productId : "ABC" + Math.floor(1000 + Math.random() * 9000),
+                        productNumber: "X2Y34UA#ABA",
+                        warrantyStatus: Math.random() > 0.3 ? "Active" : "Expired",
+                        startDate: "2022-06-15",
+                        endDate: "2024-06-15",
+                        remainingDays: Math.floor(Math.random() * 365),
+                        supportOptions: [
+                            { icon: "fa-download", title: "Download drivers", description: "Get the latest software for your product" },
+                            { icon: "fa-tools", title: "Repair services", description: "Schedule a repair for your product" },
+                            { icon: "fa-shield-alt", title: "Extend warranty", description: "Add more protection to your product" }
+                        ]
+                    };
+                    
+                    // Display warranty status
+                    if(mockData.warrantyStatus === "Active") {
+                        warrantyStatus.className = "alert alert-success";
+                        warrantyStatus.innerHTML = `<strong>Warranty status:</strong> ${mockData.warrantyStatus} (${mockData.remainingDays} days remaining)`;
+                    } else {
+                        warrantyStatus.className = "alert alert-warning";
+                        warrantyStatus.innerHTML = `<strong>Warranty status:</strong> ${mockData.warrantyStatus}`;
+                    }
+                    
+                    // Display warranty details
+                    warrantyDetails.innerHTML = `
+                        <div class="col-md-6">
+                            <p><strong>Product name:</strong> ${mockData.productName}</p>
+                            <p><strong>Serial number:</strong> ${mockData.serialNumber}</p>
+                            <p><strong>Product number:</strong> ${mockData.productNumber}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Warranty start date:</strong> ${mockData.startDate}</p>
+                            <p><strong>Warranty end date:</strong> ${mockData.endDate}</p>
+                            <p><strong>Country/Region:</strong> ${document.getElementById('country').options[document.getElementById('country').selectedIndex].text}</p>
+                        </div>
+                    `;
+                    
+                    // Display support options
+                    let supportOptionsHTML = '';
+                    mockData.supportOptions.forEach(option => {
+                        supportOptionsHTML += `
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <i class="fas ${option.icon} fa-2x text-primary mb-3"></i>
+                                        <h4 class="h6">${option.title}</h4>
+                                        <p class="small">${option.description}</p>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    supportOptions.innerHTML = supportOptionsHTML;
+                    
+                    // Show results
+                    warrantyResults.style.display = 'block';
+                    
+                    // Scroll to results
+                    warrantyResults.scrollIntoView({ behavior: 'smooth' });
+                    
+                }, 1500); // Simulate network delay
+            });
+        });
+    </script>
+</body>
+</html>

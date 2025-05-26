@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP Parts Store | Genuine HP Parts & Supplies</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --hp-blue: #0096D6;
+            --hp-dark: #000;
+            --hp-light-gray: #f8f9fa;
+        }
+         .search-bar {
+      max-width: 400px;
+    }
+
+
+    .bottom-nav {
+      background-color: black;
+    }
+    .bottom-nav a {
+      color: white;
+      font-size: 0.95rem;
+    }
+    .bottom-nav a:hover {
+      text-decoration: underline;
+    }
+        .hp-hero {
+            background-color: var(--hp-light-gray);
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .btn-hp-primary {
+            background-color: var(--hp-blue);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .btn-hp-primary:hover {
+            background-color: #0079ad;
+            color: white;
+        }
+        .btn-hp-outline {
+            border: 2px solid var(--hp-blue);
+            color: var(--hp-blue);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .btn-hp-outline:hover {
+            background-color: var(--hp-blue);
+            color: white;
+        }
+        .hp-product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .hp-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .hp-product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            padding: 20px;
+            background-color: var(--hp-light-gray);
+        }
+        .hp-product-card .card-body {
+            padding: 20px;
+        }
+        .hp-product-card .price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--hp-blue);
+        }
+        .hp-category-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+            height: 100%;
+        }
+        .hp-category-card:hover {
+            border-color: var(--hp-blue);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .hp-category-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        .hp-footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        .hp-footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .hp-footer a:hover {
+            color: white;
+        }
+        .hp-footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .search-box input {
+            padding-right: 50px;
+            border-radius: 50px;
+        }
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            border-radius: 50px;
+            background-color: var(--hp-blue);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+        }
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+        }
+        .hp-badge {
+            background-color: #e74c3c;
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#"><img src="assets/logo.svg" width="40" alt="HP Logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="topNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Explore</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Shop</a></li>
+
+          <!-- Support dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Support
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+              <li><a class="dropdown-item" href="check-warranty.html">Check Warranty</a></li>
+              <li><a class="dropdown-item" href="index.html">Authorized Service Provides</a></li>
+              <li><a class="dropdown-item" href="security-bulletins.html">Security Bulletins Archive</a></li>
+              <li><a class="dropdown-item" href="parts-store.html">Parts Store</a></li>
+              <li><a class="dropdown-item" href="customer-service.html">Consumer Service</a></li>
+              <li><a class="dropdown-item" href="business-service.html">Buseniss Service</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-3 mt-2 mt-lg-0" role="search">
+          <input class="form-control rounded-0 rounded-start" type="search" placeholder="Search HP.com" />
+          <button class="btn btn-outline-secondary rounded-end" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-cart"></i></a>
+        <a href="#" class="btn btn-dark text-white">Sign in</a>
+      </div>
+    </div>
+  </nav>
+    <!-- Hero Section -->
+    <section class="hp-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-5 fw-bold mb-4">HP Parts Store</h1>
+                    <p class="lead mb-4">Genuine HP parts and supplies for your HP printer, laptop, desktop, and other products.</p>
+                    <div class="search-box mb-4">
+                        <input type="text" class="form-control form-control-lg" placeholder="Search by product name or number...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                    <p class="small">Need help finding your part? <a href="#" class="text-decoration-none">Use our part finder tool</a></p>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/hps.png" alt="HP Parts" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mb-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Parts Store</li>
+            </ol>
+        </nav>
+
+        <h2 class="mb-4">Shop by Category</h2>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <div class="hp-category-card">
+                    <img src="assets/printer.jpg" alt="Printer Parts">
+                    <h3>Printer Parts</h3>
+                    <p class="text-muted">Ink, toner, printheads, and more</p>
+                    <a href="#" class="btn btn-hp-outline">Shop now</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hp-category-card">
+                    <img src="assets/hps.png" alt="Laptop Parts">
+                    <h3>Laptop Parts</h3>
+                    <p class="text-muted">Batteries, keyboards, adapters</p>
+                    <a href="#" class="btn btn-hp-outline">Shop now</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hp-category-card">
+                    <img src="assets/power.png" alt="Desktop Parts">
+                    <h3>Desktop Parts</h3>
+                    <p class="text-muted">Memory, hard drives, power supplies</p>
+                    <a href="#" class="btn btn-hp-outline">Shop now</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hp-category-card">
+                    <img src="assets/KABEL.webp" alt="Accessories">
+                    <h3>Accessories</h3>
+                    <p class="text-muted">Cables, docks, cases, and more</p>
+                    <a href="#" class="btn btn-hp-outline">Shop now</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="my-4">Featured Products</h2>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <div class="hp-product-card">
+                    <span class="hp-badge">Bestseller</span>
+                    <img src="assets/xl.jpeg" alt="HP 64XL Ink Cartridge">
+                    <div class="card-body">
+                        <h5 class="card-title">HP 64XL Black Ink Cartridge</h5>
+                        <p class="card-text">High-yield ink cartridge for HP ENVY and OfficeJet printers</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">$39.99</span>
+                            <button class="btn btn-hp-primary btn-sm">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hp-product-card">
+                    <img src="assets/toner.jpg" alt="HP 305A Toner">
+                    <div class="card-body">
+                        <h5 class="card-title">HP 305A Black Toner Cartridge</h5>
+                        <p class="card-text">Original HP toner for LaserJet Pro printers</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">$89.99</span>
+                            <button class="btn btn-hp-primary btn-sm">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hp-product-card">
+                    <span class="hp-badge">New</span>
+                    <img src="assets/batrei.jpg" alt="HP Pavilion Battery">
+                    <div class="card-body">
+                        <h5 class="card-title">HP Pavilion Laptop Battery</h5>
+                        <p class="card-text">Replacement battery for select HP Pavilion models</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">$69.99</span>
+                            <button class="btn btn-hp-primary btn-sm">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hp-product-card">
+                    <img src="assets/KEY.jpeg" alt="HP EliteBook Keyboard">
+                    <div class="card-body">
+                        <h5 class="card-title">HP EliteBook Keyboard</h5>
+                        <p class="card-text">Replacement keyboard for EliteBook 840 series</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price">$49.99</span>
+                            <button class="btn btn-hp-primary btn-sm">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body p-4">
+                        <h3 class="card-title">Need help finding your part?</h3>
+                        <p class="card-text">Use our part finder tool to identify the right parts for your specific HP product.</p>
+                        <a href="#" class="btn btn-hp-primary">Find my part</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body p-4">
+                        <h3 class="card-title">Check your warranty</h3>
+                        <p class="card-text">See if your product is still under warranty for free parts replacement.</p>
+                        <a href="#" class="btn btn-hp-primary">Check warranty status</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="hp-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Printers</a></li>
+                        <li><a href="#">Desktops</a></li>
+                        <li><a href="#">Monitors</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Software & Drivers</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Warranty Check</a></li>
+                        <li><a href="#">Repair Services</a></li>
+                        <li><a href="#">Community Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About HP</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Newsroom</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect</h5>
+                    <div class="social-icons mb-3">
+                        <a href="#" class="me-2 text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                    <h5>Stay informed</h5>
+                    <p class="small">Sign up for HP emails and get exclusive offers, product alerts, and more.</p>
+                    <button class="btn btn-hp-primary btn-sm">Sign up</button>
+                </div>
+            </div>
+            <div class="row hp-footer-bottom">
+                <div class="col-md-6">
+                    <p class="small">© Copyright 2023 HP Development Company, L.P.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="small me-3">Privacy</a>
+                    <a href="#" class="small me-3">Terms of Use</a>
+                    <a href="#" class="small me-3">Cookies</a>
+                    <a href="#" class="small">CA Supply Chains Act</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Product search functionality
+            const searchBox = document.querySelector('.search-box input');
+            const searchButton = document.querySelector('.search-box button');
+            
+            searchButton.addEventListener('click', function() {
+                const searchTerm = searchBox.value.trim();
+                if (searchTerm) {
+                    alert(`Searching for: ${searchTerm}`);
+                    // In a real implementation, this would redirect to search results
+                }
+            });
+            
+            searchBox.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchButton.click();
+                }
+            });
+            
+            // Add to cart functionality
+            const addToCartButtons = document.querySelectorAll('.btn-hp-primary');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productCard = this.closest('.hp-product-card');
+                    const productName = productCard.querySelector('.card-title').textContent;
+                    const productPrice = productCard.querySelector('.price').textContent;
+                    
+                    alert(`Added to cart: ${productName} - ${productPrice}`);
+                    // In a real implementation, this would add to shopping cart
+                });
+            });
+        });
+    </script>
+</body>
+</html>

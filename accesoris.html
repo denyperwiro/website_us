@@ -1,0 +1,455 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Electronics Store
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900">
+  <!-- Top red bar -->
+  <div class="bg-red-600 text-white text-xs sm:text-sm flex justify-between items-center px-4 py-1">
+   <div class="flex items-center space-x-2">
+    <i class="fas fa-truck">
+    </i>
+    <span>
+     Gratis ongkir untuk pembelian di atas Rp 500.000
+    </span>
+   </div>
+   <div class="flex items-center space-x-4">
+    <a class="hover:underline" href="#">
+     Bantuan
+    </a>
+    <a class="hover:underline" href="#">
+     Cek Pesanan
+    </a>
+    <a class="hover:underline" href="#">
+     Login
+    </a>
+    <a class="hover:underline" href="#">
+     Daftar
+    </a>
+   </div>
+  </div>
+  <!-- Header -->
+  <header class="border-b border-gray-300">
+   <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 py-3">
+    <a class="flex items-center space-x-2" href="#">
+     <img alt="Company Logo" class="h-10 w-auto" height="40" src="https://storage.googleapis.com/a1aa/image/b9a2d4b0-53fd-4d4c-93a4-fa25256de399.jpg" width="120"/>
+    </a>
+    <form aria-label="Search form" class="flex w-full sm:w-auto mt-3 sm:mt-0" role="search">
+     <input aria-label="Search products, brands, or categories" class="border border-gray-300 rounded-l-md px-3 py-2 w-full sm:w-96 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Cari produk, merek, atau kategori" type="search"/>
+     <button aria-label="Search" class="bg-blue-600 hover:bg-blue-700 text-white px-4 rounded-r-md" type="submit">
+      <i class="fas fa-search">
+      </i>
+     </button>
+    </form>
+    <div class="flex items-center space-x-6 mt-3 sm:mt-0">
+     <a class="flex items-center space-x-1 hover:text-blue-600" href="#">
+      <i class="fas fa-heart text-lg">
+      </i>
+      <span class="text-sm font-semibold">
+       Wishlist
+      </span>
+     </a>
+     <a class="flex items-center space-x-1 hover:text-blue-600" href="#">
+      <i class="fas fa-shopping-cart text-lg">
+      </i>
+      <span class="text-sm font-semibold">
+       Keranjang
+      </span>
+     </a>
+    </div>
+   </div>
+  </header>
+  <!-- Navigation bar -->
+  <nav class="bg-gray-900 text-white text-sm sm:text-base">
+   <div class="max-w-7xl mx-auto flex flex-wrap sm:flex-nowrap items-center px-4 py-2 space-x-2 sm:space-x-6 overflow-x-auto scrollbar-hide">
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Promo
+    </a>
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Laptop
+    </a>
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Handphone
+    </a>
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Aksesoris
+    </a>
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Komputer
+    </a>
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Gaming
+    </a>
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Elektronik
+    </a>
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Peralatan Kantor
+    </a>
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Peralatan Rumah
+    </a>
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Software
+    </a>
+    <a class="hover:text-yellow-400 whitespace-nowrap" href="#">
+     Lainnya
+    </a>
+   </div>
+  </nav>
+  <!-- Hero banner with search and categories -->
+  <section class="max-w-7xl mx-auto px-4 py-6">
+   <div class="relative rounded-md overflow-hidden">
+    <img alt="Hero banner showing electronics and accessories on wooden table" class="w-full h-auto object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/a577aaa5-5a37-450d-3814-164918d95f1c.jpg" width="1200"/>
+    <form aria-label="Search products" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-full max-w-4xl bg-white bg-opacity-90 rounded-md flex" role="search">
+     <input aria-label="Search products, brands, or categories" class="flex-grow px-4 py-3 rounded-l-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Cari produk, merek, atau kategori" type="search"/>
+     <button aria-label="Search" class="bg-blue-600 hover:bg-blue-700 text-white px-6 rounded-r-md" type="submit">
+      <i class="fas fa-search">
+      </i>
+     </button>
+    </form>
+   </div>
+  </section>
+  <!-- Features section -->
+  <section class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center text-gray-700">
+   <div>
+    <i class="fas fa-shipping-fast text-4xl text-blue-600 mb-2">
+    </i>
+    <h3 class="font-semibold text-lg mb-1">
+     Gratis Ongkir
+    </h3>
+    <p class="text-sm">
+     Untuk pembelian di atas Rp 500.000
+    </p>
+   </div>
+   <div>
+    <i class="fas fa-headset text-4xl text-blue-600 mb-2">
+    </i>
+    <h3 class="font-semibold text-lg mb-1">
+     Layanan Pelanggan 24/7
+    </h3>
+    <p class="text-sm">
+     Siap membantu kapan saja
+    </p>
+   </div>
+   <div>
+    <i class="fas fa-shield-alt text-4xl text-blue-600 mb-2">
+    </i>
+    <h3 class="font-semibold text-lg mb-1">
+     Garansi Resmi
+    </h3>
+    <p class="text-sm">
+     Produk asli dan bergaransi
+    </p>
+   </div>
+  </section>
+  <!-- Product categories -->
+  <section class="max-w-7xl mx-auto px-4 py-6 bg-gray-50 rounded-md shadow-sm">
+   <h2 class="text-xl font-semibold mb-4">
+    Kategori Produk
+   </h2>
+   <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6">
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Black wireless computer mouse on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/7ecdb6c5-1a6a-4d78-de3c-9957341d03e0.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Mouse
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Computer RAM memory module with green circuit board" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/af9aa58d-de34-4821-3e38-4716f17630a7.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      RAM
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Black over-ear headset with microphone on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/4518e9ef-0541-44c4-e6cb-300f4d648e2d.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Headset
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Black computer keyboard with white keys on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/b3031adf-ee1f-4742-af47-0b1c54fd0ce6.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Keyboard
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Black cube-shaped electronic device on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/273102bd-4735-4a43-55cb-16c82ccd4c07.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Cube
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Black charger adapter with cable on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/2a83f626-6d4a-47da-a0b1-d2b03474f3a8.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Charger
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Black USB cable coiled on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/9c976e7c-6a44-40dd-fe1a-3f624155ae70.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Kabel
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Silver stylus pen on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/cddd6043-aa60-431a-eebd-60b34d405233.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Stylus
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Black adapter plug on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/2c1675a0-935f-41eb-7f25-738a7bc935e6.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Adapter
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Black pen on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/3483c620-df8b-4ef0-9e29-c96d21ffc6c7.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Pulpen
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="Black mousepad on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/f1e80235-ab43-4550-3128-c749820de272.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Mousepad
+     </span>
+    </a>
+    <a class="bg-white rounded-md shadow hover:shadow-lg p-4 flex flex-col items-center text-center" href="#">
+     <img alt="White wireless computer mouse on white background" class="mb-2 w-20 h-20 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/52af29dc-5ed5-4264-ae0c-915ef8a98ac7.jpg" width="100"/>
+     <span class="font-medium text-gray-800">
+      Mouse Putih
+     </span>
+    </a>
+   </div>
+  </section>
+  <!-- Featured products -->
+  <section class="max-w-7xl mx-auto px-4 py-8">
+   <h2 class="text-2xl font-semibold mb-6">
+    Produk Terbaru
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <!-- Product 1 -->
+    <div class="border border-gray-300 rounded-md p-4 flex flex-col">
+     <img alt="Black wireless computer mouse on white background" class="mb-4 w-full h-48 object-contain" height="200" src="https://storage.googleapis.com/a1aa/image/7ecdb6c5-1a6a-4d78-de3c-9957341d03e0.jpg" width="300"/>
+     <h3 class="font-semibold text-lg mb-1">
+      Mouse Wireless Hitam
+     </h3>
+     <p class="text-sm text-gray-600 mb-2">
+      Rp 150.000
+     </p>
+     <button aria-label="Add Mouse Wireless Hitam to cart" class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md">
+      Tambah ke Keranjang
+     </button>
+    </div>
+    <!-- Product 2 -->
+    <div class="border border-gray-300 rounded-md p-4 flex flex-col">
+     <img alt="White wireless computer mouse on white background" class="mb-4 w-full h-48 object-contain" height="200" src="https://storage.googleapis.com/a1aa/image/52af29dc-5ed5-4264-ae0c-915ef8a98ac7.jpg" width="300"/>
+     <h3 class="font-semibold text-lg mb-1">
+      Mouse Wireless Putih
+     </h3>
+     <p class="text-sm text-gray-600 mb-2">
+      Rp 160.000
+     </p>
+     <button aria-label="Add Mouse Wireless Putih to cart" class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md">
+      Tambah ke Keranjang
+     </button>
+    </div>
+    <!-- Product 3 -->
+    <div class="border border-gray-300 rounded-md p-4 flex flex-col">
+     <img alt="Black mousepad on white background" class="mb-4 w-full h-48 object-contain" height="200" src="https://storage.googleapis.com/a1aa/image/f1e80235-ab43-4550-3128-c749820de272.jpg" width="300"/>
+     <h3 class="font-semibold text-lg mb-1">
+      Mousepad Hitam
+     </h3>
+     <p class="text-sm text-gray-600 mb-2">
+      Rp 50.000
+     </p>
+     <button aria-label="Add Mousepad Hitam to cart" class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md">
+      Tambah ke Keranjang
+     </button>
+    </div>
+    <!-- Product 4 -->
+    <div class="border border-gray-300 rounded-md p-4 flex flex-col">
+     <img alt="White mousepad on white background" class="mb-4 w-full h-48 object-contain" height="200" src="https://storage.googleapis.com/a1aa/image/4bfda337-dad4-4c1e-2c8c-08114c9bfbb8.jpg" width="300"/>
+     <h3 class="font-semibold text-lg mb-1">
+      Mousepad Putih
+     </h3>
+     <p class="text-sm text-gray-600 mb-2">
+      Rp 55.000
+     </p>
+     <button aria-label="Add Mousepad Putih to cart" class="mt-auto bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md">
+      Tambah ke Keranjang
+     </button>
+    </div>
+   </div>
+  </section>
+  <!-- Info section -->
+  <section class="max-w-7xl mx-auto px-4 py-6 bg-yellow-50 border border-yellow-300 rounded-md text-yellow-900">
+   <h3 class="font-semibold text-lg mb-2">
+    Informasi
+   </h3>
+   <p class="text-sm leading-relaxed">
+    Semua produk yang kami jual adalah produk asli dan bergaransi resmi. Jika ada masalah dengan produk, silakan hubungi layanan pelanggan kami 24/7.
+   </p>
+  </section>
+  <!-- Gallery section -->
+  <section class="max-w-7xl mx-auto px-4 py-8">
+   <h2 class="text-xl font-semibold mb-4">
+    Galeri
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <img alt="Modern office setup with multiple monitors and ergonomic chair" class="rounded-md object-cover w-full h-60" height="250" src="https://storage.googleapis.com/a1aa/image/14206d7b-1b3a-4011-46d8-3477c75c27c8.jpg" width="400"/>
+    <img alt="Home workspace with laptop, coffee cup, and plants" class="rounded-md object-cover w-full h-60" height="250" src="https://storage.googleapis.com/a1aa/image/3afc9257-0373-48e2-fddc-e9f10aa568a3.jpg" width="400"/>
+    <img alt="Minimalist desk setup with keyboard, mouse, and monitor" class="rounded-md object-cover w-full h-60" height="250" src="https://storage.googleapis.com/a1aa/image/dfff902d-a645-4fd8-5e86-554cfc7e9eca.jpg" width="400"/>
+   </div>
+  </section>
+  <!-- Promo banner -->
+  <section class="max-w-7xl mx-auto px-4 py-6 bg-blue-100 border border-blue-300 rounded-md text-blue-900 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+   <div class="text-center sm:text-left font-semibold text-lg">
+    Dapatkan &amp; hemat Rp500.000 untuk pembelian PC baru saja!
+   </div>
+   <button aria-label="Shop Now" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md">
+    Belanja Sekarang
+   </button>
+  </section>
+  <!-- News and updates -->
+  <section class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+   <article class="border border-gray-300 rounded-md p-4">
+    <h3 class="font-semibold mb-2">
+     Tips Memilih Mouse Wireless
+    </h3>
+    <p class="text-sm text-gray-700">
+     Pelajari cara memilih mouse wireless yang sesuai dengan kebutuhan Anda.
+    </p>
+   </article>
+   <article class="border border-gray-300 rounded-md p-4">
+    <h3 class="font-semibold mb-2">
+     Cara Merawat Keyboard Mekanik
+    </h3>
+    <p class="text-sm text-gray-700">
+     Tips dan trik untuk menjaga keyboard mekanik tetap awet dan bersih.
+    </p>
+   </article>
+   <article class="border border-gray-300 rounded-md p-4">
+    <h3 class="font-semibold mb-2">
+     Update Firmware Headset Terbaru
+    </h3>
+    <p class="text-sm text-gray-700">
+     Informasi tentang update firmware terbaru untuk headset favorit Anda.
+    </p>
+   </article>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 text-sm">
+   <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-4 gap-8">
+    <div>
+     <h4 class="font-semibold mb-3 text-white">
+      Tentang Kami
+     </h4>
+     <ul class="space-y-2">
+      <li>
+       <a class="hover:underline" href="#">
+        Profil Perusahaan
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="carrier.html">
+        Karir
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Kontak
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Blog
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4 class="font-semibold mb-3 text-white">
+      Bantuan
+     </h4>
+     <ul class="space-y-2">
+      <li>
+       <a class="hover:underline" href="how to order.html">
+        Cara Belanja
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Pengiriman
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Pengembalian
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        FAQ
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4 class="font-semibold mb-3 text-white">
+      Layanan Pelanggan
+     </h4>
+     <ul class="space-y-2">
+      <li>
+       <a class="hover:underline" href="contact.us.html">
+        Hubungi Kami
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Garansi
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Syarat &amp; Ketentuan
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Kebijakan Privasi
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h4 class="font-semibold mb-3 text-white"> <a href="payment.html"></a>
+      Metode Pembayaran
+     </h4>
+     <div class="flex flex-wrap gap-3">
+      <img alt="Visa payment method logo" class="h-10 object-contain" height="40" src="https://storage.googleapis.com/a1aa/image/ba33b1c4-7e63-4f32-2243-1e53c3f0f372.jpg" width="60"/>
+      <img alt="Mastercard payment method logo" class="h-10 object-contain" height="40" src="https://storage.googleapis.com/a1aa/image/8ec77fba-f095-438c-892e-cfb581616553.jpg" width="60"/>
+      <img alt="OVO payment method logo" class="h-10 object-contain" height="40" src="https://storage.googleapis.com/a1aa/image/6e4b9207-3690-4d4a-c485-44cdaf8d0fd0.jpg" width="60"/>
+      <img alt="Gopay payment method logo" class="h-10 object-contain" height="40" src="https://storage.googleapis.com/a1aa/image/6435bfa5-a2b2-46be-cf57-c694ebfed15b.jpg" width="60"/>
+     </div>
+    </div>
+   </div>
+   <div class="border-t border-gray-700 text-center py-4 text-xs text-gray-500">
+    © 2024 Electronics Store. All rights reserved.
+   </div>
+  </footer>
+ </body>
+</html>

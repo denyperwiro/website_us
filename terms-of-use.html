@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>terms of use</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<style>
+
+    body{
+        margin: 0;
+        letter-spacing: 0;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+    }
+
+
+   
+
+    .title-letter{
+        margin: 30px 60px;
+    }
+
+    .title-privacy{
+        color: black;
+        font-size: 35px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        margin-top: 50px;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+    }
+
+    .sub-title-privacy{
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+        line-height: 1.5;
+        padding-bottom:5px ;
+        
+    }
+
+    .list{
+        font-weight: 400;
+        color: black;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    .link-sub-title{
+       
+        border-bottom: black 1px solid;
+        color: black;
+        text-decoration: none;
+       
+
+    }
+
+
+
+     /* Mengatur style untuk seluruh footer */
+    .top-footer {
+      background-color: #f5f5f5; /* Warna abu-abu muda */
+      padding: 20px ; /* Padding atas dan bawah */
+      display: flex; /* Mengatur agar isi footer bisa disusun horizontal */
+      justify-content: center; /* Menengahkan isi secara horizontal */
+      gap: 40px; /* Jarak antar item */
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+       margin-top: 120px;
+    }
+
+    .top-footer-item a{
+        color: black;
+        text-decoration: underline;
+    }
+
+
+
+    
+   /* Container utama footer */
+    footer {
+      background-color: #000; /* Latar footer tetap hitam */
+      padding: 40px; /* Ruang di dalam footer */
+      border-top: 1px solid #444; /* Garis pemisah di atas footer */
+      
+    }
+
+    /* Atur tata letak kolom footer */
+    .footer-container {
+      display: flex; /* Gunakan flexbox untuk baris kolom */
+      flex-wrap: wrap; /* Kolom bisa turun ke bawah jika layar kecil */
+      justify-content: space-between; /* Jarak antar kolom */
+      max-width: 1200px;
+      margin: auto; /* Pusatkan footer di halaman */
+    }
+
+    /* Gaya untuk masing-masing kolom */
+    .footer-column {
+      flex: 1 1 180px; /* Responsif: 1 bagian, minimal 180px */
+      margin: 10px;
+    }
+
+    /* Judul kolom (About Us, Support, dll) */
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Link di dalam footer */
+    .footer-column a {
+      display: block;
+      color: #ccc; /* Abu-abu muda */
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 14px;
+      
+    }
+
+
+    /* Bagian bawah footer (copyright + links hukum) */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+
+    /* Baris link legal (privacy, terms, dll) */
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    /* Link individual pada bagian bawah */
+    .footer-links a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+
+
+
+    .nav2{
+          height: 50px;
+          width: 55px;
+          
+        }
+ 
+        .btn-link {
+            font-size: 1.25rem;
+        }
+        .form-control {
+            font-size: 1.25rem;
+            height: 50px;
+            width: 500px;
+           
+        
+        }
+        .btn-outline-secondary {
+            font-size: 1.25rem;
+            padding: 10px 15px;
+        }
+
+        .troli {
+        
+            font-size: 30px;
+            color: black; 
+            margin-top: 2,5px;
+        }
+
+        .container-sign{
+            display: inline-block;
+            justify-items: center;
+            padding-left: 17px;
+            padding-top: 6px;
+            padding-right: 30px;
+           
+        }
+
+        .button-sign{
+            background-color: black;
+            justify-items: center;
+            height: 40px;
+            width: 90px;
+        }
+
+        .sub-title-sign{
+            color: white;
+            font-size: 20px ;
+           
+            font-weight: 400;
+            
+
+        }
+
+
+
+        
+
+
+
+   
+
+</style>
+
+<body>
+
+   
+    
+  <!-- navigation bar/bawah -->
+    <nav class="navbar navbar-light bg-white">
+        <div class="container-fluid d-flex">
+            <img src="./logo-hp.png" id="home" class="nav2" >
+            <ul class="navbar-nav d-flex flex-row me-auto">
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal"> Support</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Explore</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Shop</button>
+            </ul>
+
+            <!-- tabel penacarian -->
+            <div class="d-flex">
+                <form class="d-flex me-2" style="margin-right: auto;">
+                    <input class="form-control me-2 text-secondary border border-secondary rounded" type="search" placeholder="What Are You Looking for?" aria-label="Search">
+                </form>
+
+            <!-- icon troli -->
+                <div class="troli"> 
+                    <i class="bi bi-cart icon"></i> 
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    
+    <!-- sistem modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Support</h6>
+                            <ul>
+                                
+                                <li><a href="diagnostic_tools.html"> Diagnostic Tools </a></li>
+                                <li><a href="business_desktops.html"> Business Desktops </a></li>
+                                <li><a href="financing.html">Financing</a></li>
+                                <li><a href="client.html">HP client </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Explore</h6>
+                            <ul>
+                                 <li><a href="more_about.html">More About</a></li>
+                                 <li><a href="privacy_choices.html">Privacy Choices</a></li>
+                                 <li><a href="site_disclaimers.html">Site Disclaimers </a></li>
+                                  <li><a href="profil-bye-deny.html">Profile</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Shop</h6>
+                            <ul>
+                                 
+                               
+                               <li><a href="printers-issues.html">Printers Issues</a></li>
+                                 <li><a href="customer support.html">Customer Support</a></li> 
+                                 <li><a href="smb-servers.html"> Small Business Servers </a></li>
+                                 <li><a href="terms-of-use.html"> Terms Of Use </a></li>
+                                 <li><a href="zworkstations.html"> Zworkstations </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+<div class="title-letter">
+    <h1 class="title-privacy">
+        Welcome To The HP Website
+    </h1>
+
+    <p class="sub-title-privacy">
+        Welcome to the HP Inc. (“HP” or “Our” or “We” or “Us”) website – and thank You for visiting, We hope You enjoy the experience!
+    </p>
+
+    <p class="sub-title-privacy">
+        These Terms of Use (“These Terms”) are a legal contract between You and HP (collectively, “Everyone”) and govern Your use of this website, as well as other websites that HP may control, and all the text, data, information, software, graphics, photographs, and more (all of which We refer to as “Materials”) that HP and its Subsidiaries may make available to You, as well as any services We may provide through any of Our websites (all of which are referred to in These Terms as “This Website”).
+    </p>
+
+    <p class="sub-title-privacy">
+        READ THESE TERMS CAREFULLY BEFORE BROWSING THIS WEBSITE. USING THIS WEBSITE INDICATES THAT YOU HAVE BOTH READ AND ACCEPT THESE TERMS. YOU CANNOT USE THIS WEBSITE IF YOU DO NOT ACCEPT THESE TERMS.
+    </p>
+
+    <h1 class="title-privacy"> 
+        Accessing This Website
+    </h1>
+
+    <p class="sub-title-privacy">
+        When You access This Website, You are responsible for complying with These Terms as well as any and all use of This Website through any account that You may setup through or on This Website; some Materials will only be available to You if You have an account. You agree to provide true, accurate, current, and complete information for so long as You use This Website. Because it is Your account, it is Your responsibility to obtain and maintain all equipment, services and software needed for access to and use of This Website as well as paying related charges. It is also Your responsibility to maintain the confidentiality of Your password(s). Should You believe Your password or other security information for This Website has been breached in any way, You must immediately notify Us.
+
+
+    </p>
+
+    <p class="sub-title-privacy">
+        Sometimes, We collect certain personal information about You solely in connection with Your access and use of This Website. HP's use of that information is governed by the provisions of the HP Online Privacy Statement.
+    </p>
+
+    <p class="sub-title-privacy">
+        We reserve the right to require that You change Your password or restrict Your access to This Website as We deem reasonably necessary.
+
+
+    </p>
+
+    <h1 class="title-privacy">
+        Your Permitted Use of This Website
+    </h1>
+
+    <p class="sub-title-privacy">
+        You are invited to use This Website for Your personal and business purposes where you are purchasing HP’s products and services (“Permitted Uses”).
+    </p>
+
+    <p class="sub-title-privacy">
+        You have no rights in This Website or any Materials and you may not modify, edit, copy, reproduce, create derivative works of, reverse engineer, alter, enhance or in any way exploit any of This Website or Materials in any manner.
+    </p>
+
+    <h1 class="title-privacy">
+        Unauthorized Use of This Website, Acceptable Use Policy
+    </h1>
+
+    <p class="sub-title-privacy">We authorize Your limited use of This Website. Any other use of This Website beyond the Permitted Uses is prohibited and, therefore, constitutes unauthorized use of This Website. This is because all rights in This Website remain the property of HP.</p>
+    <p class="sub-title-privacy">Unauthorized use of This Website may result in violation of various United States and international copyright laws. We do not want that to happen and, therefore, We have given You examples of things to avoid in Our Acceptable Use Policy found here HP Acceptable Use Policy . You must follow HP’s Acceptable Use Policy whenever you use This Website or any services offered from This Website.</p>
+    <h1 class="title-privacy">Terminating Your Use of This Website</h1>
+    <p class="sub-title-privacy">We or You may terminate Your use of This Website at any time. Your use of This Website will automatically terminate in the event You breach any of These Terms. To clarify:</p>
+    <li class="list">Unless We otherwise agree with You in writing, We may terminate, suspend, or modify Your registration with, or access to, all or part of This Website, without notice, at any time and for any reason.</li>
+    <li class="list">You may discontinue Your access to and use of This Website at any time. In the event of an automatic termination for breach, You must immediately destroy any downloaded or printed materials (and any copies thereof).</li>
+   
+    <h1 class="title-privacy">Disclaimers</h1>
+    <p class="sub-title-privacy">THIS WEBSITE IS PROVIDED "AS IS" AND "WITH ALL FAULTS" AND THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THIS WEBSITE IS WITH YOU.</p>
+    <p class="sub-title-privacy">HP EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND (EXPRESS, IMPLIED OR STATUTORY) WITH RESPECT TO THIS WEBSITE, WHICH INCLUDES BUT IS NOT LIMITED TO, ANY IMPLIED OR STATUTORY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR USE OR PURPOSE, TITLE, AND NON-INFRINGEMENT OF INTELLECTUAL PROPERTY RIGHTS.</p>
+    <p class="sub-title-privacy">THIS MEANS THAT HP DOES NOT PROMISE YOU THAT THE WEBSITE IS FREE OF PROBLEMS. Without limiting the generality of the foregoing, HP makes no warranty that This Website will meet your requirements or that This Website will be uninterrupted, timely, secure, or error free or that defects in This Website will be corrected. HP makes no warranty as to the results that may be obtained from the use of This Website or as to the accuracy or reliability of any information obtained through This Website. No advice or information, whether oral or written, obtained by you through This Website or from HP, its subsidiaries, or other affiliated companies, or its or their suppliers (or the respective officers, directors, employees, or agents of any such entities) (collectively, "The HP Parties") shall create any warranty. HP disclaims all equitable indemnities.</p>
+    <h1 class="title-privacy">HP May Modify These Terms of Use</h1>
+    <p class="sub-title-privacy">HP may, in its sole and absolute discretion, change These Terms (including any other documents that are referenced in or linked to from These Terms) from time to time. HP will post notice of such changes on This Website as applicable. If You object to any such changes, Your sole recourse shall be to cease using This Website. Continued use of This Website following notice of any such changes shall indicate Your acknowledgement of such changes and agreement to be bound by the terms and conditions of such changes. Certain provisions of These Terms may be superseded by expressly-designated legal notices or terms located on particular pages of This Website and, in such circumstances, the expressly-designated legal notice or term shall be deemed to be incorporated into These Terms and to supersede the provision(s) of These Terms that are designated as being superseded.</p>
+    
+    <p class="sub-title-privacy">Revised March 2015</p>
+    <a href="#home">Back to top</a>
+</div>
+
+ <div class="top-footer">
+   
+    <div class="top-footer-item">
+      
+      <a href="#">FEEDBACK</a>
+    </div>
+
+    <div class="top-footer-item">
+     <a href="#">MORE USEFUL LINKS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="more_about.html">MORE ABOUT THESE PRODUCTS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="site_disclaimers.html">SITE DISCLAIMERS </a>
+    </div>
+  </div>
+
+
+<footer>
+  <div class="footer-container">
+    
+    <!-- Kolom 1: About Us -->
+    <div class="footer-column">
+      <h4 >ABOUT US</h4>
+    
+      <a href="#">Contact HP</a>
+      <a href="#">Careers</a>
+      <a href="#">Investor relations</a>
+      <a href="#">Sustainable impact</a>
+      <a href="#">Diversity, Equity and Inclusion</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Tech Takes</a>
+      <a href="#">HP Store Newsletter</a>
+      <a href="#">HP Printables Newsletter</a>
+    </div>
+
+    <!-- Kolom 2: Cara Membeli -->
+    <div class="footer-column">
+      <h4 >WAYS TO BUY</h4>
+      <a href="#">Shop online</a>
+      <a href="#">Call an HP rep</a>
+      <a href="#">Find a reseller</a>
+      <a href="#">Enterprise store</a>
+      <a href="#">Public sector purchasing</a>
+    </div>
+
+    <!-- Kolom 3: Dukungan -->
+    <div class="footer-column">
+      <h4 >SUPPORT</h4>
+      <a href="#">Download drivers</a>
+      <a href="#">Support & troubleshooting</a>
+      <a href="#">Community</a>
+      <a href="#">Register your product</a>
+      <a href="#">Authorized service providers</a>
+      <a href="#">Check repair status</a>
+      <a href="#">Fraud alert</a>
+      <a href="#">Security Center</a>
+    </div>
+
+    <!-- Kolom 4: Mitra HP -->
+    <div class="footer-column">
+      <h4 >HP PARTNERS</h4>
+      <a href="#">HP Amplify Partner Program</a>
+      <a href="#">HP Partner Portal</a>
+      <a href="#">Developers</a>
+    </div>
+
+
+ 
+  <div class="footer-bottom">
+    <!-- Kumpulan link legal -->
+    <div class="footer-links">
+      <a href="#">Recalls</a>
+      <a href="#">Product recycling</a>
+      <a href="#">Accessibility</a>
+      <a href="#">CA Supply Chains Act</a>
+      <a href="#">Privacy</a>
+      <a href="#">Use of cookies</a>
+      <a href="#">Your privacy choices</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Limited warranty statement</a>
+      <a href="#">Terms & conditions of sales & service</a>
+    </div>
+    
+    <p>©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.</p>
+  </div>
+</footer>
+        
+
+</body>
+</html>

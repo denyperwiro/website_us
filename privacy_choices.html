@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your privacy your choices</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<style>
+
+    body{
+        margin: 0;
+        letter-spacing: 0;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+        
+    }
+
+
+   
+
+    .title-letter{
+        margin: 30px 60px;
+    }
+
+    .title-privacy{
+        color: black;
+        font-size: 35px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+    }
+
+    .sub-title-privacy{
+        font-size: 16px;
+         font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 400;
+        color: black;
+        line-height: 1,5;
+        padding-bottom:5px ;
+    }
+
+    .list{
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 400;
+        color: black;
+        line-height: 1,5;
+        font-size: 15px;
+    }
+
+    .link-sub-title{
+       
+        border-bottom: black 1px solid;
+        color: black;
+        text-decoration: none;
+
+    }
+
+     /* Mengatur style untuk seluruh footer */
+    .top-footer {
+      background-color: #f5f5f5; /* Warna abu-abu muda */
+      padding: 20px ; /* Padding atas dan bawah */
+      display: flex; /* Mengatur agar isi footer bisa disusun horizontal */
+      justify-content: center; /* Menengahkan isi secara horizontal */
+      gap: 40px; /* Jarak antar item */
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+       margin-top: 120px;
+    }
+
+    .top-footer-item a{
+        color: black;
+        text-decoration: underline;
+    }
+
+
+    
+   /* Container utama footer */
+    footer {
+      background-color: #000; /* Latar footer tetap hitam */
+      padding: 40px; /* Ruang di dalam footer */
+      border-top: 1px solid #444; /* Garis pemisah di atas footer */
+      
+    }
+
+    /* Atur tata letak kolom footer */
+    .footer-container {
+      display: flex; /* Gunakan flexbox untuk baris kolom */
+      flex-wrap: wrap; /* Kolom bisa turun ke bawah jika layar kecil */
+      justify-content: space-between; /* Jarak antar kolom */
+      max-width: 1200px;
+      margin: auto; /* Pusatkan footer di halaman */
+    }
+
+    /* Gaya untuk masing-masing kolom */
+    .footer-column {
+      flex: 1 1 180px; /* Responsif: 1 bagian, minimal 180px */
+      margin: 10px;
+    }
+
+    /* Judul kolom (About Us, Support, dll) */
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Link di dalam footer */
+    .footer-column a {
+      display: block;
+      color: #ccc; /* Abu-abu muda */
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 14px;
+      
+    }
+
+
+    /* Bagian bawah footer (copyright + links hukum) */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+
+    /* Baris link legal (privacy, terms, dll) */
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    /* Link individual pada bagian bawah */
+    .footer-links a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+
+    .nav2{
+          height: 50px;
+          width: 55px;
+          
+        }
+ 
+        .btn-link {
+            font-size: 1.25rem;
+        }
+        .form-control {
+            font-size: 1.25rem;
+            height: 50px;
+            width: 500px;
+           
+        
+        }
+        .btn-outline-secondary {
+            font-size: 1.25rem;
+            padding: 10px 15px;
+        }
+
+        .troli {
+        
+            font-size: 30px;
+            color: black; 
+            margin-top: 2,5px;
+        }
+
+        .container-sign{
+            display: inline-block;
+            justify-items: center;
+            padding-left: 17px;
+            padding-top: 6px;
+            padding-right: 30px;
+           
+        }
+
+        .button-sign{
+            background-color: black;
+            justify-items: center;
+            height: 40px;
+            width: 90px;
+        }
+
+        .sub-title-sign{
+            color: white;
+            font-size: 20px ;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            
+
+        }
+
+
+
+   
+
+</style>
+
+<body>
+
+   
+    
+      <!-- navigation bar/bawah -->
+    <nav class="navbar navbar-light bg-white">
+        <div class="container-fluid d-flex">
+            <img src="./logo-hp.png"  class="nav2" >
+            <ul class="navbar-nav d-flex flex-row me-auto">
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Support</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Explore</button>
+                <button type="button" class="btn btn-link text-dark" data-bs-toggle="modal" data-bs-target="#menuModal">Shop</button>
+            </ul>
+
+            <!-- tabel penacarian -->
+            <div class="d-flex">
+                <form class="d-flex me-2" style="margin-right: auto;">
+                    <input class="form-control me-2 text-secondary border border-secondary rounded" type="search" placeholder="What Are You Looking for?" aria-label="Search">
+                </form>
+
+            <!-- icon troli -->
+                <div class="troli"> 
+                    <i class="bi bi-cart icon"></i> 
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    
+    <!-- sistem modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Support</h6>
+                            <ul>
+                                
+                                <li><a href="diagnostic_tools.html"> Diagnostic Tools </a></li>
+                                <li><a href="business_desktops.html"> Business Desktops </a></li>
+                                <li><a href="financing.html">Financing</a></li>
+                                <li><a href="client.html">HP client </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Explore</h6>
+                            <ul>
+                                 <li><a href="more_about.html">More About</a></li>
+                                 <li><a href="privacy_choices.html">Privacy Choices</a></li>
+                                 <li><a href="site_disclaimers.html">Site Disclaimers </a></li>
+                                  <li><a href="profil-bye-deny.html">Profile</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Shop</h6>
+                            <ul>
+                                 
+                               
+                                <li><a href="printers-issues.html">Printers Issues</a></li>
+                                 <li><a href="customer support.html">Customer Support</a></li>
+                                 <li><a href="smb-servers.html"> Small Business Servers </a></li>
+                                 <li><a href="terms-of-use.html"> Terms Of Use </a></li>
+                                 <li><a href="zworkstations.html"> Zworkstations </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <div class="title-letter">
+        <h1 class="title-privacy">Your Privacy Choices</h1>
+        <p class="sub-title-privacy">
+            This Privacy Choices Notice is intended for a United States audience and supplements the HP US Privacy Statement.
+             It informs you of the rights you can exercise in relation to your personal information, including information that may be 
+             collected from your online activity, use of devices, and interactions you have with HP offline, 
+             such as when you engage with our customer support representatives.
+        </p>
+
+        <p class="sub-title-privacy">
+            Your personal information may be collected, used, disclosed, or otherwise processed by HP for the purposes of
+            managing your relationship with HP and to better serve you by personalizing your experience and interaction with us.
+            Details about what categories and pieces of personal information we collect about you, how we use the 
+            information we collect, where and from whom we obtain it, to whom we disclose, sell, or share your personal
+            information, your respective State rights regarding it, and how you can exercise your rights can be found
+            in our HP US Privacy Statement. Throughout this document references to “we,” “us,”
+            “our,” and “Company” refer to HP branded companies and current and future affiliates (herein "HP").
+        </p>
+
+        <p class="sub-title-privacy">
+            HP will not discriminate against you for exercising your rights and choices, although some of the
+            functionality and features available on HP Services may change or no longer be available to you as the 
+            data might be necessary to provide some functionalities or features.
+        </p>
+
+        <p class="sub-title-privacy">
+            Throughout this document references to ‘’local law’’ or ‘’applicable law’’ refer to US Federal privacy law, 
+            privacy US State law and local law where you reside in the United States.
+        </p>
+
+        <h1 class="title-privacy">Exercising Your Rights & Contacting Us</h1>
+
+        <p class="sub-title-privacy">
+            As described in our US Privacy Statement, you have the following rights in relation to how we use your 
+            information and the manner in which we process it (as provided for in the local law). This includes:
+        </p>
+
+        <div class="list">
+        <li>A right to access the personal information that we collect, use, disclose, or otherwise process from you.
+
+        </li>
+        
+        <li>A right to know what personal information we collect, use, disclose, share, 
+            sell, or otherwise process about you; the categories of sources of such information; 
+            the purposes for processing your personal information; and the categories of third parties 
+            with whom we disclose your personal information.
+        </li>
+
+        <li>
+            A right to delete the personal information that we collect or otherwise process from you 
+            (with specified exceptions for operational and legal necessity).
+        </li>
+
+        </div>
+
+        <p class="sub-title-privacy">
+            You can request us to stop selling or sharing your personal information outside of your
+            browsing activity by using the <strong>“Do Not Sell or Share My Personal Information Request” form.
+            To exercise your rights,s, our collection </strong>  or if you have any questions or concerns about our US Privacy Statement
+            and our privacy practiceand use of your information or a possible data breach, 
+            you can, or by entrusting an authorized agent,<strong> contact us by using our  HP’s 
+            Privacy Office and Data Protection </strong>Officer form, or by writing to us at the address below:
+        </p>
+
+        <p class="sub-title-privacy">
+           <strong>How We Manage your Privacy Requests</strong> 
+        </p>
+
+        <p class="sub-title-privacy">
+            Upon receipt of your communication, our representative will contact you within a
+             reasonable time to respond to your questions or concerns. In some cases, we may request
+              further information to verify your identity, complete your request, ask for the service
+               your request refers to, clarify the nature of your request, remedy any deficiencies with your request, or let you know if we need more time, as permitted in applicable law. Please refrain from sending us sensitive personal information.
+        </p>
+
+        <p class="sub-title-privacy">
+            You can designate someone else to make a request on your behalf. To protect your information, we will ask for a signed permission from you authorizing the other person to submit a request on your behalf. If applicable, we will contact you to confirm that you have provided the authorized agent permission to submit the request before we respond to your authorized agent’s request.
+
+ 
+        </p>
+
+        <p class="sub-title-privacy"><strong>Timing</strong></p>
+
+        <p>
+            We will acknowledge receipt of your request within 10 days after we receive your request. You will receive our response to your request within 45 days of your request, unless we provide you with notice that it will take more than 45 days to respond (in that case, we won't take more than 90 days to respond).
+
+ 
+        </p>
+
+        <h1 class="sub-title-privacy">
+            Additional Rights for Certain US States Residents
+
+        </h1>
+
+        <p class="sub-title-privacy">
+            California, Colorado, Connecticut, Virginia, Utah, Florida, Oregon, Texas, Montana, Delaware, Iowa, Nebraska,  New Hampshire , and New Jersey privacy laws permit their respective residents to request us to stop selling or sharing their personal information with third parties. If you are resident from such states, this section applies to any personal information that we collect about you in accordance with your respective state's privacy laws.
+
+
+        </p>
+
+        <p class="sub-title-privacy">
+            <strong>
+                Obtaining Information about the Sale or Sharing of your Personal Information
+            </strong>
+        </p>
+
+        <p class="sub-title-privacy">
+            You can request and obtain from us further information regarding those categories of third parties to whom your personal information was disclosed, sold, or shared (if any, and as defined under applicable law), the purposes for collecting, selling, or sharing your personal information, and the categories of personal information disclosed, sold or shared, as provided for in the local law. To make such a request, please contact us by using the HP’s Privacy Office and Data Protection Officer form.
+
+
+        </p>
+
+        <p class="sub-title-privacy">
+            <strong>
+                Your Right to Opt-Out
+            </strong>
+        </p>
+
+        <p class="sub-title-privacy">
+            As a Consumer, you have the right to Opt-out, this means you the right to direct HP to not sell or share personal data about you to third parties, as defined by local law, or to stop doing so for the following purposes:
+
+
+        </p>
+
+        <p class="sub-title-privacy">
+            As a California, Colorado, Connecticut, Virginia, Utah, Florida, Oregon, Texas, Montana, Delaware, Iowa, Nebraska, New Hampshire or New Jersey resident, you can also exercise your Opt-Out right by using the “Do Not Sell or Share My Personal Information Request” form for the sale or sharing of personal information that occurs outside of your browsing activity. Similarly, exercising your right to Opt-Out of sale or sharing that occurs during your browsing activity can be accomplished in either of the ways listed below:
+        </p>
+
+        <h1 class="title-privacy">
+            Changes to Our Privacy Choices Notice
+
+
+        </h1>
+
+        <p class="sub-title-privacy">
+            If we modify this Privacy Choices Notice, we will post the revised disclosure here, with an updated revision date. If we make significant changes to this Privacy Choices Notice that materially alter our methods by which you can exercise your rights request, or as otherwise required by local law, we may also notify you by other means, such as sending an email or posting a notice on our corporate website and/or social media pages prior to the changes taking effect. 
+
+
+        </p>
+
+        <p class="sub-title-privacy">
+            Date Posted: January  2025
+        </p>
+
+        <p class="sub-title-privacy">
+            <a class="link-sub-title" href="#">
+               <strong> Download Privacy Choices Notice</strong>
+            </a>
+        </p>
+
+        <p class="sub-title-privacy">
+            <a class="link-sub-title" href="#">
+               <strong> Download HP US Privacy Statement</strong>
+            </a>
+        </p>
+
+        <p class="sub-title-privacy">
+            <a class="link-sub-title" href="#">
+                
+               <strong> Archive of previous privacy choices notices </strong>
+            </a>
+        </p>
+</div>
+
+
+<div class="top-footer">
+   
+    <div class="top-footer-item">
+      
+      <a href="#">FEEDBACK</a>
+    </div>
+
+    <div class="top-footer-item">
+     <a href="#">MORE USEFUL LINKS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="more_about.html">MORE ABOUT THESE PRODUCTS </a>
+    </div>
+
+    <div class="top-footer-item">
+      <a href="site_disclaimers.html">SITE DISCLAIMERS </a>
+    </div>
+  </div>
+
+
+
+<footer>
+  <div class="footer-container">
+    
+    <!-- Kolom 1: About Us -->
+    <div class="footer-column">
+      <h4 >ABOUT US</h4>
+    
+      <a href="#">Contact HP</a>
+      <a href="#">Careers</a>
+      <a href="#">Investor relations</a>
+      <a href="#">Sustainable impact</a>
+      <a href="#">Diversity, Equity and Inclusion</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Tech Takes</a>
+      <a href="#">HP Store Newsletter</a>
+      <a href="#">HP Printables Newsletter</a>
+    </div>
+
+    <!-- Kolom 2: Cara Membeli -->
+    <div class="footer-column">
+      <h4 >WAYS TO BUY</h4>
+      <a href="#">Shop online</a>
+      <a href="#">Call an HP rep</a>
+      <a href="#">Find a reseller</a>
+      <a href="#">Enterprise store</a>
+      <a href="#">Public sector purchasing</a>
+    </div>
+
+    <!-- Kolom 3: Dukungan -->
+    <div class="footer-column">
+      <h4 >SUPPORT</h4>
+      <a href="#">Download drivers</a>
+      <a href="#">Support & troubleshooting</a>
+      <a href="#">Community</a>
+      <a href="#">Register your product</a>
+      <a href="#">Authorized service providers</a>
+      <a href="#">Check repair status</a>
+      <a href="#">Fraud alert</a>
+      <a href="#">Security Center</a>
+    </div>
+
+    <!-- Kolom 4: Mitra HP -->
+    <div class="footer-column">
+      <h4 >HP PARTNERS</h4>
+      <a href="#">HP Amplify Partner Program</a>
+      <a href="#">HP Partner Portal</a>
+      <a href="#">Developers</a>
+    </div>
+
+
+ 
+  <div class="footer-bottom">
+    <!-- Kumpulan link legal -->
+    <div class="footer-links">
+      <a href="#">Recalls</a>
+      <a href="#">Product recycling</a>
+      <a href="#">Accessibility</a>
+      <a href="#">CA Supply Chains Act</a>
+      <a href="#">Privacy</a>
+      <a href="#">Use of cookies</a>
+      <a href="#">Your privacy choices</a>
+      <a href="#">Terms of use</a>
+      <a href="#">Limited warranty statement</a>
+      <a href="#">Terms & conditions of sales & service</a>
+    </div>
+    
+    <p>©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.</p>
+  </div>
+</footer>
+        
+
+</body>
+</html>

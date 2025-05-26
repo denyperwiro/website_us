@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HP Support Services Clone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .search-bar {
+      max-width: 400px;
+    }
+
+    .bottom-nav {
+      background-color: black;
+    }
+
+    .bottom-nav a {
+      color: white;
+      font-size: 0.95rem;
+    }
+
+    .bottom-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      position: relative;
+      background: url('assets/Hero-image1.jpg') center center / cover no-repeat;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+      z-index: 0;
+    }
+
+    .hero-box {
+      position: relative;
+      z-index: 1;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-icon {
+      font-size: 2rem;
+      color: #0071c5;
+      margin-bottom: 10px;
+    }
+
+    .feature-box {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      height: 100%;
+      transition: transform 0.2s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#"><img src="assets/logo.svg" width="40" alt="HP Logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="topNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Explore</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Shop</a></li>
+
+          <!-- Support dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Support
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+              <li><a class="dropdown-item" href="check-warranty.html">Check Warranty</a></li>
+              <li><a class="dropdown-item" href="index.html">Authorized Service Provides</a></li>
+              <li><a class="dropdown-item" href="security-bulletins.html">Security Bulletins Archive</a></li>
+              <li><a class="dropdown-item" href="parts-store.html">Parts Store</a></li>
+              <li><a class="dropdown-item" href="customer-service.html">Consumer Service</a></li>
+              <li><a class="dropdown-item" href="business-service.html">Buseniss Service</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex me-3 mt-2 mt-lg-0" role="search">
+          <input class="form-control rounded-0 rounded-start" type="search" placeholder="Search HP.com" />
+          <button class="btn btn-outline-secondary rounded-end" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-cart"></i></a>
+        <a href="#" class="btn btn-dark text-white">Sign in</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-box text-center mx-4">
+      <h5>Need help with your device?</h5>
+      <p class="small">We'll help you find product-specific coverage and support options.</p>
+      <button class="btn btn-primary btn-sm">Get started</button>
+    </div>
+  </section>
+
+  <section class="py-5 text-center">
+    <h4 class="mb-5">Keep your devices working at their best.</h4>
+    <div class="container">
+      <div class="row g-6 justify-content-center">
+        <div class="col-md-2 col-sm-6">
+          <div class="feature-box">
+            <div><i class="fa-solid fa-desktop feature-icon"></i></div>
+            <h6>Extended PC protection</h6>
+            <p class="small">Affordable options to enhance PC coverage.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Learn</a><br>
+            <a href="#" class="small">Find my Care Pack</a>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="feature-box">
+            <div><i class="fa-solid fa-print feature-icon"></i></div>
+            <h6>Extended printer protection</h6>
+            <p class="small">Reliable printer support plan.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Learn</a><br>
+            <a href="#" class="small">Find my Care Pack</a>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="feature-box">
+            <div><i class="fa-solid fa-headset feature-icon"></i></div>
+            <h6>Tech support</h6>
+            <p class="small">Expert answers for everyday tech problems.<br><strong>From $16.99/month</strong></p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Learn</a>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="feature-box">
+            <div><i class="fa-solid fa-shield-halved feature-icon"></i></div>
+            <h6>Virus protection</h6>
+            <p class="small">Protect data and device performance.<br><strong>From $39.99</strong></p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Learn</a>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="feature-box">
+            <div><i class="fa-solid fa-lock feature-icon"></i></div>
+            <h6>Theft & data protection</h6>
+            <p class="small">Peace of mind with theft protection.<br><strong>From $39.99</strong></p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Learn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary text-white text-center py-5">
+    <h4>Ready to protect your investment?</h4>
+    <p>Let’s find coverage that makes sense for you and your device.</p>
+    <button class="btn btn-light">Get started</button>
+  </section>
+
+  <footer class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h6>About Us</h6>
+          <a href="#">Contact HP</a><br>
+          <a href="#">Careers</a><br>
+          <a href="#">Sustainable impact</a>
+        </div>
+        <div class="col-md-3">
+          <h6>Ways to Buy</h6>
+          <a href="#">Shop online</a><br>
+          <a href="#">Find a reseller</a>
+        </div>
+        <div class="col-md-3">
+          <h6>Support</h6>
+          <a href="#">Download drivers</a><br>
+          <a href="#">Check repair status</a>
+        </div>
+        <div class="col-md-3">
+          <h6>Stay connected</h6>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
